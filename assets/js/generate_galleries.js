@@ -19,7 +19,8 @@ const templateHeader = `<!DOCTYPE html>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/Style.css">
+  <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
 </head>
 <body style="padding-top: 80px;">
 
@@ -52,7 +53,7 @@ const templateHeader = `<!DOCTYPE html>
                 Photos Gallery <i class="fas fa-caret-right" style="font-size:0.7rem;"></i>
               </a>
               <div class="dropdown-menu-nested">
-                <a href="wedding-albums.html">Wedding Albums</a>
+                <a href="wedding-planners.html">Wedding Albums</a>
                 <a href="destination-wedding.html">Destination Wedding</a>
                 <a href="corporate-events.html">Corporate Events</a>
                 <a href="house-opening-ceremony.html">House Opening Ceremony</a>
@@ -123,7 +124,7 @@ const templateFooter = `      </div>
           <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#services">Services</a></li>
           <li><a href="index.html#venues">Venues</a></li>
-          <li><a href="wedding-albums.html">Gallery</a></li>
+          <li><a href="wedding-planners.html">Gallery</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
       </div>
@@ -149,8 +150,8 @@ const templateFooter = `      </div>
   <a href="https://wa.me/918592877733?text=Hi" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
     <i class="fab fa-whatsapp" style="color:#fff; font-size:1.6rem;"></i>
   </a>
-  <script src="script.js"></script>
-</body>
+  <script src="assets/js/Script.js"></script>
+  </body>
 </html>`;
 
 // Ensure images directory exists

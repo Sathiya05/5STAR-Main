@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
-    <title>Corporate Event Management in Tamilnadu</title>
+    <title>Wedding Planners in Tamilnadu</title>
     <meta name="description"
-        content="5 Star Event Management – Premier corporate event planners in Tamilnadu. Conferences, product launches, team events, award nights & more. 18+ years experience. ISO Certified.">
+        content="5 Star Event Management – Expert wedding planners in Tamilnadu. Full-service wedding planning, décor, catering & more. 18+ years experience. ISO Certified.">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,6 +40,9 @@
         }
 
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        /* ── HERO ────────────────────────────────────────────────────── */
+        /* reuses your existing #home / hero-slide / hero-overlay from Style.css */
 
         /* ── BREADCRUMB ──────────────────────────────────────────────── */
         .breadcrumb-bar {
@@ -131,14 +134,14 @@
             color: var(--text);
             margin-top: 20px;
         }
-        .svc-intro-img { position: relative; }
+        .svc-intro-img {
+            position: relative;
+        }
         .svc-intro-img img {
             width: 100%;
             height: 460px;
             object-fit: cover;
             display: block;
-            position: relative;
-            z-index: 1;
         }
         .svc-intro-img::before {
             content: '';
@@ -158,6 +161,7 @@
             z-index: 0;
             pointer-events: none;
         }
+        .svc-intro-img img { position: relative; z-index: 1; }
         .svc-badge {
             display: inline-flex;
             align-items: center;
@@ -172,6 +176,81 @@
             color: var(--blue-dark);
         }
         .svc-badge i { color: var(--blue); }
+/* popular */
+        .destinations {
+            background: var(--off-white);
+            padding: 96px 24px;
+        }
+        .destinations .container { text-align: center; }
+        .dest-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 56px;
+        }
+        .dest-card {
+            position: relative;
+            overflow: hidden;
+            height: 300px;
+            cursor: pointer;
+        }
+        .dest-card img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform .6s ease;
+        }
+        .dest-card:hover img { transform: scale(1.08); }
+        .dest-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10,22,40,.85) 0%, rgba(10,22,40,.2) 60%, transparent 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 24px;
+            transition: background .3s;
+        }
+        .dest-card:hover .dest-overlay {
+            background: linear-gradient(to top, rgba(13,59,122,.9) 0%, rgba(13,59,122,.35) 60%, transparent 100%);
+        }
+        .dest-name {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .dest-tag {
+            font-family: var(--sans);
+            font-size: .72rem;
+            font-weight: 600;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            color: #93c5fd;
+        }
+        .dest-card:hover .dest-btn {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .dest-btn {
+            display: inline-block;
+            margin-top: 14px;
+            padding: 8px 20px;
+            background: var(--blue-light);
+            color: #fff;
+            font-family: var(--sans);
+            font-size: .72rem;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity .3s, transform .3s;
+            align-self: flex-start;
+        }
+
 
         /* ── WHAT'S INCLUDED ─────────────────────────────────────────── */
         .included {
@@ -224,86 +303,28 @@
             color: var(--text-muted);
         }
 
-        /* ── EVENT TYPES STRIP ───────────────────────────────────────── */
-        .event-types {
-            background: var(--white);
-            padding: 96px 24px;
-        }
-        .event-types .container { text-align: center; }
-        .event-types-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
-            margin-top: 56px;
-            text-align: left;
-        }
-        .et-card {
-            border: 1px solid var(--blue-pale2);
-            overflow: hidden;
-            transition: box-shadow .3s, transform .3s;
-        }
-        .et-card:hover {
-            box-shadow: 0 12px 40px rgba(26,95,180,.12);
-            transform: translateY(-4px);
-        }
-        .et-card-img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            display: block;
-            transition: transform .5s ease;
-        }
-        .et-card:hover .et-card-img { transform: scale(1.05); }
-        .et-card-img-wrap { overflow: hidden; }
-        .et-card-body { padding: 24px; }
-        .et-card-body h4 {
-            font-family: var(--serif);
-            font-size: 1.25rem;
-            font-weight: 400;
-            color: var(--dark);
-            margin-bottom: 10px;
-        }
-        .et-card-body p {
-            font-family: var(--sans);
-            font-size: .83rem;
-            line-height: 1.7;
-            color: var(--text-muted);
-        }
-        .et-tag {
-            display: inline-block;
-            background: var(--blue-pale);
-            color: var(--blue);
-            font-family: var(--sans);
-            font-size: .65rem;
-            font-weight: 700;
-            letter-spacing: .14em;
-            text-transform: uppercase;
-            padding: 4px 10px;
-            margin-bottom: 10px;
-        }
-
         /* ── WHY CHOOSE US ───────────────────────────────────────────── */
-        .why-corporate {
+        .why-wedding {
             background: var(--blue-dark);
             padding: 96px 24px;
             position: relative;
             overflow: hidden;
         }
-        .why-corporate::before {
+        .why-wedding::before {
             content: '';
             position: absolute;
             inset: 0;
             background: radial-gradient(ellipse at 80% 20%, rgba(74,144,217,.15), transparent 60%);
             pointer-events: none;
         }
-        .why-corporate .container {
+        .why-wedding .container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 80px;
             align-items: center;
             position: relative;
         }
-        .why-corporate-img img {
+        .why-wedding-img img {
             width: 100%;
             height: 480px;
             object-fit: cover;
@@ -509,7 +530,7 @@
             color: var(--text-muted);
         }
 
-               /* ── GALLERY STRIP ───────────────────────────────────────────── */
+        /* ── GALLERY STRIP ───────────────────────────────────────────── */
         .gallery-strip {
             background: var(--white);
             padding: 80px 24px;
@@ -658,36 +679,6 @@
             font-size: .72rem;
         }
 
-        /* ── STATS BAR ─────────────────────────────────────────────────
-        .stats-bar {
-            background: var(--blue);
-            padding: 56px 24px;
-        }
-        .stats-bar .container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-            text-align: center;
-        }
-        .stat-item { padding: 20px 10px; }
-        .stat-num {
-            font-family: var(--serif);
-            font-size: 3rem;
-            font-weight: 300;
-            color: #fff;
-            line-height: 1;
-            margin-bottom: 8px;
-        }
-        .stat-num em { font-style: italic; color: #93c5fd; }
-        .stat-label {
-            font-family: var(--sans);
-            font-size: .78rem;
-            font-weight: 600;
-            letter-spacing: .1em;
-            text-transform: uppercase;
-            color: rgba(255,255,255,.6);
-        } */
-
         /* ── FAQ ─────────────────────────────────────────────────────── */
         .faq-section {
             background: var(--white);
@@ -695,7 +686,9 @@
         }
         .faq-section .container { max-width: 820px; text-align: center; }
         .faq-list { margin-top: 52px; text-align: left; }
-        .faq-item { border-bottom: 1px solid var(--blue-pale2); }
+        .faq-item {
+            border-bottom: 1px solid var(--blue-pale2);
+        }
         .faq-question {
             width: 100%;
             background: none;
@@ -808,30 +801,26 @@
         /* ── RESPONSIVE ──────────────────────────────────────────────── */
         @media (max-width: 1024px) {
             .included-grid { grid-template-columns: repeat(2, 1fr); }
+            .dest-grid { grid-template-columns: repeat(2, 1fr); }
             .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
             .g-item.tall { grid-row: span 1; }
             .g-item.wide { grid-column: span 1; }
-            .stats-bar .container { grid-template-columns: repeat(2, 1fr); }
-            .lb-prev { left: -16px; }
-            .lb-next { right: -16px; }
         }
         @media (max-width: 900px) {
             .svc-intro .container,
-            .why-corporate .container { grid-template-columns: 1fr; gap: 48px; }
-            .why-corporate-img { order: -1; }
-            .why-corporate-img img { height: 320px; }
+            .why-wedding .container { grid-template-columns: 1fr; gap: 48px; }
+            .why-wedding-img { order: -1; }
+            .why-wedding-img img { height: 320px; }
             .pkg-grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
             .steps-row { grid-template-columns: repeat(3, 1fr); gap: 32px; }
             .steps-row::before { display: none; }
-            .event-types-grid { grid-template-columns: 1fr 1fr; }
         }
         @media (max-width: 600px) {
             .included-grid { grid-template-columns: 1fr; }
             .steps-row { grid-template-columns: 1fr 1fr; }
             .gallery-grid { grid-template-columns: 1fr 1fr; }
-            .svc-intro-img::before, .svc-intro-img::after { display: none; }
-            .event-types-grid { grid-template-columns: 1fr; }
-            .stats-bar .container { grid-template-columns: repeat(2, 1fr); }
+            .svc-intro-img::before,
+            .svc-intro-img::after { display: none; }
         }
     </style>
 </head>
@@ -841,34 +830,34 @@
   <!-- ============================================================
        HEADER — Fixed top navigation bar
   ============================================================ -->
-  <header id="site-header">
+  <header id="site-header" class="scrolled" data-force-scrolled="true">
     <div class="header-inner">
 
-      <!-- Logo -->
-      <a href="index.html" class="logo">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
         <img src="assets/images/logo.png" alt="5 Star Event Management Logo">
       </a>
 
       <!-- Desktop Navigation -->
       <nav class="desktop-nav">
-        <a href="index.html" class="nav-link ">Home</a>
+        <a href="index.html" class="nav-link">Home</a>
         <a href="aboutus.html" class="nav-link">About Us</a>
 
         <div class="dropdown">
-          <a href="wedding service.html" class="nav-link active">
+          <a href="wedding-planners.html" class="nav-link active">
             Services <i class="fas fa-caret-down" style="font-size:0.7rem;"></i>
           </a>
           <div class="dropdown-menu">
-            <a href="wedding service.html">Wedding Planners</a>
-            <a href="destination wedding.html">Destination Wedding</a>
-            <a href="corporate evnt.html">Corporate Events</a>
-            <a href="house opening ceremony.html">House opening ceremony</a>
-            <a href="private parties.html">Private Parties</a>
+            <a href="wedding-planners.html">Wedding Planners</a>
+            <a href="destination-wedding.html">Destination Wedding</a>
+            <a href="corporate-events.html">Corporate Events</a>
+            <a href="house-opening-ceremony.html">House opening ceremony</a>
+            <a href="private-parties.html">Private Parties</a>
           </div>
         </div>
 
         <!-- <a href="#venues" class="nav-link">Venues</a> -->
-        <a href="our client.html" class="nav-link">Our Clients</a>
+        <a href="our-clients.html" class="nav-link">Our Clients</a>
 
         <!-- <div class="dropdown"> -->
           <a href="decor-gallery.html" class="nav-link">
@@ -914,16 +903,16 @@
           Services <i class="fas fa-chevron-down" style="font-size:0.7rem; margin-left:8px;"></i>
         </button>
         <div id="services-menu" class="mobile-submenu">
-          <a href="wedding service.html" class="mobile-sublink">Wedding Planners</a>
-          <a href="destination wedding.html" class="mobile-sublink">Destination Wedding</a>
-          <a href="corporate evnt.html" class="mobile-sublink">Corporate Events</a>
-          <a href="private parties.html" class="mobile-sublink">Private Parties</a>
-          <a href="house opening ceremony.html" class="mobile-sublink">House Opening Ceremony</a>
+          <a href="wedding-planners.html" class="mobile-sublink">Wedding Planners</a>
+          <a href="destination-wedding.html" class="mobile-sublink">Destination Wedding</a>
+          <a href="corporate-events.html" class="mobile-sublink">Corporate Events</a>
+          <a href="private-parties.html" class="mobile-sublink">Private Parties</a>
+          <a href="house-opening-ceremony.html" class="mobile-sublink">House Opening Ceremony</a>
         </div>
       </div>
 
       <!-- <a href="#venues" class="mobile-link">Venues</a> -->
-      <a href="our client.html" class="mobile-link">Our Clients</a>
+      <a href="our-clients.html" class="mobile-link">Our Clients</a>
 
       <!-- Gallery Dropdown -->
        <a href="decor-gallery.html" class="mobile-link">Gallery</a>
@@ -948,372 +937,281 @@
   </div>
 
     <!-- ============================================================
-    HERO
+        HERO — same structure as About page
     ============================================================ -->
     <section id="home">
         <div class="hero-slide active"
-            style="background-image:url('assets/images/corporate1.jpeg');">
+            style="background-image:url('assets/images/Mandap-Decoration_25.jpg');">
         </div>
         <div class="hero-slide"
-            style="background-image:url('assets/images/corporate2.png');">
+            style="background-image:url('assets/images/Wedding-Backdrops_7.jpg');">
         </div>
         <div class="hero-slide"
-            style="background-image:url('assets/images/corporate3.png');">
+            style="background-image:url('assets/images/Wedding-Backdrops_26.jpg');">
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content" style="margin-top:250px;">
             <p class="hero-label" style="color:#fff; font-size:1.25rem; font-weight:bold;">
   Our Services
 </p>
-<h1 class="hero-title">Corporate Events Across South India</h1>
+<h1 class="hero-title">Wedding Planners Across South India</h1>
         </div>
     </section>
 
-    <!-- ============================================================
-    BREADCRUMB
-    ============================================================ -->
-    <!-- <div class="breadcrumb-bar">
-        <div class="bc-inner">
-            <a href="index.html">Home</a>
-            <i class="fas fa-chevron-right"></i>
-            <a href="#">Services</a>
-            <i class="fas fa-chevron-right"></i>
-            <span>Corporate Events</span>
-        </div>
-    </div> -->
 
     <!-- ============================================================
-    INTRO SECTION
+        INTRO SECTION
     ============================================================ -->
     <section class="svc-intro">
         <div class="container">
             <div>
-                <p class="sec-label">Corporate Event Management</p>
-                <h2 class="sec-title">Professional Events that <em>Impress & Inspire</em></h2>
-                <div class="sec-divider"></div>
+    <p class="sec-label">Wedding Planners</p>
+    <h2 class="sec-title">Your Dream Wedding, <em>Perfectly Planned</em></h2>
+    <div class="sec-divider"></div>
 
-<p>
-  At <strong>5 Star Event Management</strong>, we create corporate events that elevate your brand and leave a lasting impression. From executive conferences to large-scale product launches, we combine strategic planning with creative execution to deliver seamless and impactful experiences.
-</p>
+    <p>
+        At <strong>5 Star Event Management</strong>, we believe every wedding is a once-in-a-lifetime story waiting to be beautifully crafted. With 20+ years of experience and over 5000+ successful events across Tamilnadu, Kerala, Karnataka, and Andhra Pradesh, our expert planners bring your vision to life with elegance and precision.
+    </p>
 
-<p>
-  With 20+ years of experience and 5000+ successful events across Tamilnadu, Kerala, Karnataka, and Andhra Pradesh, our expert team manages every detail — including AV setup, branding, logistics, catering, and entertainment — allowing you to focus on your business objectives.
-</p>
-                <div class="svc-badge"><i class="fas fa-certificate"></i> ISO 9001:2015 Certified Event Management Company</div>
-                <div class="svc-badge" style="margin-top:10px;"><i class="fas fa-briefcase"></i> 1,000+ Corporate Events Successfully Executed</div>
-            </div>
+    <p>
+        From the first consultation to the grand celebration, we manage every detail with creativity, care, and seamless coordination — ensuring you and your loved ones enjoy every moment stress-free.
+    </p>
+
+    <div class="svc-badge">
+        <i class="fas fa-certificate"></i> ISO 9001:2015 Certified Wedding Planners
+    </div>
+
+    <div class="svc-badge" style="margin-top:10px;">
+        <i class="fas fa-heart"></i> 5000+ Events Successfully Delivered
+    </div>
+</div>
             <div class="svc-intro-img">
-                <img src="assets/images/corporate4.jpeg"
-                    alt="Corporate Event by 5 Star Event Management">
+                <img src="assets/images/Sangeet_31.jpg"
+                    alt="Beautiful Wedding Decoration by 5 Star Event Management">
             </div>
         </div>
     </section>
 
-
-
     <!-- ============================================================
-    EVENT TYPES
+        POPULAR 
     ============================================================ -->
-    <section class="event-types">
+
+    <section class="destinations">
     <div class="container">
-        <p class="sec-label" style="justify-content:center;">What We Manage</p>
-        <h2 class="sec-title">Corporate Events We <em>Specialise In</em></h2>
+        <p class="sec-label" style="justify-content:center;">What We Offer</p>
+        <h2 class="sec-title">Traditional <em>Wedding Services</em></h2>
         <div class="sec-divider" style="margin-left:auto; margin-right:auto;"></div>
 
-        <div class="event-types-grid">
+        <div class="dest-grid">
 
-            <!-- Card 1 -->
-            <div class="et-card">
-                <div class="et-card-img-wrap">
-                    <img src="assets/images/corporate4.jpeg" class="et-card-img">
-                </div>
-                <div class="et-card-body">
-                    <span class="et-tag">Conferences</span>
-                    <h4>Conferences & Seminars</h4>
-                    <p>Full AV setup, stage design, and delegate management.</p>
-
-                    <!-- Gradient Button -->
-                    <a href="tel:+917996605557"
-                       style="display:inline-block;margin-top:10px;padding:10px 18px;
-                       background:linear-gradient(45deg,#2563eb,#06b6d4);
-                       color:#fff;text-decoration:none;border-radius:8px;
-                       font-size:14px;transition:0.3s;"
-                       onmouseover="this.style.boxShadow='0 0 15px rgba(37,99,235,0.7)';"
-                       onmouseout="this.style.boxShadow='none';">
-                       Enquire Now
-                    </a>
+            <div class="dest-card">
+                <img src="assets/images/Wedding-Backdrops_3.jpg" alt="Wedding Stage Decoration">
+                <div class="dest-overlay">
+                    <span class="dest-tag">Stage Setup</span>
+                    <div class="dest-name">Wedding Stage Decoration</div>
+                    <a href="tel:+917996605557" class="dest-btn">Enquire Now</a>
                 </div>
             </div>
 
-            <!-- Card 2 -->
-            <div class="et-card">
-                <div class="et-card-img-wrap">
-                    <img src="assets/images/corporate5.jpeg" class="et-card-img">
-                </div>
-                <div class="et-card-body">
-                    <span class="et-tag">Launches</span>
-                    <h4>Product Launches</h4>
-                    <p>High-impact product unveilings with LED screens and media.</p>
-
-                    <!-- Blue Hover Button -->
-                    <a href="tel:+917996605557"
-                       style="display:inline-block;margin-top:10px;padding:8px 16px;
-                       background:#2563eb;color:#fff;text-decoration:none;border-radius:6px;
-                       font-size:14px;transition:all 0.3s ease;"
-                       onmouseover="this.style.background='#1d4ed8'; this.style.transform='scale(1.05)';"
-                       onmouseout="this.style.background='#2563eb'; this.style.transform='scale(1)';">
-                       Enquire Now
-                    </a>
+            <div class="dest-card">
+                <img src="assets/images/Wedding-Backdrops_22.jpg" alt="Hall Decoration">
+                <div class="dest-overlay">
+                    <span class="dest-tag">Venue Setup</span>
+                    <div class="dest-name">Marriage Hall Decoration</div>
+                    <a href="tel:+917996605557" class="dest-btn">Enquire Now</a>
                 </div>
             </div>
 
-            <!-- Card 3 -->
-            <div class="et-card">
-                <div class="et-card-img-wrap">
-                    <img src="assets/images/corporate6.jpeg" class="et-card-img">
-                </div>
-                <div class="et-card-body">
-                    <span class="et-tag">Award Nights</span>
-                    <h4>Award Ceremonies</h4>
-                    <p>Luxury award nights with décor and entertainment.</p>
-
-                    <!-- Glass Button -->
-                    <a href="tel:+917996605557"
-                       style="display:inline-block;margin-top:10px;padding:10px 18px;
-                       background:rgba(37,99,235,0.8);
-                       backdrop-filter:blur(10px);
-                       color:#fff;text-decoration:none;border-radius:10px;
-                       font-size:14px;border:1px solid rgba(255,255,255,0.2);
-                       transition:0.3s;"
-                       onmouseover="this.style.background='#2563eb';"
-                       onmouseout="this.style.background='rgba(37,99,235,0.8)';">
-                       Enquire Now
-                    </a>
+            <div class="dest-card">
+                <img src="assets/images/Wedding-Backdrops_4.jpg" alt="Mandap Decoration">
+                <div class="dest-overlay">
+                    <span class="dest-tag">Mandapam</span>
+                    <div class="dest-name">Traditional Mandap Setup</div>
+                    <a href="tel:+917996605557" class="dest-btn">Enquire Now</a>
                 </div>
             </div>
 
-            <!-- Card 4 -->
-            <div class="et-card">
-                <div class="et-card-img-wrap">
-                    <img src="assets/images/corporate1.jpeg" class="et-card-img">
-                </div>
-                <div class="et-card-body">
-                    <span class="et-tag">Team Events</span>
-                    <h4>Team Building</h4>
-                    <p>Engaging retreats and team outings.</p>
-
-                    <!-- Phone Icon Button -->
-                    <a href="tel:+917996605557"
-                       style="display:inline-flex;align-items:center;gap:8px;
-                       margin-top:10px;padding:8px 16px;
-                       background:#2563eb;color:#fff;text-decoration:none;border-radius:6px;
-                       font-size:14px;">
-                       <i class="fas fa-phone"></i> Enquire Now
-                    </a>
+            <div class="dest-card">
+                <img src="assets/images/Wedding-Backdrops_6.jpg" alt="Flower Decoration">
+                <div class="dest-overlay">
+                    <span class="dest-tag">Floral Design</span>
+                    <div class="dest-name">Flower Decoration</div>
+                    <a href="tel:+917996605557" class="dest-btn">Enquire Now</a>
                 </div>
             </div>
 
-            <!-- Card 5 -->
-            <div class="et-card">
-                <div class="et-card-img-wrap">
-                    <img src="assets/images/corporate6.jpeg" class="et-card-img">
-                </div>
-                <div class="et-card-body">
-                    <span class="et-tag">Exhibitions</span>
-                    <h4>Trade Shows</h4>
-                    <p>Custom stalls and branding solutions.</p>
-
-                    <!-- WhatsApp Button -->
-                    <a href="tel:+917996605557"
-                       style="display:inline-block;margin-top:10px;padding:10px 18px;
-                       background:#2563eb;color:#fff;text-decoration:none;border-radius:8px;
-                       font-size:14px;transition:0.3s;"
-                       onmouseover="this.style.boxShadow='0 0 20px #2563eb';"
-                       onmouseout="this.style.boxShadow='none';">
-                       Enquire Now
-                    </a>
+            <div class="dest-card">
+                <img src="assets/images/Party-Decorations_29.jpg" alt="Catering Services">
+                <div class="dest-overlay">
+                    <span class="dest-tag">Catering</span>
+                    <div class="dest-name">Food & Catering Services</div>
+                    <a href="tel:+917996605557" class="dest-btn">Enquire Now</a>
                 </div>
             </div>
 
-            <!-- Card 6 -->
-            <div class="et-card">
-                <div class="et-card-img-wrap">
-                    <img src="assets/images/corporate7.jpeg" class="et-card-img">
-                </div>
-                <div class="et-card-body">
-                    <span class="et-tag">Annual Events</span>
-                    <h4>Annual Day</h4>
-                    <p>Memorable celebrations with entertainment.</p>
-
-                    <!-- Glow Button -->
-                    <a href="tel:+917996605557"
-                       style="display:inline-block;margin-top:10px;padding:10px 18px;
-                       background:#2563eb;color:#fff;text-decoration:none;border-radius:8px;
-                       font-size:14px;transition:0.3s;"
-                       onmouseover="this.style.boxShadow='0 0 20px #2563eb';"
-                       onmouseout="this.style.boxShadow='none';">
-                       Enquire Now
-                    </a>
+            <div class="dest-card">
+                <img src="assets/images/Photo-Booth-Decoration_2.png" alt="Photography Services">
+                <div class="dest-overlay">
+                    <span class="dest-tag">Media</span>
+                    <div class="dest-name">Photography & Videography</div>
+                    <a href="tel:+917996605557" class="dest-btn">Enquire Now</a>
                 </div>
             </div>
 
         </div>
     </div>
 </section>
-
     <!-- ============================================================
-    WHAT'S INCLUDED
+        WHAT'S INCLUDED
     ============================================================ -->
     <section class="included">
         <div class="container">
             <p class="sec-label" style="justify-content:center;">What's Included</p>
-            <h2 class="sec-title">Everything Covered, <em>End to End</em></h2>
+            <h2 class="sec-title">Everything You Need, <em>All in One Place</em></h2>
             <div class="sec-divider" style="margin-left:auto; margin-right:auto;"></div>
 
             <div class="included-grid">
                 <div class="inc-card">
-                    <div class="inc-card-icon"><i class="fas fa-tv"></i></div>
-                    <h4>AV & Tech Setup</h4>
-                    <!-- <p>LED screens, projectors, PA systems, live streaming, and hybrid event technology.</p> -->
-                </div>
-                <div class="inc-card">
-                    <div class="inc-card-icon"><i class="fas fa-paint-brush"></i></div>
-                    <h4>Stage & Brand Design</h4>
-                    <!-- <p>Custom stage builds, branded backdrops, signage, and on-brand event environments.</p> -->
+                    <div class="inc-card-icon"><i class="fas fa-palette"></i></div>
+                    <h4>Custom Décor & Design</h4>
                 </div>
                 <div class="inc-card">
                     <div class="inc-card-icon"><i class="fas fa-utensils"></i></div>
-                    <h4>Catering & Hospitality</h4>
-                    <!-- <p>Corporate buffets, high-tea arrangements, and premium dining for any guest count.</p> -->
+                    <h4>Catering Coordination</h4>
                 </div>
                 <div class="inc-card">
                     <div class="inc-card-icon"><i class="fas fa-camera"></i></div>
                     <h4>Photography & Videography</h4>
-                    <!-- <p>Professional event coverage, highlights reels, and live streaming for virtual audiences.</p> -->
+                </div>
+                <div class="inc-card">
+                    <div class="inc-card-icon"><i class="fas fa-music"></i></div>
+                    <h4>Music & Entertainment</h4>
                 </div>
                 <div class="inc-card">
                     <div class="inc-card-icon"><i class="fas fa-map-marker-alt"></i></div>
-                    <h4>Venue Sourcing</h4>
-                    <!-- <p>We identify and negotiate the best corporate venues, hotels, and convention centres.</p> -->
-                </div>
-                <div class="inc-card">
-                    <div class="inc-card-icon"><i class="fas fa-users"></i></div>
-                    <h4>Guest & Delegate Management</h4>
-                    <!-- <p>Invitations, RSVP tracking, registration desks, and guest hospitality management.</p> -->
+                    <h4>Venue Selection & Booking</h4>
                 </div>
                 <div class="inc-card">
                     <div class="inc-card-icon"><i class="fas fa-bus"></i></div>
-                    <h4>Transport & Logistics</h4>
-                    <!-- <p>End-to-end logistics including guest transportation, accommodation tie-ups, and on-ground coordination.</p> -->
+                    <h4>Guest Logistics</h4>
+                </div>
+                <div class="inc-card">
+                    <div class="inc-card-icon"><i class="fas fa-certificate"></i></div>
+                    <h4>Priest & Ritual Coordination</h4>
                 </div>
                 <div class="inc-card">
                     <div class="inc-card-icon"><i class="fas fa-headset"></i></div>
-                    <h4>Dedicated Event Manager</h4>
-                    <!-- <p>A senior event manager is assigned to your event from planning to execution — your single point of contact.</p> -->
+                    <h4>Dedicated Wedding Manager</h4>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ============================================================
-    WHY CHOOSE US
+        WHY CHOOSE US
     ============================================================ -->
-    <section class="why-corporate">
+    <section class="why-wedding">
         <div class="container">
-            <div class="why-corporate-img">
-                <img src="assets/images/Corporate-event-Decor_92.jpg"
-                    alt="Corporate Event Setup by 5 Star Event Management">
+            <div class="why-wedding-img">
+                <img src="assets/images/Wedding-Backdrops_8.jpg"
+                    alt="Wedding setup by 5 Star Event Management">
             </div>
             <div>
-                <p class="sec-label" style="color:rgba(147,197,253,.8);">Why Choose Us</p>
-                <h2 class="sec-title sec-title-white">Why Companies Trust <em>5 Star</em></h2>
-                <div class="sec-divider sec-divider-white"></div>
-                <div class="why-points">
-                    <div class="why-point">
-    <div class="why-point-icon"><i class="fas fa-award"></i></div>
-    <div>
-        <h5>20+ Years of Corporate Event Expertise</h5>
-        <p>With over two decades of experience and 5000+ events delivered, we have successfully managed corporate events across industries including IT, manufacturing, FMCG, education, and healthcare.</p>
-    </div>
-</div>
+    <p class="sec-label" style="color:rgba(147,197,253,.8);">Why Choose Us</p>
+    <h2 class="sec-title sec-title-white">Why Clients Trust <em>5 Star</em></h2>
+    <div class="sec-divider sec-divider-white"></div>
 
-<div class="why-point">
-    <div class="why-point-icon"><i class="fas fa-shield-alt"></i></div>
-    <div>
-        <h5>ISO 9001:2015 Certified Processes</h5>
-        <p>Our structured and certified processes ensure consistent quality, professionalism, and reliable execution for every corporate event.</p>
-    </div>
-</div>
+    <div class="why-points">
 
-<div class="why-point">
-    <div class="why-point-icon"><i class="fas fa-rupee-sign"></i></div>
-    <div>
-        <h5>Transparent & GST-Compliant Billing</h5>
-        <p>We provide clear, itemised quotations with GST-compliant invoicing — ensuring smooth approvals and complete financial transparency.</p>
-    </div>
-</div>
-
-<div class="why-point">
-    <div class="why-point-icon"><i class="fas fa-clock"></i></div>
-    <div>
-        <h5>On-Time Execution, Every Time</h5>
-        <p>We follow strict timelines with built-in contingencies to ensure your corporate events run smoothly without delays.</p>
-    </div>
-</div>
-
-<div class="why-point">
-    <div class="why-point-icon"><i class="fas fa-handshake"></i></div>
-    <div>
-        <h5>Trusted Long-Term Partnerships</h5>
-        <p>Many of our corporate clients partner with us for multiple events, trusting our ability to understand their brand and deliver consistently across South India.</p>
-    </div>
-</div>
-                </div>
+        <div class="why-point">
+            <div class="why-point-icon"><i class="fas fa-award"></i></div>
+            <div>
+                <h5>20+ Years of Event Experience</h5>
+                <p>Since 2006, we have successfully delivered 5000+ events across Tamilnadu, Kerala, Karnataka, and Andhra Pradesh — from intimate gatherings to grand celebrations.</p>
             </div>
+        </div>
+
+        <div class="why-point">
+            <div class="why-point-icon"><i class="fas fa-shield-alt"></i></div>
+            <div>
+                <h5>ISO 9001:2015 Certified Quality</h5>
+                <p>Our processes follow international quality standards, ensuring every event is executed with precision, professionalism, and zero compromise.</p>
+            </div>
+        </div>
+
+        <div class="why-point">
+            <div class="why-point-icon"><i class="fas fa-rupee-sign"></i></div>
+            <div>
+                <h5>Transparent Pricing</h5>
+                <p>We provide clear, itemised quotations with no hidden costs — giving you complete control and confidence over your event budget.</p>
+            </div>
+        </div>
+
+        <div class="why-point">
+            <div class="why-point-icon"><i class="fas fa-handshake"></i></div>
+            <div>
+                <h5>Strong Vendor Network</h5>
+                <p>We collaborate with trusted and experienced vendors across South India, ensuring consistent quality in catering, décor, photography, and more.</p>
+            </div>
+        </div>
+
+        <div class="why-point">
+            <div class="why-point-icon"><i class="fas fa-smile"></i></div>
+            <div>
+                <h5>High Client Satisfaction</h5>
+                <p>Our clients trust us for our commitment and reliability — many return and refer us, making us a preferred event partner for years.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
         </div>
     </section>
 
 
     <!-- ============================================================
-    HOW IT WORKS
+        HOW IT WORKS
     ============================================================ -->
     <section class="how-it-works">
         <div class="container">
             <p class="sec-label" style="justify-content:center;">Our Process</p>
-            <h2 class="sec-title">How We Execute Your <em>Corporate Event</em></h2>
+            <h2 class="sec-title">How We Plan Your <em>Wedding</em></h2>
             <div class="sec-divider" style="margin-left:auto; margin-right:auto;"></div>
 
             <div class="steps-row">
                 <div class="step-box">
                     <div class="step-num">01</div>
-                    <h5>Brief & Discovery</h5>
-                    <p>We understand your event objectives, audience, brand guidelines, budget, and timeline.</p>
+                    <h5>Free Consultation</h5>
+                    <p>We meet to understand your vision, date, guest count, and budget — no obligations.</p>
                 </div>
                 <div class="step-box">
                     <div class="step-num">02</div>
                     <h5>Concept & Proposal</h5>
-                    <p>We present a tailored event concept with venue options, AV plan, design mock-ups, and itemised costing.</p>
+                    <p>We create a custom wedding concept with mood board, venue shortlist, and itemised quote.</p>
                 </div>
                 <div class="step-box">
                     <div class="step-num">03</div>
-                    <h5>Production & Booking</h5>
-                    <p>We confirm all vendors, secure the venue, finalise branding materials, and begin on-ground production.</p>
+                    <h5>Vendor Booking</h5>
+                    <p>We confirm caterers, decorators, photographers, priests, and all vendors on your behalf.</p>
                 </div>
                 <div class="step-box">
                     <div class="step-num">04</div>
-                    <h5>Rehearsal & Setup</h5>
-                    <p>Full venue setup and dry run the day before — we test every AV element, seating, and flow.</p>
+                    <h5>Rehearsal & Prep</h5>
+                    <p>We run a venue walkthrough, coordinate all teams, and set up fully the day before.</p>
                 </div>
                 <div class="step-box">
                     <div class="step-num">05</div>
-                    <h5>Event Day</h5>
-                    <p>Our on-ground team manages every moment with precision — so you focus on your people and agenda.</p>
+                    <h5>Wedding Day</h5>
+                    <p>Our team manages every minute — you enjoy every moment, stress-free.</p>
                 </div>
             </div>
         </div>
     </section>
 
-      <section class="gallery-strip">
+    <!-- ============================================================
+        GALLERY STRIP
+    ============================================================ -->
+    <section class="gallery-strip">
         <div class="container">
             <p class="sec-label" style="justify-content:center;">Our Work</p>
             <h2 class="sec-title">A Glimpse of Our <em>Ceremonies</em></h2>
@@ -1321,45 +1219,45 @@
 
             <div class="gallery-grid">
                 <div class="g-item tall"
-                    data-src="assets/images/corporate9.png"
+                    data-src="assets/images/Mandap-Decoration_8.jpg"
                     data-caption="Griha Pravesh Ceremony — Chennai">
-                    <img src="assets/images/corporate9.png" alt="Griha Pravesh">
+                    <img src="assets/images/Mandap-Decoration_8.jpg" alt="Griha Pravesh">
                     <div class="g-item-overlay">
                         <i class="fas fa-expand-alt"></i>
                         <span>View Full</span>
                     </div>
                 </div>
                 <div class="g-item"
-                    data-src="assets/images/corporate10.png"
+                    data-src="assets/images/Naming-cermony_2.jpg"
                     data-caption="Floral Décor — Coimbatore">
-                    <img src="assets/images/corporate10.png" alt="Floral Decoration">
+                    <img src="assets/images/Naming-cermony_2.jpg" alt="Floral Decoration">
                     <div class="g-item-overlay">
                         <i class="fas fa-expand-alt"></i>
                         <span>View Full</span>
                     </div>
                 </div>
                 <div class="g-item"
-                    data-src="assets/images/corporate3.png"
+                    data-src="assets/images/Mandap-Decoration_24.jpg"
                     data-caption="Housewarming Celebration — Hosur">
-                    <img src="assets/images/corporate3.png" alt="Housewarming">
+                    <img src="assets/images/Mandap-Decoration_24.jpg" alt="Housewarming">
                     <div class="g-item-overlay">
                         <i class="fas fa-expand-alt"></i>
                         <span>View Full</span>
                     </div>
                 </div>
                 <div class="g-item tall"
-                    data-src="assets/images/corporate2.png"
+                    data-src="assets/images/Sangeet_33.jpg"
                     data-caption="Villa Inauguration — Madurai">
-                    <img src="assets/images/corporate2.png" alt="Villa Inauguration">
+                    <img src="assets/images/Sangeet_33.jpg" alt="Villa Inauguration">
                     <div class="g-item-overlay">
                         <i class="fas fa-expand-alt"></i>
                         <span>View Full</span>
                     </div>
                 </div>
                 <div class="g-item wide"
-                    data-src="assets/images/corporate1.jpeg"
+                    data-src="assets/images/Sangeet_37.jpg"
                     data-caption="Grand Vaibhavam Ceremony — Salem">
-                    <img src="assets/images/corporate1.jpeg" alt="Grand Ceremony">
+                    <img src="assets/images/Sangeet_37.jpg" alt="Grand Ceremony">
                     <div class="g-item-overlay">
                         <i class="fas fa-expand-alt"></i>
                         <span>View Full</span>
@@ -1384,8 +1282,9 @@
     </div>
 
 
+
     <!-- ============================================================
-    FAQ
+        FAQ
     ============================================================ -->
     <section class="faq-section">
         <div class="container">
@@ -1396,47 +1295,47 @@
             <div class="faq-list">
                 <div class="faq-item">
                     <button class="faq-question">
-                        How early should we book for a corporate event?
+                        How far in advance should I book a wedding planner?
                         <i class="fas fa-plus"></i>
                     </button>
                     <div class="faq-answer">
-                        We recommend booking at least 4–8 weeks in advance for mid-size events and 3–6 months for large conferences or exhibitions. However, we can accommodate urgent bookings — contact us to check availability.
+                        We recommend booking at least 6–12 months in advance, especially for peak wedding season (November to February). However, we also manage last-minute bookings — contact us and we'll let you know our availability.
                     </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question">
-                        Do you provide GST-compliant invoicing for corporate clients?
+                        Do you manage multi-day wedding functions?
                         <i class="fas fa-plus"></i>
                     </button>
                     <div class="faq-answer">
-                        Yes. We are a registered GST entity and provide fully compliant GST invoices, itemised billing, and vendor receipts. Our billing structure is designed to integrate seamlessly with corporate procurement and finance processes.
+                        Absolutely. We specialise in managing all functions across multiple days — Haldi, Mehendi, Sangeet, Nalangu, Wedding Ceremony, and Reception — ensuring each function has its own unique theme and atmosphere.
                     </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question">
-                        Can you manage hybrid events with live streaming?
+                        Can you work within a tight budget?
                         <i class="fas fa-plus"></i>
                     </button>
                     <div class="faq-answer">
-                        Absolutely. We have extensive experience with hybrid and virtual corporate events — including multi-camera live streaming, virtual audience management, and real-time Q&A integration for remote participants.
+                        Yes. We work with a wide range of budgets and are known for maximising value. During your consultation, we will be transparent about what's achievable within your budget and suggest creative alternatives where needed.
                     </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question">
-                        Do you handle events outside Hosur and Chennai?
+                        Do you cover weddings outside Hosur?
                         <i class="fas fa-plus"></i>
                     </button>
                     <div class="faq-answer">
-                        Yes. We manage corporate events across all major cities in Tamilnadu including Coimbatore, Madurai, Salem, Trichy, Vellore, and Pondicherry. We also manage outstation and destination corporate events on request.
+                        Yes! We operate across all major cities in Tamilnadu including Chennai, Coimbatore, Madurai, Salem, Trichy, Vellore, and Pondicherry. We also manage destination weddings outside Tamil Nadu on request.
                     </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question">
-                        Can you match our company's brand guidelines for event design?
+                        What is included in the free consultation?
                         <i class="fas fa-plus"></i>
                     </button>
                     <div class="faq-answer">
-                        Yes — brand consistency is a priority for corporate events. Our design team works closely with your marketing or brand team to ensure all visuals, signage, stage design, and collateral adhere precisely to your brand guidelines.
+                        Our free consultation covers a detailed discussion of your wedding vision, preferred dates, guest count, venue preferences, décor ideas, and budget. We also give you a preliminary overview of what we can deliver and our process. There is absolutely no obligation to book.
                     </div>
                 </div>
             </div>
@@ -1444,16 +1343,16 @@
     </section>
 
     <!-- ============================================================
-    CTA BANNER
+        CTA BANNER
     ============================================================ -->
     <section class="svc-cta">
-        <h2>Ready to Plan Your <em>Corporate Event?</em></h2>
-        <p>Speak with our corporate event specialists today — free consultation, detailed proposal, no obligation.</p>
+        <h2>Ready to Plan Your <em>Dream Wedding?</em></h2>
+        <p>Talk to our wedding specialists today — free consultation, no obligation. Let's create something unforgettable together.</p>
         <div class="cta-btns">
             <a href="tel:+917996605557" class="btn-white">
                 <i class="fas fa-phone-alt"></i> Call Us Now
             </a>
-            <a href="https://wa.me/917996605557?text=Hi, I'm interested in Corporate Event Management services" target="_blank" class="btn-outline-white">
+            <a href="https://wa.me/917996605557?text=Hi, I'm interested in Wedding Planning services" target="_blank" class="btn-outline-white">
                 <i class="fab fa-whatsapp"></i> WhatsApp Us
             </a>
         </div>
@@ -1467,9 +1366,9 @@
   <div class="footer-main">
 
     <!-- Left: Logo + Description + Socials -->
-    <div class="footer-brand">
-      <img src="assets/images/logo.png" alt="5 Star Events">
-      <p>Tamilnadu's premier ISO 9001:2015 certified event management company. 18+ years of crafting unforgettable celebrations across Tamilnadu.</p>
+        <div class="footer-brand">
+            <img src="assets/images/logo.png" alt="5 Star Events">
+            <p>Tamilnadu's premier ISO 9001:2015 certified event management company. 18+ years of crafting unforgettable celebrations across Tamilnadu.</p>
       <div class="footer-socials">
           <a href="https://www.instagram.com/5__star__events?igsh=MW40YzFyYmFlNmk5dA==" target="_blank"
             aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -1481,30 +1380,28 @@
         </div>
     </div>
 
-    <!-- Middle: Quick Links -->
-    <!-- Middle: Quick Links -->
-    <div class="footer-col">
-      <h6>Quick Links</h6>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="wedding service.html">Services</a></li>
-        <!-- <li><a href="#venues">Venues</a></li> -->
-        <li><a href="decor-gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <!-- Middle: Quick Links -->
-    <div class="footer-col">
-      <h6>Services</h6>
-      <ul>
-        <li><a href="wedding service.html">Wedding Planners</a></li>
-        <li><a href="destination wedding.html">Destination Wedding</a></li>
-        <li><a href="corporate evnt.html">Corporate Events</a></li>
-        <li><a href="house opening ceremony.html">House Opening Ceremony</a></li>
-        <li><a href="private parties.html">Private Parties</a></li>
-      </ul>
-    </div>
+      <div class="footer-col">
+        <h6>Quick Links</h6>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="wedding-planners.html">Services</a></li>
+          <!-- <li><a href="#venues">Venues</a></li> -->
+          <li><a href="decor-gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <!-- Middle: Quick Links -->
+      <div class="footer-col">
+        <h6>Services</h6>
+        <ul>
+          <li><a href="wedding-planners.html">Wedding Planners</a></li>
+          <li><a href="destination-wedding.html">Destination Wedding</a></li>
+          <li><a href="corporate-events.html">Corporate Events</a></li>
+          <li><a href="house-opening-ceremony.html">House Opening Ceremony</a></li>
+          <li><a href="private-parties.html">Private Parties</a></li>
+        </ul>
+      </div>
 
     <!-- Right: Contact Info -->
     <div class="footer-col">
@@ -1553,13 +1450,10 @@
         <i class="fab fa-whatsapp" style="color:#fff; font-size:1.6rem;"></i>
     </a>
 
-        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-        <script src="assets/js/Script.js"></script>
-
-
-        
-    <script>
-        // ── FAQ ACCORDION ──────────────────────────────────────────────
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="assets/js/Script.js"></script>
+<script>
+        /* ── FAQ ACCORDION ── */
         document.querySelectorAll('.faq-question').forEach(btn => {
             btn.addEventListener('click', () => {
                 const answer = btn.nextElementSibling;
@@ -1575,7 +1469,7 @@
             });
         });
 
-          /* ── LIGHTBOX ── */
+        /* ── LIGHTBOX ── */
         const items = document.querySelectorAll('.g-item[data-src]');
         const lightbox = document.getElementById('lightbox');
         const lbImg = document.getElementById('lb-img');
@@ -1635,5 +1529,5 @@
             }
         });
 
-    </script>
+                </script>
 

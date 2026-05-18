@@ -41,123 +41,6 @@
 
         body { font-family: var(--sans); background: var(--white); color: var(--text); }
 
-        /* ── HEADER ────────────────────────────────────────────────────
-        #site-header {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            z-index: 1000;
-            background: rgba(10,22,40,0.92);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(74,144,217,.15);
-            transition: background .3s;
-        }
-        .header-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-            height: 72px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 24px;
-        }
-        .logo img { height: 44px; width: auto; display: block; filter: brightness(1.1); }
-        .desktop-nav { display: flex; align-items: center; gap: 4px; }
-        .nav-link {
-            font-family: var(--sans);
-            font-size: .78rem;
-            font-weight: 500;
-            letter-spacing: .05em;
-            text-transform: uppercase;
-            color: rgba(255,255,255,.75);
-            text-decoration: none;
-            padding: 8px 14px;
-            transition: color .25s;
-            position: relative;
-        }
-        .nav-link:hover, .nav-link.active { color: #fff; }
-        .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: 2px; left: 14px; right: 14px;
-            height: 2px;
-            background: var(--blue-light);
-        }
-        .dropdown { position: relative; }
-        .dropdown-menu {
-            position: absolute;
-            top: calc(100% + 8px);
-            left: 0;
-            background: var(--dark-2);
-            border: 1px solid rgba(74,144,217,.2);
-            min-width: 200px;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-8px);
-            transition: all .25s;
-            z-index: 100;
-        }
-        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
-        .dropdown-menu a {
-            display: block;
-            padding: 12px 18px;
-            font-family: var(--sans);
-            font-size: .78rem;
-            color: rgba(255,255,255,.7);
-            text-decoration: none;
-            transition: color .2s, background .2s;
-        }
-        .dropdown-menu a:hover { color: #fff; background: rgba(74,144,217,.12); }
-        .btn-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--blue);
-            color: #fff;
-            font-family: var(--sans);
-            font-size: .72rem;
-            font-weight: 700;
-            letter-spacing: .1em;
-            text-transform: uppercase;
-            padding: 10px 20px;
-            text-decoration: none;
-            white-space: nowrap;
-            transition: background .25s;
-            flex-shrink: 0;
-        }
-        .btn-cta:hover { background: var(--blue-dark); }
-        #mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: #fff;
-            font-size: 1.3rem;
-            cursor: pointer;
-            padding: 8px;
-        }
-        #mobile-menu {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: var(--dark);
-            z-index: 999;
-            padding: 88px 32px 32px;
-        }
-        #mobile-menu.open { display: block; }
-        .mobile-link {
-            display: block;
-            padding: 16px 0;
-            font-family: var(--sans);
-            font-size: 1rem;
-            color: rgba(255,255,255,.8);
-            text-decoration: none;
-            border-bottom: 1px solid rgba(255,255,255,.08);
-        }
-        @media (max-width: 900px) {
-            .desktop-nav, .btn-cta { display: none; }
-            #mobile-menu-btn { display: block; }
-        } */
-
         /* ── HERO ────────────────────────────────────────────────────── */
         #home {
             position: relative;
@@ -1066,7 +949,7 @@
   <!-- ============================================================
        HEADER — Fixed top navigation bar
   ============================================================ -->
-  <header id="site-header">
+  <header id="site-header" class="scrolled" data-force-scrolled="true">
     <div class="header-inner">
 
       <!-- Logo -->
@@ -1080,20 +963,20 @@
         <a href="aboutus.html" class="nav-link">About Us</a>
 
         <div class="dropdown">
-          <a href="wedding service.html" class="nav-link active">
+          <a href="wedding-planners.html" class="nav-link active">
             Services <i class="fas fa-caret-down" style="font-size:0.7rem;"></i>
           </a>
           <div class="dropdown-menu">
-            <a href="wedding service.html">Wedding Planners</a>
-            <a href="destination wedding.html">Destination Wedding</a>
-            <a href="corporate evnt.html">Corporate Events</a>
-            <a href="house opening ceremony.html">House opening ceremony</a>
-            <a href="private parties.html">Private Parties</a>
+            <a href="wedding-planners.html">Wedding Planners</a>
+            <a href="destination-wedding.html">Destination Wedding</a>
+            <a href="corporate-events.html">Corporate Events</a>
+            <a href="house-opening-ceremony.html">House opening ceremony</a>
+            <a href="private-parties.html">Private Parties</a>
           </div>
         </div>
 
         <!-- <a href="#venues" class="nav-link">Venues</a> -->
-        <a href="our client.html" class="nav-link">Our Clients</a>
+        <a href="our-clients.html" class="nav-link">Our Clients</a>
 
         <!-- <div class="dropdown"> -->
           <a href="decor-gallery.html" class="nav-link">
@@ -1139,16 +1022,16 @@
           Services <i class="fas fa-chevron-down" style="font-size:0.7rem; margin-left:8px;"></i>
         </button>
         <div id="services-menu" class="mobile-submenu">
-          <a href="wedding service.html" class="mobile-sublink">Wedding Planners</a>
-          <a href="destination wedding.html" class="mobile-sublink">Destination Wedding</a>
-          <a href="corporate evnt.html" class="mobile-sublink">Corporate Events</a>
-          <a href="private parties.html" class="mobile-sublink">Private Parties</a>
-          <a href="house opening ceremony.html" class="mobile-sublink">House Opening Ceremony</a>
+          <a href="wedding-planners.html" class="mobile-sublink">Wedding Planners</a>
+          <a href="destination-wedding.html" class="mobile-sublink">Destination Wedding</a>
+          <a href="corporate-events.html" class="mobile-sublink">Corporate Events</a>
+          <a href="private-parties.html" class="mobile-sublink">Private Parties</a>
+          <a href="house-opening-ceremony.html" class="mobile-sublink">House Opening Ceremony</a>
         </div>
       </div>
 
       <!-- <a href="#venues" class="mobile-link">Venues</a> -->
-      <a href="our client.html" class="mobile-link">Our Clients</a>
+      <a href="our-clients.html" class="mobile-link">Our Clients</a>
 
       <!-- Gallery Dropdown -->
        <a href="decor-gallery.html" class="mobile-link">Gallery</a>
@@ -1618,7 +1501,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="wedding service.html">Services</a></li>
+        <li><a href="wedding-planners.html">Services</a></li>
         <!-- <li><a href="#venues">Venues</a></li> -->
         <li><a href="decor-gallery.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -1628,11 +1511,11 @@
     <div class="footer-col">
       <h6>Services</h6>
       <ul>
-        <li><a href="wedding service.html">Wedding Planners</a></li>
-        <li><a href="destination wedding.html">Destination Wedding</a></li>
-        <li><a href="corporate evnt.html">Corporate Events</a></li>
-        <li><a href="house opening ceremony.html">House Opening Ceremony</a></li>
-        <li><a href="private parties.html">Private Parties</a></li>
+        <li><a href="wedding-planners.html">Wedding Planners</a></li>
+        <li><a href="destination-wedding.html">Destination Wedding</a></li>
+        <li><a href="corporate-events.html">Corporate Events</a></li>
+        <li><a href="house-opening-ceremony.html">House Opening Ceremony</a></li>
+        <li><a href="private-parties.html">Private Parties</a></li>
       </ul>
     </div>
 
