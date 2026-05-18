@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+    <title>Wedding Planners in Tamilnadu</title>
+    <meta name="description"
+        content="5 Star Event Management – Expert wedding planners in Tamilnadu. Full-service wedding planning, décor, catering & more. 18+ years experience. ISO Certified.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="assets/css/Style.css">
+
+    <style>
+        /* ── THEME: WHITE & BLUE ─────────────────────────────────────── */
+        :root {
+            --blue:         #1a5fb4;
+            --blue-light:   #4a90d9;
+            --blue-dark:    #0d3b7a;
+            --blue-pale:    #e8f0fb;
+            --blue-pale2:   #d0e2f5;
+            --white:        #ffffff;
+            --off-white:    #f5f8ff;
+            --dark:         #0a1628;
+            --dark-2:       #112040;
+            --text:         #2c3e5a;
+            --text-muted:   #6b7f9e;
+            --serif:        'Cormorant Garamond', Georgia, serif;
+            --sans:         'Inter', sans-serif;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        /* ── HERO ────────────────────────────────────────────────────── */
+        /* reuses your existing #home / hero-slide / hero-overlay from Style.css */
+
+        /* ── BREADCRUMB ──────────────────────────────────────────────── */
+        .breadcrumb-bar {
+            background: var(--blue-pale);
+            border-bottom: 1px solid var(--blue-pale2);
+            padding: 12px 24px;
+        }
+        .breadcrumb-bar .bc-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--sans);
+            font-size: .78rem;
+            color: var(--text-muted);
+        }
+        .breadcrumb-bar a { color: var(--blue); text-decoration: none; }
+        .breadcrumb-bar a:hover { text-decoration: underline; }
+        .breadcrumb-bar i { font-size: .6rem; }
+
+        /* ── SECTION HELPERS ─────────────────────────────────────────── */
+        .sec-label {
+            font-family: var(--sans);
+            font-size: .68rem;
+            font-weight: 700;
+            letter-spacing: .28em;
+            text-transform: uppercase;
+            color: var(--blue);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .sec-label::before {
+            content: '';
+            display: block;
+            width: 28px; height: 2px;
+            background: var(--blue);
+            flex-shrink: 0;
+        }
+        .sec-title {
+            font-family: var(--serif);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 300;
+            line-height: 1.2;
+            color: var(--dark);
+        }
+        .sec-title em { font-style: italic; color: var(--blue); }
+        .sec-title-white { color: #fff; }
+        .sec-title-white em { color: #93c5fd; }
+        .sec-divider {
+            width: 56px; height: 2px;
+            background: linear-gradient(90deg, var(--blue), var(--blue-light));
+            margin-top: 20px;
+        }
+        .sec-divider-white {
+            background: linear-gradient(90deg, #fff, rgba(255,255,255,.3));
+        }
+        .container { max-width: 1100px; margin: 0 auto; }
+
+        /* ── INTRO SECTION ───────────────────────────────────────────── */
+        .svc-intro {
+            background: var(--white);
+            padding: 96px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+        .svc-intro::after {
+            content: '';
+            position: absolute;
+            top: -120px; right: -120px;
+            width: 420px; height: 420px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(26,95,180,.07), transparent 70%);
+            pointer-events: none;
+        }
+        .svc-intro .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 72px;
+            align-items: center;
+            position: relative;
+        }
+        .svc-intro p {
+            font-family: var(--sans);
+            font-size: .95rem;
+            line-height: 1.85;
+            color: var(--text);
+            margin-top: 20px;
+        }
+        .svc-intro-img {
+            position: relative;
+        }
+        .svc-intro-img img {
+            width: 100%;
+            height: 460px;
+            object-fit: cover;
+            display: block;
+        }
+        .svc-intro-img::before {
+            content: '';
+            position: absolute;
+            top: -14px; left: -14px;
+            width: 60%; height: 60%;
+            border: 2px solid var(--blue-light);
+            z-index: 0;
+            pointer-events: none;
+        }
+        .svc-intro-img::after {
+            content: '';
+            position: absolute;
+            bottom: -14px; right: -14px;
+            width: 60%; height: 60%;
+            border: 2px solid var(--blue-pale2);
+            z-index: 0;
+            pointer-events: none;
+        }
+        .svc-intro-img img { position: relative; z-index: 1; }
+        .svc-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--blue-pale);
+            border: 1px solid var(--blue-pale2);
+            padding: 10px 18px;
+            margin-top: 28px;
+            font-family: var(--sans);
+            font-size: .78rem;
+            font-weight: 600;
+            color: var(--blue-dark);
+        }
+        .svc-badge i { color: var(--blue); }
+/* popular */
+        .destinations {
+            background: var(--off-white);
+            padding: 96px 24px;
+        }
+        .destinations .container { text-align: center; }
+        .dest-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 56px;
+        }
+        .dest-card {
+            position: relative;
+            overflow: hidden;
+            height: 300px;
+            cursor: pointer;
+        }
+        .dest-card img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform .6s ease;
+        }
+        .dest-card:hover img { transform: scale(1.08); }
+        .dest-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10,22,40,.85) 0%, rgba(10,22,40,.2) 60%, transparent 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 24px;
+            transition: background .3s;
+        }
+        .dest-card:hover .dest-overlay {
+            background: linear-gradient(to top, rgba(13,59,122,.9) 0%, rgba(13,59,122,.35) 60%, transparent 100%);
+        }
+        .dest-name {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .dest-tag {
+            font-family: var(--sans);
+            font-size: .72rem;
+            font-weight: 600;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            color: #93c5fd;
+        }
+        .dest-card:hover .dest-btn {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .dest-btn {
+            display: inline-block;
+            margin-top: 14px;
+            padding: 8px 20px;
+            background: var(--blue-light);
+            color: #fff;
+            font-family: var(--sans);
+            font-size: .72rem;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity .3s, transform .3s;
+            align-self: flex-start;
+        }
+
+
+        /* ── WHAT'S INCLUDED ─────────────────────────────────────────── */
+        .included {
+            background: var(--off-white);
+            padding: 96px 24px;
+        }
+        .included .container { text-align: center; }
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 56px;
+            text-align: left;
+        }
+        .inc-card {
+            background: var(--white);
+            padding: 28px 24px;
+            border-top: 3px solid transparent;
+            transition: border-color .3s, box-shadow .3s, transform .3s;
+            box-shadow: 0 1px 12px rgba(26,95,180,.06);
+            text-align: center;
+        }
+        .inc-card:hover {
+            border-color: var(--blue);
+            box-shadow: 0 8px 32px rgba(26,95,180,.12);
+            transform: translateY(-4px);
+        }
+        .inc-card-icon {
+            width: 48px; height: 48px;
+            background: var(--blue-pale);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--blue);
+            font-size: 1.1rem;
+            margin: 0 auto 16px;
+        }
+        .inc-card h4 {
+            font-family: var(--serif);
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+        .inc-card p {
+            font-family: var(--sans);
+            font-size: .83rem;
+            line-height: 1.7;
+            color: var(--text-muted);
+        }
+
+        /* ── WHY CHOOSE US ───────────────────────────────────────────── */
+        .why-wedding {
+            background: var(--blue-dark);
+            padding: 96px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+        .why-wedding::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 80% 20%, rgba(74,144,217,.15), transparent 60%);
+            pointer-events: none;
+        }
+        .why-wedding .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+        }
+        .why-wedding-img img {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+            display: block;
+        }
+        .why-points { margin-top: 40px; }
+        .why-point {
+            display: flex;
+            gap: 18px;
+            margin-bottom: 28px;
+            align-items: flex-start;
+        }
+        .why-point-icon {
+            width: 36px; height: 36px;
+            flex-shrink: 0;
+            background: rgba(74,144,217,.15);
+            border: 1px solid rgba(74,144,217,.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #93c5fd;
+            font-size: .85rem;
+            margin-top: 2px;
+        }
+        .why-point h5 {
+            font-family: var(--serif);
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .why-point p {
+            font-family: var(--sans);
+            font-size: .82rem;
+            line-height: 1.65;
+            color: rgba(255,255,255,.55);
+        }
+
+        /* ── PACKAGES ────────────────────────────────────────────────── */
+        .packages {
+            background: var(--white);
+            padding: 96px 24px;
+        }
+        .packages .container { text-align: center; }
+        .pkg-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-top: 56px;
+            text-align: left;
+        }
+        .pkg-card {
+            border: 1px solid var(--blue-pale2);
+            padding: 40px 32px 36px;
+            position: relative;
+            transition: box-shadow .3s, transform .3s;
+        }
+        .pkg-card:hover {
+            box-shadow: 0 12px 40px rgba(26,95,180,.12);
+            transform: translateY(-4px);
+        }
+        .pkg-card.featured {
+            border-color: var(--blue);
+            background: var(--blue);
+        }
+        .pkg-card.featured .pkg-name,
+        .pkg-card.featured .pkg-price,
+        .pkg-card.featured .pkg-desc,
+        .pkg-card.featured .pkg-feature { color: #fff; }
+        .pkg-card.featured .pkg-feature i { color: #93c5fd; }
+        .pkg-tag {
+            position: absolute;
+            top: -12px; left: 50%;
+            transform: translateX(-50%);
+            background: var(--blue-light);
+            color: #fff;
+            font-family: var(--sans);
+            font-size: .65rem;
+            font-weight: 700;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            padding: 4px 14px;
+        }
+        .pkg-name {
+            font-family: var(--sans);
+            font-size: .72rem;
+            font-weight: 700;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--blue);
+            margin-bottom: 10px;
+        }
+        .pkg-price {
+            font-family: var(--serif);
+            font-size: 2.2rem;
+            font-weight: 300;
+            color: var(--dark);
+            margin-bottom: 4px;
+        }
+        .pkg-price span {
+            font-family: var(--sans);
+            font-size: .8rem;
+            font-weight: 400;
+            color: var(--text-muted);
+        }
+        .pkg-desc {
+            font-family: var(--sans);
+            font-size: .82rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin: 14px 0 24px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--blue-pale2);
+        }
+        .pkg-card.featured .pkg-desc { border-bottom-color: rgba(255,255,255,.2); }
+        .pkg-feature {
+            font-family: var(--sans);
+            font-size: .83rem;
+            color: var(--text);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .pkg-feature i { color: var(--blue); font-size: .75rem; margin-top: 3px; flex-shrink: 0; }
+        .pkg-btn {
+            display: block;
+            text-align: center;
+            margin-top: 28px;
+            padding: 13px 24px;
+            font-family: var(--sans);
+            font-size: .78rem;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background .25s, color .25s;
+        }
+        .pkg-btn-outline {
+            border: 2px solid var(--blue);
+            color: var(--blue);
+            background: transparent;
+        }
+        .pkg-btn-outline:hover { background: var(--blue); color: #fff; }
+        .pkg-btn-white {
+            background: #fff;
+            color: var(--blue-dark);
+        }
+        .pkg-btn-white:hover { background: var(--blue-pale); }
+
+        /* ── HOW IT WORKS ────────────────────────────────────────────── */
+        .how-it-works {
+            background: var(--off-white);
+            padding: 96px 24px;
+        }
+        .how-it-works .container { text-align: center; }
+        .steps-row {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0;
+            margin-top: 64px;
+            position: relative;
+        }
+        .steps-row::before {
+            content: '';
+            position: absolute;
+            top: 27px;
+            left: 10%; width: 80%; height: 1px;
+            background: linear-gradient(90deg, transparent, var(--blue-light), transparent);
+        }
+        .step-box {
+            padding: 0 12px;
+            text-align: center;
+        }
+        .step-num {
+            width: 54px; height: 54px;
+            border-radius: 50%;
+            background: var(--white);
+            border: 2px solid var(--blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-family: var(--serif);
+            font-size: 1.3rem;
+            color: var(--blue);
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 0 0 6px var(--off-white);
+        }
+        .step-box h5 {
+            font-family: var(--serif);
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+        .step-box p {
+            font-family: var(--sans);
+            font-size: .76rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+        }
+
+        /* ── GALLERY STRIP ───────────────────────────────────────────── */
+        .gallery-strip {
+            background: var(--white);
+            padding: 80px 24px;
+        }
+        .gallery-strip .container { text-align: center; }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 220px 220px;
+            gap: 10px;
+            margin-top: 48px;
+        }
+        .g-item {
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+        .g-item img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform .5s ease;
+        }
+        .g-item:hover img { transform: scale(1.06); }
+        .g-item.tall { grid-row: span 2; }
+        .g-item.wide { grid-column: span 2; }
+        .g-item-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(10,22,40,0);
+            transition: background .3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .g-item:hover .g-item-overlay { background: rgba(10,22,40,.45); }
+        .g-item-overlay i {
+            color: #fff;
+            font-size: 1.6rem;
+            opacity: 0;
+            transition: opacity .3s, transform .3s;
+            transform: scale(.7);
+        }
+        .g-item-overlay span {
+            color: #fff;
+            font-family: var(--sans);
+            font-size: .72rem;
+            font-weight: 600;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            opacity: 0;
+            transition: opacity .3s .05s;
+        }
+        .g-item:hover .g-item-overlay i {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .g-item:hover .g-item-overlay span { opacity: 1; }
+
+        /* ── LIGHTBOX ────────────────────────────────────────────────── */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0,0,0,.92);
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .lightbox.active {
+            display: flex;
+            animation: lbFadeIn .25s ease;
+        }
+        @keyframes lbFadeIn {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+        .lb-inner {
+            position: relative;
+            max-width: 1000px;
+            width: 100%;
+            animation: lbSlideUp .3s ease;
+        }
+        @keyframes lbSlideUp {
+            from { transform: translateY(24px); opacity: 0; }
+            to   { transform: translateY(0);    opacity: 1; }
+        }
+        .lb-img {
+            width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            display: block;
+        }
+        .lb-close {
+            position: absolute;
+            top: -44px; right: 0;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.4rem;
+            cursor: pointer;
+            width: 36px; height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: .7;
+            transition: opacity .2s, transform .2s;
+        }
+        .lb-close:hover { opacity: 1; transform: rotate(90deg); }
+        .lb-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,.12);
+            border: 1px solid rgba(255,255,255,.2);
+            color: #fff;
+            font-size: 1.1rem;
+            width: 44px; height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background .2s;
+        }
+        .lb-nav:hover { background: rgba(255,255,255,.25); }
+        .lb-prev { left: -60px; }
+        .lb-next { right: -60px; }
+        .lb-caption {
+            text-align: center;
+            color: rgba(255,255,255,.6);
+            font-family: var(--sans);
+            font-size: .78rem;
+            margin-top: 14px;
+            letter-spacing: .06em;
+        }
+        .lb-counter {
+            position: absolute;
+            bottom: -36px; left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255,255,255,.4);
+            font-family: var(--sans);
+            font-size: .72rem;
+        }
+
+        /* ── FAQ ─────────────────────────────────────────────────────── */
+        .faq-section {
+            background: var(--white);
+            padding: 96px 24px;
+        }
+        .faq-section .container { max-width: 820px; text-align: center; }
+        .faq-list { margin-top: 52px; text-align: left; }
+        .faq-item {
+            border-bottom: 1px solid var(--blue-pale2);
+        }
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 22px 4px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            font-family: var(--serif);
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: var(--dark);
+            text-align: left;
+            gap: 16px;
+        }
+        .faq-question i {
+            color: var(--blue);
+            font-size: .85rem;
+            flex-shrink: 0;
+            transition: transform .3s;
+        }
+        .faq-question.open i { transform: rotate(45deg); }
+        .faq-answer {
+            font-family: var(--sans);
+            font-size: .88rem;
+            line-height: 1.75;
+            color: var(--text-muted);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .4s ease, padding .3s;
+        }
+        .faq-answer.open {
+            max-height: 300px;
+            padding-bottom: 20px;
+        }
+
+        /* ── CTA BANNER ──────────────────────────────────────────────── */
+        .svc-cta {
+            background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);
+            padding: 96px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .svc-cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(255,255,255,.06), transparent 70%);
+        }
+        .svc-cta h2 {
+            font-family: var(--serif);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 300;
+            color: #fff;
+            margin-bottom: 16px;
+            position: relative;
+        }
+        .svc-cta h2 em { font-style: italic; color: #93c5fd; }
+        .svc-cta p {
+            font-family: var(--sans);
+            font-size: .95rem;
+            color: rgba(255,255,255,.65);
+            max-width: 500px;
+            margin: 0 auto 44px;
+            line-height: 1.7;
+            position: relative;
+        }
+        .cta-btns {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+        }
+        .btn-white {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #fff;
+            color: var(--blue-dark);
+            font-family: var(--sans);
+            font-size: .78rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            padding: 15px 34px;
+            text-decoration: none;
+            transition: background .25s, transform .25s;
+        }
+        .btn-white:hover { background: var(--blue-pale); transform: translateY(-2px); }
+        .btn-outline-white {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 2px solid rgba(255,255,255,.5);
+            color: #fff;
+            font-family: var(--sans);
+            font-size: .78rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            padding: 15px 34px;
+            text-decoration: none;
+            transition: border-color .25s, background .25s;
+        }
+        .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+
+        /* ── RESPONSIVE ──────────────────────────────────────────────── */
+        @media (max-width: 1024px) {
+            .included-grid { grid-template-columns: repeat(2, 1fr); }
+            .dest-grid { grid-template-columns: repeat(2, 1fr); }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
+            .g-item.tall { grid-row: span 1; }
+            .g-item.wide { grid-column: span 1; }
+        }
+        @media (max-width: 900px) {
+            .svc-intro .container,
+            .why-wedding .container { grid-template-columns: 1fr; gap: 48px; }
+            .why-wedding-img { order: -1; }
+            .why-wedding-img img { height: 320px; }
+            .pkg-grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
+            .steps-row { grid-template-columns: repeat(3, 1fr); gap: 32px; }
+            .steps-row::before { display: none; }
+        }
+        @media (max-width: 600px) {
+            .included-grid { grid-template-columns: 1fr; }
+            .steps-row { grid-template-columns: 1fr 1fr; }
+            .gallery-grid { grid-template-columns: 1fr 1fr; }
+            .svc-intro-img::before,
+            .svc-intro-img::after { display: none; }
+        }
+    </style>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       HEADER — Fixed top navigation bar
+  ============================================================ -->
+  <header id="site-header">
+    <div class="header-inner">
+
+            <!-- Logo -->
+            <a href="#" class="logo">
+        <img src="/assets/images/logo.png" alt="5 Star Event Management Logo"
+          style="height:80px; width:auto;">
+      </a>
+</a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="aboutus.html" class="nav-link">About Us</a>
+
+        <div class="dropdown">
+          <a href="wedding service.html" class="nav-link active">
+            Services <i class="fas fa-caret-down" style="font-size:0.7rem;"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="wedding service.html">Wedding Planners</a>
+            <a href="destination wedding.html">Destination Wedding</a>
+            <a href="corporate evnt.html">Corporate Events</a>
+            <a href="house opening ceremony.html">House opening ceremony</a>
+            <a href="private parties.html">Private Parties</a>
+          </div>
+        </div>
+
+        <!-- <a href="#venues" class="nav-link">Venues</a> -->
+        <a href="our client.html" class="nav-link">Our Clients</a>
+
+        <!-- <div class="dropdown"> -->
+          <a href="decor-gallery.html" class="nav-link">
+            Gallery 
+          </a>
+          <!-- <div class="dropdown-menu">
+            <a href="/wedding-albums(images).html">Wedding Albums</a>
+            <a href="/destination-wedding(images).html">Destination Wedding</a>
+            <a href="/corporate-events(images).html">Corporate Events</a>
+            <a href="/house-opening-ceremony(images).html">House Opening Ceremony</a>
+            <a href="/private-parties(images).html">Private Parties</a>
+          </div>
+        </div> -->
+
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <!-- Call Button (desktop) -->
+      <a href="tel:+917996605557" class="btn-cta">
+        <i class="fas fa-phone-alt" style="font-size:0.75rem;"></i>
+        +91-799-660-5557
+      </a>
+
+      <!-- Hamburger (mobile only) -->
+      <button id="mobile-menu-btn" aria-label="Open menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+
+  <!-- ============================================================
+       MOBILE MENU — Full-screen overlay nav for small screens
+  ============================================================ -->
+  <div id="mobile-menu">
+    <nav>
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="aboutus.html" class="mobile-link">About Us</a>
+
+      <!-- Services Dropdown -->
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-toggle" onclick="toggleMobileDropdown('services-menu')">
+          Services <i class="fas fa-chevron-down" style="font-size:0.7rem; margin-left:8px;"></i>
+        </button>
+        <div id="services-menu" class="mobile-submenu">
+          <a href="wedding service.html" class="mobile-sublink">Wedding Planners</a>
+          <a href="destination wedding.html" class="mobile-sublink">Destination Wedding</a>
+          <a href="corporate evnt.html" class="mobile-sublink">Corporate Events</a>
+          <a href="private parties.html" class="mobile-sublink">Private Parties</a>
+          <a href="house opening ceremony.html" class="mobile-sublink">House Opening Ceremony</a>
+        </div>
+      </div>
+
+      <!-- <a href="#venues" class="mobile-link">Venues</a> -->
+      <a href="our client.html" class="mobile-link">Our Clients</a>
+
+      <!-- Gallery Dropdown -->
+       <a href="decor-gallery.html" class="mobile-link">Gallery</a>
+      <!-- <div class="mobile-dropdown">
+        <button class="mobile-dropdown-toggle" onclick="toggleMobileDropdown('gallery-menu')">
+          Gallery <i class="fas fa-chevron-down" style="font-size:0.7rem; margin-left:8px;"></i>
+        </button>
+        <div id="gallery-menu" class="mobile-submenu">
+          <a href="wedding-albums.html" class="mobile-sublink">Wedding Albums</a>
+          <a href="destination-wedding.html" class="mobile-sublink">Destination Wedding</a>
+          <a href="corporate-events.html" class="mobile-sublink">Corporate Events</a>
+          <a href="house-opening-ceremony.html" class="mobile-sublink">House Opening Ceremony</a>
+          <a href="private-parties.html" class="mobile-sublink">Private Parties</a>
+        </div>
+      </div> -->
+
+      <a href="contact.html" class="mobile-link">Contact Us</a>
+      <a href="tel:+917996605557" class="mobile-link" style="color:var(--primary); margin-top:16px;">
+        <i class="fas fa-phone-alt"></i> Call Now
+      </a>
+    </nav>
+  </div>
+
+    <!-- ============================================================
+        HERO — same structure as About page
+    ============================================================ -->
+    <section id="home">
+        <div class="hero-slide active"
+            style="background-image:url('assets/images/Mandap-Decoration_25.jpg');">
+        </div>
+        <div class="hero-slide"
+            style="background-image:url('assets/images/Wedding-Backdrops_7.jpg');">
+        </div>
+        <div class="hero-slide"
+            style="background-image:url('assets/images/Wedding-Backdrops_26.jpg');">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content" style="margin-top:250px;">
+            <p class="hero-label" style="color:#fff; font-size:1.25rem; font-weight:bold;">
+  Our Services
+</p>
+<h1 class="hero-title">Wedding Planners Across South India</h1>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+        INTRO SECTION
+    ============================================================ -->
+    <section class="svc-intro">
+        <div class="container">
+            <div>
+    <p class="sec-label">Wedding Planners</p>
+    <h2 class="sec-title">Your Dream Wedding, <em>Perfectly Planned</em></h2>
+    <div class="sec-divider"></div>
+
+    <p>
+        At <strong>5 Star Event Management</strong>, we believe every wedding is a once-in-a-lifetime story waiting to be beautifully crafted. With 20+ years of experience and over 5000+ successful events across Tamilnadu, Kerala, Karnataka, and Andhra Pradesh, our expert planners bring your vision to life with elegance and precision.
+    </p>
+
+    <p>
+        From the first consultation to the grand celebration, we manage every detail with creativity, care, and seamless coordination — ensuring you and your loved ones enjoy every moment stress-free.
+    </p>
+
+    <div class="svc-badge">
+        <i class="fas fa-certificate"></i> ISO 9001:2015 Certified Wedding Planners
+    </div>
+
+    <div class="svc-badge" style="margin-top:10px;">
+        <i class="fas fa-heart"></i> 5000+ Events Successfully Delivered
+    </div>
+</div>
+            <div class="svc-intro-img">
+                <img src="assets/images/Sangeet_31.jpg"
+                    alt="Beautiful Wedding Decoration by 5 Star Event Management">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+        POPULAR 
+    ============================================================ -->
+
+    <section class="destinations">
+    <div class="container">
+        <p class="sec-label" style="justify-content:center;">What We Offer</p>
+        <h2 class="sec-title">Traditional <em>Wedding Services</em></h2>
+        <div class="sec-divider" style="margin-left:auto; margin-right:auto;"></div>
+
+        <div class="dest-grid">
+
+            <div class="dest-card">
+                <img src="assets/images/Wedding-Backdrops_3.jpg" alt="Wedding Stage Decoration">
+                <div class="dest-overlay">
+                    <span class="dest-tag">Stage Setup</span>
+                    <div class="dest-name">Wedding Stage Decoration</div>
+                    <a href="tel:+917996605557" class="dest-btn">Enquire Now</a>
+                </div>
+            </div>
+
+            <div class="dest-card">
+                <img src="assets/images/Wedding-Backdrops_22.jpg" alt="Hall Decoration">
+                <div class="dest-overlay">
+                    <span class="dest-tag">Venue Setup</span>
+                    <div class="dest-name">Marriage Hall Decoration</div>
+                    <a href="tel:+917996605557" class="dest-btn">Enquire Now</a>
+                </div>
+            </div>
+
+            <div class="dest-card">
+                <img src="assets/images/Wedding-Backdrops_4.jpg" alt="Mandap Decoration">
+                <div class="dest-overlay">
+                    <span class="dest-tag">Mandapam</span>
+                    <div class="dest-name">Traditional Mandap Setup</div>
+                    <a href="tel:+917996605557" class="dest-btn">Enquire Now</a>
+                </div>
+            </div>
+
+            <div class="dest-card">
+                <img src="assets/images/Wedding-Backdrops_6.jpg" alt="Flower Decoration">
+                <div class="dest-overlay">
+                    <span class="dest-tag">Floral Design</span>
+                    <div class="dest-name">Flower Decoration</div>
+                    <a href="tel:+917996605557" class="dest-btn">Enquire Now</a>
+                </div>
+            </div>
+
+            <div class="dest-card">
+                <img src="assets/images/Party-Decorations_29.jpg" alt="Catering Services">
+                <div class="dest-overlay">
+                    <span class="dest-tag">Catering</span>
+                    <div class="dest-name">Food & Catering Services</div>
+                    <a href="tel:+917996605557" class="dest-btn">Enquire Now</a>
+                </div>
+            </div>
+
+            <div class="dest-card">
+                <img src="assets/images/Photo-Booth-Decoration_2.png" alt="Photography Services">
+                <div class="dest-overlay">
+                    <span class="dest-tag">Media</span>
+                    <div class="dest-name">Photography & Videography</div>
+                    <a href="tel:+917996605557" class="dest-btn">Enquire Now</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+    <!-- ============================================================
+        WHAT'S INCLUDED
+    ============================================================ -->
+    <section class="included">
+        <div class="container">
+            <p class="sec-label" style="justify-content:center;">What's Included</p>
+            <h2 class="sec-title">Everything You Need, <em>All in One Place</em></h2>
+            <div class="sec-divider" style="margin-left:auto; margin-right:auto;"></div>
+
+            <div class="included-grid">
+                <div class="inc-card">
+                    <div class="inc-card-icon"><i class="fas fa-palette"></i></div>
+                    <h4>Custom Décor & Design</h4>
+                </div>
+                <div class="inc-card">
+                    <div class="inc-card-icon"><i class="fas fa-utensils"></i></div>
+                    <h4>Catering Coordination</h4>
+                </div>
+                <div class="inc-card">
+                    <div class="inc-card-icon"><i class="fas fa-camera"></i></div>
+                    <h4>Photography & Videography</h4>
+                </div>
+                <div class="inc-card">
+                    <div class="inc-card-icon"><i class="fas fa-music"></i></div>
+                    <h4>Music & Entertainment</h4>
+                </div>
+                <div class="inc-card">
+                    <div class="inc-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h4>Venue Selection & Booking</h4>
+                </div>
+                <div class="inc-card">
+                    <div class="inc-card-icon"><i class="fas fa-bus"></i></div>
+                    <h4>Guest Logistics</h4>
+                </div>
+                <div class="inc-card">
+                    <div class="inc-card-icon"><i class="fas fa-certificate"></i></div>
+                    <h4>Priest & Ritual Coordination</h4>
+                </div>
+                <div class="inc-card">
+                    <div class="inc-card-icon"><i class="fas fa-headset"></i></div>
+                    <h4>Dedicated Wedding Manager</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+        WHY CHOOSE US
+    ============================================================ -->
+    <section class="why-wedding">
+        <div class="container">
+            <div class="why-wedding-img">
+                <img src="assets/images/Wedding-Backdrops_8.jpg"
+                    alt="Wedding setup by 5 Star Event Management">
+            </div>
+            <div>
+    <p class="sec-label" style="color:rgba(147,197,253,.8);">Why Choose Us</p>
+    <h2 class="sec-title sec-title-white">Why Clients Trust <em>5 Star</em></h2>
+    <div class="sec-divider sec-divider-white"></div>
+
+    <div class="why-points">
+
+        <div class="why-point">
+            <div class="why-point-icon"><i class="fas fa-award"></i></div>
+            <div>
+                <h5>20+ Years of Event Experience</h5>
+                <p>Since 2006, we have successfully delivered 5000+ events across Tamilnadu, Kerala, Karnataka, and Andhra Pradesh — from intimate gatherings to grand celebrations.</p>
+            </div>
+        </div>
+
+        <div class="why-point">
+            <div class="why-point-icon"><i class="fas fa-shield-alt"></i></div>
+            <div>
+                <h5>ISO 9001:2015 Certified Quality</h5>
+                <p>Our processes follow international quality standards, ensuring every event is executed with precision, professionalism, and zero compromise.</p>
+            </div>
+        </div>
+
+        <div class="why-point">
+            <div class="why-point-icon"><i class="fas fa-rupee-sign"></i></div>
+            <div>
+                <h5>Transparent Pricing</h5>
+                <p>We provide clear, itemised quotations with no hidden costs — giving you complete control and confidence over your event budget.</p>
+            </div>
+        </div>
+
+        <div class="why-point">
+            <div class="why-point-icon"><i class="fas fa-handshake"></i></div>
+            <div>
+                <h5>Strong Vendor Network</h5>
+                <p>We collaborate with trusted and experienced vendors across South India, ensuring consistent quality in catering, décor, photography, and more.</p>
+            </div>
+        </div>
+
+        <div class="why-point">
+            <div class="why-point-icon"><i class="fas fa-smile"></i></div>
+            <div>
+                <h5>High Client Satisfaction</h5>
+                <p>Our clients trust us for our commitment and reliability — many return and refer us, making us a preferred event partner for years.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+        HOW IT WORKS
+    ============================================================ -->
+    <section class="how-it-works">
+        <div class="container">
+            <p class="sec-label" style="justify-content:center;">Our Process</p>
+            <h2 class="sec-title">How We Plan Your <em>Wedding</em></h2>
+            <div class="sec-divider" style="margin-left:auto; margin-right:auto;"></div>
+
+            <div class="steps-row">
+                <div class="step-box">
+                    <div class="step-num">01</div>
+                    <h5>Free Consultation</h5>
+                    <p>We meet to understand your vision, date, guest count, and budget — no obligations.</p>
+                </div>
+                <div class="step-box">
+                    <div class="step-num">02</div>
+                    <h5>Concept & Proposal</h5>
+                    <p>We create a custom wedding concept with mood board, venue shortlist, and itemised quote.</p>
+                </div>
+                <div class="step-box">
+                    <div class="step-num">03</div>
+                    <h5>Vendor Booking</h5>
+                    <p>We confirm caterers, decorators, photographers, priests, and all vendors on your behalf.</p>
+                </div>
+                <div class="step-box">
+                    <div class="step-num">04</div>
+                    <h5>Rehearsal & Prep</h5>
+                    <p>We run a venue walkthrough, coordinate all teams, and set up fully the day before.</p>
+                </div>
+                <div class="step-box">
+                    <div class="step-num">05</div>
+                    <h5>Wedding Day</h5>
+                    <p>Our team manages every minute — you enjoy every moment, stress-free.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+        GALLERY STRIP
+    ============================================================ -->
+    <section class="gallery-strip">
+        <div class="container">
+            <p class="sec-label" style="justify-content:center;">Our Work</p>
+            <h2 class="sec-title">A Glimpse of Our <em>Ceremonies</em></h2>
+            <div class="sec-divider" style="margin-left:auto; margin-right:auto;"></div>
+
+            <div class="gallery-grid">
+                <div class="g-item tall"
+                    data-src="assets/images/Mandap-Decoration_8.jpg"
+                    data-caption="Griha Pravesh Ceremony — Chennai">
+                    <img src="assets/images/Mandap-Decoration_8.jpg" alt="Griha Pravesh">
+                    <div class="g-item-overlay">
+                        <i class="fas fa-expand-alt"></i>
+                        <span>View Full</span>
+                    </div>
+                </div>
+                <div class="g-item"
+                    data-src="assets/images/Naming-cermony_2.jpg"
+                    data-caption="Floral Décor — Coimbatore">
+                    <img src="assets/images/Naming-cermony_2.jpg" alt="Floral Decoration">
+                    <div class="g-item-overlay">
+                        <i class="fas fa-expand-alt"></i>
+                        <span>View Full</span>
+                    </div>
+                </div>
+                <div class="g-item"
+                    data-src="assets/images/Mandap-Decoration_24.jpg"
+                    data-caption="Housewarming Celebration — Hosur">
+                    <img src="assets/images/Mandap-Decoration_24.jpg" alt="Housewarming">
+                    <div class="g-item-overlay">
+                        <i class="fas fa-expand-alt"></i>
+                        <span>View Full</span>
+                    </div>
+                </div>
+                <div class="g-item tall"
+                    data-src="assets/images/Sangeet_33.jpg"
+                    data-caption="Villa Inauguration — Madurai">
+                    <img src="assets/images/Sangeet_33.jpg" alt="Villa Inauguration">
+                    <div class="g-item-overlay">
+                        <i class="fas fa-expand-alt"></i>
+                        <span>View Full</span>
+                    </div>
+                </div>
+                <div class="g-item wide"
+                    data-src="assets/images/Sangeet_37.jpg"
+                    data-caption="Grand Vaibhavam Ceremony — Salem">
+                    <img src="assets/images/Sangeet_37.jpg" alt="Grand Ceremony">
+                    <div class="g-item-overlay">
+                        <i class="fas fa-expand-alt"></i>
+                        <span>View Full</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    LIGHTBOX OVERLAY
+    ============================================================ -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+        <div class="lb-inner">
+            <button class="lb-close" id="lb-close" aria-label="Close"><i class="fas fa-times"></i></button>
+            <button class="lb-nav lb-prev" id="lb-prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+            <button class="lb-nav lb-next" id="lb-next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+            <img class="lb-img" id="lb-img" src="" alt="">
+            <div class="lb-caption" id="lb-caption"></div>
+            <div class="lb-counter" id="lb-counter"></div>
+        </div>
+    </div>
+
+
+
+    <!-- ============================================================
+        FAQ
+    ============================================================ -->
+    <section class="faq-section">
+        <div class="container">
+            <p class="sec-label" style="justify-content:center;">Have Questions?</p>
+            <h2 class="sec-title">Frequently Asked <em>Questions</em></h2>
+            <div class="sec-divider" style="margin-left:auto; margin-right:auto;"></div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How far in advance should I book a wedding planner?
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        We recommend booking at least 6–12 months in advance, especially for peak wedding season (November to February). However, we also manage last-minute bookings — contact us and we'll let you know our availability.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you manage multi-day wedding functions?
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        Absolutely. We specialise in managing all functions across multiple days — Haldi, Mehendi, Sangeet, Nalangu, Wedding Ceremony, and Reception — ensuring each function has its own unique theme and atmosphere.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can you work within a tight budget?
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        Yes. We work with a wide range of budgets and are known for maximising value. During your consultation, we will be transparent about what's achievable within your budget and suggest creative alternatives where needed.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you cover weddings outside Hosur?
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        Yes! We operate across all major cities in Tamilnadu including Chennai, Coimbatore, Madurai, Salem, Trichy, Vellore, and Pondicherry. We also manage destination weddings outside Tamil Nadu on request.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What is included in the free consultation?
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        Our free consultation covers a detailed discussion of your wedding vision, preferred dates, guest count, venue preferences, décor ideas, and budget. We also give you a preliminary overview of what we can deliver and our process. There is absolutely no obligation to book.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+        CTA BANNER
+    ============================================================ -->
+    <section class="svc-cta">
+        <h2>Ready to Plan Your <em>Dream Wedding?</em></h2>
+        <p>Talk to our wedding specialists today — free consultation, no obligation. Let's create something unforgettable together.</p>
+        <div class="cta-btns">
+            <a href="tel:+917996605557" class="btn-white">
+                <i class="fas fa-phone-alt"></i> Call Us Now
+            </a>
+            <a href="https://wa.me/917996605557?text=Hi, I'm interested in Wedding Planning services" target="_blank" class="btn-outline-white">
+                <i class="fab fa-whatsapp"></i> WhatsApp Us
+            </a>
+        </div>
+    </section>
+
+    <!-- ============================================================
+        FOOTER — identical to About page
+    ============================================================ -->
+<footer>
+
+  <div class="footer-main">
+
+    <!-- Left: Logo + Description + Socials -->
+        <div class="footer-brand">
+            <img src="/assets/images/logo.png" alt="5 Star Events" style="height: 100px;">
+            <p>Tamilnadu's premier ISO 9001:2015 certified event management company. 18+ years of crafting unforgettable celebrations across Tamilnadu.</p>
+      <div class="footer-socials">
+          <a href="https://www.instagram.com/5__star__events?igsh=MW40YzFyYmFlNmk5dA==" target="_blank"
+            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank" aria-label="YouTube"><i
+              class="fab fa-youtube"></i></a>
+          <a href="#" target="_blank" aria-label="Facebook"><i
+              class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/917996605557" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- Middle: Quick Links -->
+    <div class="footer-col">
+      <h6>Quick Links</h6>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="wedding service.html">Services</a></li>
+        <!-- <li><a href="#venues">Venues</a></li> -->
+        <li><a href="decor-gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <!-- Middle: Quick Links -->
+    <div class="footer-col">
+      <h6>Services</h6>
+      <ul>
+        <li><a href="wedding service.html">Wedding Planners</a></li>
+        <li><a href="destination wedding.html">Destination Wedding</a></li>
+        <li><a href="corporate evnt.html">Corporate Events</a></li>
+        <li><a href="house opening ceremony.html">House Opening Ceremony</a></li>
+        <li><a href="private parties.html">Private Parties</a></li>
+      </ul>
+    </div>
+
+    <!-- Right: Contact Info -->
+    <div class="footer-col">
+      <h6>Contact Info</h6>
+      <div class="footer-contact-list">
+        <div class="footer-contact-row">
+          <i class="fas fa-phone-alt"></i>
+          <a href="tel:+917996605557">+91-799-660-5557</a>
+        </div>
+        <div class="footer-contact-row">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:5starfaqruddinevents@gmail.com">5starfaqruddinevents@gmail.com</a>
+        </div>
+        <div class="footer-contact-row">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Mathigiri, Hosur, Tamilnadu – 635 110</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+ 
+  <!-- Phone + Email bar -->
+  <!-- <div class="footer-bar-contact">
+    <a href="tel:+917996605557">
+      <i class="fas fa-phone-alt"></i>
+      +91-799-660-5557
+    </a>
+    <a href="mailto:info@5stareventmanagement.com">
+      <i class="fas fa-envelope"></i>
+      info@5stareventmanagement.com
+    </a>
+  </div> -->
+  <!-- Copyright bar -->
+  <div class="footer-bottom">
+    <span>
+      © 2008–2026 5 Star Event Management. All Rights Reserved.
+    </span>
+  </div>
+
+</footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/917996605557?text=Hi" target="_blank" rel="noopener" class="whatsapp-float"
+        aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp" style="color:#fff; font-size:1.6rem;"></i>
+    </a>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="assets/js/Script.js"></script>
+<script>
+        /* ── FAQ ACCORDION ── */
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const answer = btn.nextElementSibling;
+                const isOpen = btn.classList.contains('open');
+                document.querySelectorAll('.faq-question').forEach(b => {
+                    b.classList.remove('open');
+                    b.nextElementSibling.classList.remove('open');
+                });
+                if (!isOpen) {
+                    btn.classList.add('open');
+                    answer.classList.add('open');
+                }
+            });
+        });
+
+        /* ── LIGHTBOX ── */
+        const items = document.querySelectorAll('.g-item[data-src]');
+        const lightbox = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lb-img');
+        const lbCaption = document.getElementById('lb-caption');
+        const lbCounter = document.getElementById('lb-counter');
+
+        let galleryImages = [];
+        let currentIndex = 0;
+
+        items.forEach((item, idx) => {
+            galleryImages.push({ src: item.dataset.src, caption: item.dataset.caption || '' });
+            item.addEventListener('click', () => openLightbox(idx));
+        });
+
+        function openLightbox(idx) {
+            currentIndex = idx;
+            updateLightbox();
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function updateLightbox() {
+            lbImg.src = galleryImages[currentIndex].src;
+            lbCaption.textContent = galleryImages[currentIndex].caption;
+            lbCounter.textContent = (currentIndex + 1) + ' / ' + galleryImages.length;
+        }
+
+        document.getElementById('lb-close').addEventListener('click', closeLightbox);
+        document.getElementById('lb-prev').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+            updateLightbox();
+        });
+        document.getElementById('lb-next').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % galleryImages.length;
+            updateLightbox();
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') {
+                currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+                updateLightbox();
+            }
+            if (e.key === 'ArrowRight') {
+                currentIndex = (currentIndex + 1) % galleryImages.length;
+                updateLightbox();
+            }
+        });
+
+                </script>
+

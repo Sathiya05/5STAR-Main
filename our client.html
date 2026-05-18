@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+  <title>Our Clients - 5 Star Event Management</title>
+  <meta name="description"
+    content="5 Star Event Management – Trusted by India's leading corporations across South India.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/Style.css">
+  <style>
+    :root {
+      --blue: #1a5fb4;
+      --blue-light: #4a90d9;
+      --blue-dark: #0d3b7a;
+      --blue-pale: #e8f0fb;
+      --blue-pale2: #d0e2f5;
+      --white: #ffffff;
+      --off-white: #f5f8ff;
+      --dark: #0a1628;
+      --text: #2c3e5a;
+      --text-muted: #6b7f9e;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Inter', sans-serif;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ── NAV overrides ── */
+    #site-header {
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+
+    #site-header.scrolled {
+      background: rgba(255, 255, 255, .97) !important;
+      box-shadow: 0 1px 16px rgba(0, 0, 0, .08) !important;
+    }
+
+    .nav-link {
+      color: #1f2937 !important;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: #1d4ed8 !important;
+    }
+
+    #site-header.scrolled .nav-link {
+      color: #1f2937 !important;
+    }
+
+    #site-header.scrolled .nav-link:hover,
+    #site-header.scrolled .nav-link.active {
+      color: #1d4ed8 !important;
+    }
+
+    .dropdown-menu a {
+      color: #374151;
+    }
+
+    /* ── PAGE BANNER (no bg image) ── */
+    .page-banner {
+      background: var(--blue-dark);
+      padding: 72px 24px 64px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-banner::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 140%, rgba(74, 144, 217, .18), transparent 65%);
+      pointer-events: none;
+    }
+
+    .page-banner .breadcrumb {
+      font-family: var(--sans);
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .45);
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-banner .breadcrumb a {
+      color: rgba(255, 255, 255, .45);
+      text-decoration: none;
+      transition: color .2s;
+    }
+
+    .page-banner .breadcrumb a:hover {
+      color: rgba(255, 255, 255, .8);
+    }
+
+    .page-banner .breadcrumb span {
+      margin: 0 8px;
+    }
+
+    .page-banner h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 300;
+      color: #fff;
+      line-height: 1.15;
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-banner h1 em {
+      font-style: italic;
+      color: #93c5fd;
+    }
+
+    .page-banner-divider {
+      width: 48px;
+      height: 1px;
+      background: rgba(255, 255, 255, .25);
+      margin: 20px auto 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── STATS STRIP ── */
+    .stats-strip {
+      background: var(--white);
+      border-bottom: 1px solid var(--blue-pale2);
+    }
+
+    .stats-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .stat-cell {
+      padding: 36px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .stat-cell:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 20%;
+      bottom: 20%;
+      width: 1px;
+      background: var(--blue-pale2);
+    }
+
+    .stat-cell .num {
+      font-family: var(--serif);
+      font-size: 2.4rem;
+      font-weight: 300;
+      color: var(--dark);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-cell .num em {
+      font-style: normal;
+      color: var(--blue);
+    }
+
+    .stat-cell .lbl {
+      font-family: var(--sans);
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    /* ── SECTION HELPERS ── */
+    .sec-label {
+      font-family: var(--sans);
+      font-size: .67rem;
+      font-weight: 700;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sec-label::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--blue);
+      flex-shrink: 0;
+    }
+
+    .sec-title {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--dark);
+    }
+
+    .sec-title em {
+      font-style: italic;
+      color: var(--blue);
+    }
+
+    .sec-divider {
+      width: 44px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--blue), var(--blue-light));
+      margin-top: 16px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* ── CLIENTS GRID ── */
+    .clients-section {
+      background: var(--off-white);
+      padding: 96px 24px;
+    }
+
+    .clients-section .container {
+      text-align: center;
+    }
+
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 56px;
+      text-align: left;
+    }
+
+    .client-card {
+      background: var(--white);
+      border: 1px solid var(--blue-pale2);
+      position: relative;
+      padding: 36px 32px 32px;
+      transition: box-shadow .3s, transform .3s, border-color .3s;
+      overflow: hidden;
+    }
+
+    .client-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--blue-dark), var(--blue-light));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .4s ease;
+    }
+
+    .client-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .client-card:hover {
+      box-shadow: 0 12px 40px rgba(26, 95, 180, .12);
+      transform: translateY(-5px);
+      border-color: var(--blue-pale);
+    }
+
+    .client-tag {
+      font-family: var(--sans);
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .client-tag::before {
+      content: '';
+      display: block;
+      width: 18px;
+      height: 1px;
+      background: var(--blue-light);
+    }
+
+    .client-name {
+      font-family: var(--serif);
+      font-size: 1.55rem;
+      font-weight: 400;
+      color: var(--dark);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .client-divider {
+      width: 36px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--blue), var(--blue-light));
+      margin-bottom: 16px;
+    }
+
+    .client-desc {
+      font-family: var(--sans);
+      font-size: .85rem;
+      line-height: 1.75;
+      color: var(--text-muted);
+    }
+
+    .client-card-footer {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--blue-pale2);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--sans);
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--blue-light);
+    }
+
+    .client-card-footer i {
+      font-size: .65rem;
+    }
+
+    /* ── INDUSTRIES (why-wedding style) ── */
+    .industries-section {
+      background: var(--blue-dark);
+      padding: 96px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .industries-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 80% 20%, rgba(74, 144, 217, .15), transparent 60%);
+      pointer-events: none;
+    }
+
+    .industries-section .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      position: relative;
+    }
+
+    .industry-list {
+      margin-top: 40px;
+    }
+
+    .industry-item {
+      display: flex;
+      gap: 18px;
+      margin-bottom: 28px;
+      align-items: flex-start;
+    }
+
+    .industry-icon {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      background: rgba(74, 144, 217, .15);
+      border: 1px solid rgba(74, 144, 217, .3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #93c5fd;
+      font-size: .85rem;
+      margin-top: 2px;
+    }
+
+    .industry-item h5 {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .industry-item p {
+      font-family: var(--sans);
+      font-size: .82rem;
+      line-height: 1.65;
+      color: rgba(255, 255, 255, .55);
+    }
+
+    .industries-img img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ── REGIONS (how-it-works style) ── */
+    .regions-section {
+      background: var(--off-white);
+      padding: 96px 24px;
+    }
+
+    .regions-section .container {
+      text-align: center;
+    }
+
+    .regions-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      margin-top: 64px;
+      position: relative;
+    }
+
+    .regions-row::before {
+      content: '';
+      position: absolute;
+      top: 27px;
+      left: 10%;
+      width: 80%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--blue-light), transparent);
+    }
+
+    .region-box {
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .region-num {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 2px solid var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 1.2rem;
+      color: var(--blue);
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 0 0 6px var(--off-white);
+      transition: background .3s, color .3s;
+    }
+
+    .region-box:hover .region-num {
+      background: var(--blue);
+      color: #fff;
+    }
+
+    .region-box h5 {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 400;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    .region-box p {
+      font-family: var(--sans);
+      font-size: .76rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+
+    /* ── CTA BANNER ── */
+    .svc-cta {
+      background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);
+      padding: 96px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .svc-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(255, 255, 255, .06), transparent 70%);
+    }
+
+    .svc-cta h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+      color: #fff;
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .svc-cta h2 em {
+      font-style: italic;
+      color: #93c5fd;
+    }
+
+    .svc-cta p {
+      font-family: var(--sans);
+      font-size: .95rem;
+      color: rgba(255, 255, 255, .65);
+      max-width: 500px;
+      margin: 0 auto 44px;
+      line-height: 1.7;
+      position: relative;
+    }
+
+    .cta-btns {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #fff;
+      color: var(--blue-dark);
+      font-family: var(--sans);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 15px 34px;
+      text-decoration: none;
+      transition: background .25s, transform .25s;
+    }
+
+    .btn-white:hover {
+      background: var(--blue-pale);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 2px solid rgba(255, 255, 255, .5);
+      color: #fff;
+      font-family: var(--sans);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 15px 34px;
+      text-decoration: none;
+      transition: border-color .25s, background .25s;
+    }
+
+    .btn-outline-white:hover {
+      border-color: #fff;
+      background: rgba(255, 255, 255, .08);
+    }
+
+    /* ── TESTIMONIAL QUOTE ── */
+    .quote-section {
+      background: var(--white);
+      padding: 80px 24px;
+    }
+
+    .quote-section .container {
+      max-width: 800px;
+      text-align: center;
+    }
+
+    .quote-mark {
+      font-family: var(--serif);
+      font-size: 6rem;
+      line-height: 0.6;
+      color: var(--blue-pale2);
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .quote-text {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--dark);
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+
+    .quote-author {
+      font-family: var(--sans);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+
+    .quote-divider {
+      width: 40px;
+      height: 1px;
+      background: var(--blue-light);
+      margin: 16px auto;
+    }
+
+    /* ── NAV OVERRIDES ── */
+    .nav-link {
+      color: #1f2937 !important;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: #1d4ed8 !important;
+    }
+
+    header.scrolled .nav-link {
+      color: #1f2937 !important;
+    }
+
+    header.scrolled .nav-link:hover,
+    header.scrolled .nav-link.active {
+      color: #1d4ed8 !important;
+    }
+
+    .dropdown-menu a {
+      color: #374151;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      position: relative;
+      font-family: var(--sans);
+      font-size: 14px;
+      color: #fff;
+      overflow: hidden;
+      background-color: #0d1b2a;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      filter: brightness(0.25);
+      z-index: 0;
+    }
+
+    footer>* {
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-main {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 60px 48px;
+      gap: 40px;
+    }
+
+    .footer-brand {
+      flex: 0 0 320px;
+      max-width: 320px;
+    }
+
+    .footer-brand img {
+      display: block;
+      height: 48px;
+      object-fit: contain;
+      margin-bottom: 20px;
+      filter: brightness(0) invert(1);
+    }
+
+    .footer-brand p {
+      color: rgba(255, 255, 255, 0.60);
+      font-size: 13.5px;
+      line-height: 1.75;
+      margin: 0 0 24px;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 10px;
+    }
+
+    .footer-socials a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.20);
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 14px;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.05);
+      transition: background .2s, color .2s, border-color .2s;
+    }
+
+    .footer-socials a:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.40);
+    }
+
+    .footer-col {
+      flex: 1;
+    }
+
+    .footer-col h6 {
+      font-size: 11px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin: 0 0 20px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+    }
+
+    .footer-col ul li a {
+      color: rgba(255, 255, 255, 0.60);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color .2s;
+    }
+
+    .footer-col ul li a:hover {
+      color: #fff;
+    }
+
+    .footer-contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .footer-contact-row {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: rgba(255, 255, 255, 0.60);
+      font-size: 13.5px;
+      line-height: 1.55;
+    }
+
+    .footer-contact-row i {
+      color: #a78bfa;
+      font-size: 13px;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    .footer-contact-row a {
+      color: rgba(255, 255, 255, 0.60);
+      text-decoration: none;
+      transition: color .2s;
+    }
+
+    .footer-contact-row a:hover {
+      color: #fff;
+    }
+
+    .footer-divider {
+      border: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.10);
+      margin: 0 60px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-bottom {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding: 18px 60px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.40);
+      max-width: 1200px;
+      margin: 0 auto;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    .footer-bottom a {
+      color: rgba(255, 255, 255, 0.40);
+      text-decoration: none;
+      transition: color .2s;
+    }
+
+    .footer-bottom a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom strong {
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .clients-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 900px) {
+
+      .clients-intro .container,
+      .industries-section .container {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .industries-img {
+        order: -1;
+      }
+
+      .industries-img img {
+        height: 320px;
+      }
+
+      .regions-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+      }
+
+      .regions-row::before {
+        display: none;
+      }
+
+      .stats-inner {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stat-cell:nth-child(2)::after {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .clients-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .regions-row {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .stats-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-content {
+        padding: 0 24px 60px;
+      }
+
+      .intro-img-wrap::before,
+      .intro-img-wrap::after {
+        display: none;
+      }
+
+      .footer-main {
+        flex-direction: column;
+        padding: 40px 24px 32px;
+      }
+
+      .footer-brand {
+        flex: none;
+        max-width: 100%;
+      }
+
+      .footer-divider {
+        margin: 0 24px;
+      }
+
+      .footer-bottom {
+        padding: 18px 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+
+<body style="padding-top: 80px;">
+
+  <!-- HEADER -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <img src="/assets/images/logo.png" alt="5 Star Event Management Logo"
+          style="height:80px; width:auto;">
+      </a>
+      
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="aboutus.html" class="nav-link">About Us</a>
+        <div class="dropdown">
+          <a href="wedding service.html" class="nav-link">
+            Services <i class="fas fa-caret-down" style="font-size:0.7rem;"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="wedding service.html">Wedding Planners</a>
+            <a href="destination wedding.html">Destination Wedding</a>
+            <a href="corporate evnt.html">Corporate Events</a>
+            <a href="house opening ceremony.html">House opening ceremony</a>
+            <a href="private parties.html">Private Parties</a>
+          </div>
+        </div>
+        <a href="our client.html" class="nav-link active">Our Clients</a>
+        <a href="decor-gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+      <a href="tel:+917996605557" class="btn-cta">
+        <i class="fas fa-phone-alt" style="font-size:0.75rem;"></i>
+        +91-799-660-5557
+      </a>
+      <button id="mobile-menu-btn" aria-label="Open menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu">
+    <nav>
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="aboutus.html" class="mobile-link">About Us</a>
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-toggle" onclick="toggleMobileDropdown('services-menu')">
+          Services <i class="fas fa-chevron-down" style="font-size:0.7rem; margin-left:8px;"></i>
+        </button>
+        <div id="services-menu" class="mobile-submenu">
+          <a href="wedding service.html" class="mobile-sublink">Wedding Planners</a>
+          <a href="destination wedding.html" class="mobile-sublink">Destination Wedding</a>
+          <a href="corporate evnt.html" class="mobile-sublink">Corporate Events</a>
+          <a href="private parties.html" class="mobile-sublink">Private Parties</a>
+          <a href="house opening ceremony.html" class="mobile-sublink">House Opening Ceremony</a>
+        </div>
+      </div>
+      <a href="our client.html" class="mobile-link">Our Clients</a>
+      <a href="decor-gallery.html" class="mobile-link">Gallery</a>
+      <a href="contact.html" class="mobile-link">Contact Us</a>
+      <a href="tel:+917996605557" class="mobile-link" style="color:var(--primary); margin-top:16px;">
+        <i class="fas fa-phone-alt"></i> Call Now
+      </a>
+    </nav>
+  </div>
+
+  <!-- PAGE BANNER — solid dark bg, no image -->
+  <div class="page-banner">
+    <p class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      Our Clients
+    </p>
+    <h1>Trusted by <em>Industry Leaders</em></h1>
+    <div class="page-banner-divider"></div>
+  </div>
+
+  <!-- STATS STRIP -->
+  <div class="stats-strip">
+    <div class="stats-inner">
+      <div class="stat-cell">
+        <div class="num">12<em>+</em></div>
+        <div class="lbl">Major Corporations</div>
+      </div>
+      <div class="stat-cell">
+        <div class="num">4</div>
+        <div class="lbl">South Indian States</div>
+      </div>
+      <div class="stat-cell">
+        <div class="num">18<em>+</em></div>
+        <div class="lbl">Years of Partnership</div>
+      </div>
+      <div class="stat-cell">
+        <div class="num">2.5<em>K+</em></div>
+        <div class="lbl">Events Delivered</div>
+      </div>
+    </div>
+  </div>
+
+  <section class="clients-section">
+    <div class="container">
+      <p class="sec-label" style="justify-content:center;">Our Distinguished Clients</p>
+      <h2 class="sec-title">Organisations That <em>Trust Us</em></h2>
+      <div class="sec-divider" style="margin-left:auto; margin-right:auto;"></div>
+
+      <div class="clients-grid">
+
+        <div class="client-card">
+          <div class="client-tag">Rail Technology</div>
+          <h3 class="client-name">Wabtec Corporation</h3>
+          <div class="client-divider"></div>
+          <p class="client-desc">A global leader in rail technology, providing innovative freight and transit solutions
+            across 50+ countries. Their engineering excellence drives modern railway infrastructure worldwide.</p>
+          <div class="client-card-footer">
+            <i class="fas fa-globe"></i> Global Corporation
+          </div>
+        </div>
+
+        <div class="client-card">
+          <div class="client-tag">Automotive Components</div>
+          <h3 class="client-name">UNO Minda Limited</h3>
+          <div class="client-divider"></div>
+          <p class="client-desc">One of India's foremost automotive component manufacturers, supplying switches, horns,
+            alloy wheels, and lighting systems to leading OEMs across the globe.</p>
+          <div class="client-card-footer">
+            <i class="fas fa-industry"></i> NSE Listed Company
+          </div>
+        </div>
+
+        <div class="client-card">
+          <div class="client-tag">Aviation MRO</div>
+          <h3 class="client-name">FEAM Aero India Pvt Ltd</h3>
+          <div class="client-divider"></div>
+          <p class="client-desc">A premium aircraft maintenance, repair & overhaul (MRO) company serving major airlines
+            across Asia and the Middle East. They set the benchmark for aviation safety and operational excellence.</p>
+          <div class="client-card-footer">
+            <i class="fas fa-plane"></i> Asia & Middle East
+          </div>
+        </div>
+
+        <div class="client-card">
+          <div class="client-tag">Manufacturing</div>
+          <h3 class="client-name">Milan Industries Pvt Ltd</h3>
+          <div class="client-divider"></div>
+          <p class="client-desc">A manufacturing company producing industrial components and precision engineering
+            products for various sectors, with a strong presence across South India.</p>
+          <div class="client-card-footer">
+            <i class="fas fa-cogs"></i> Industrial Manufacturing
+          </div>
+        </div>
+
+        <div class="client-card">
+          <div class="client-tag">Residential Township</div>
+          <h3 class="client-name">Titan Township</h3>
+          <div class="client-divider"></div>
+          <p class="client-desc">A prestigious residential colony developed for employees of Titan Company Limited, one
+            of India's most iconic consumer brands, fostering community and comfort.</p>
+          <div class="client-card-footer">
+            <i class="fas fa-home"></i> Titan Company Ltd
+          </div>
+        </div>
+
+        <div class="client-card">
+          <div class="client-tag">Residential Township</div>
+          <h3 class="client-name">Swarnabhoomi Titan Township</h3>
+          <div class="client-divider"></div>
+          <p class="client-desc">Another landmark residential colony developed by the Titan family, providing
+            high-quality housing and facilities that nurture a close-knit community spirit.</p>
+          <div class="client-card-footer">
+            <i class="fas fa-home"></i> Titan Company Ltd
+          </div>
+        </div>
+
+        <div class="client-card">
+          <div class="client-tag">Logistics & Transport</div>
+          <h3 class="client-name">Priya Transport</h3>
+          <div class="client-divider"></div>
+          <p class="client-desc">A logistics and transportation company delivering goods and freight services across
+            multiple regions, known for reliability and timely delivery across South India.</p>
+          <div class="client-card-footer">
+            <i class="fas fa-truck"></i> South India Logistics
+          </div>
+        </div>
+
+        <div class="client-card">
+          <div class="client-tag">Automotive Electricals</div>
+          <h3 class="client-name">Indian Nippon</h3>
+          <div class="client-divider"></div>
+          <p class="client-desc">A leading manufacturer of ignition systems and automotive electrical equipment. A joint
+            venture with Nippon Denso Japan, supplying to Honda, TVS, Hero, and other major OEMs across India.</p>
+          <div class="client-card-footer">
+            <i class="fas fa-bolt"></i> Indo-Japanese JV
+          </div>
+        </div>
+
+        <div class="client-card">
+          <div class="client-tag">Labour Union</div>
+          <h3 class="client-name">Titan Union</h3>
+          <div class="client-divider"></div>
+          <p class="client-desc">The workers' organisation representing and protecting the rights, welfare, and
+            interests of employees at Titan Company Limited — championing dignity and fair practice.</p>
+          <div class="client-card-footer">
+            <i class="fas fa-users"></i> Employee Welfare
+          </div>
+        </div>
+
+        <div class="client-card">
+          <div class="client-tag">Poultry & Food</div>
+          <h3 class="client-name">VHL Venky's Group</h3>
+          <div class="client-divider"></div>
+          <p class="client-desc">India's largest fully integrated poultry group, processing over 4 million birds per
+            day. They also own Blackburn Rovers FC and operate pharmaceutical and food divisions globally.</p>
+          <div class="client-card-footer">
+            <i class="fas fa-globe-asia"></i> Global Operations
+          </div>
+        </div>
+
+        <div class="client-card">
+          <div class="client-tag">Paper & Packaging</div>
+          <h3 class="client-name">Ranga Venkataya Paper Mills</h3>
+          <div class="client-divider"></div>
+          <p class="client-desc">A well-established paper and packaging manufacturer with a legacy of quality production
+            in South India, supplying publishing houses, packaging firms, and stationery brands across the region.</p>
+          <div class="client-card-footer">
+            <i class="fas fa-scroll"></i> South India Legacy
+          </div>
+        </div>
+
+        <div class="client-card">
+          <div class="client-tag">Warehousing & Logistics</div>
+          <h3 class="client-name">Avigna Industrial & Logistics Park</h3>
+          <div class="client-divider"></div>
+          <p class="client-desc">A premium warehousing and logistics park developer redefining India's supply chain
+            infrastructure. Their Grade-A facilities across Chennai, Bengaluru, and Hyderabad serve Fortune 500
+            companies.</p>
+          <div class="client-card-footer">
+            <i class="fas fa-warehouse"></i> Fortune 500 Clients
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE / TESTIMONIAL -->
+  <section class="quote-section">
+    <div class="container">
+      <span class="quote-mark">&ldquo;</span>
+      <p class="quote-text">Five Star Event Management has been our trusted partner for over a decade. Their attention
+        to detail, professionalism, and warmth have made every event truly unforgettable.</p>
+      <div class="quote-divider"></div>
+      <p class="quote-author">Corporate Client — Titan Township, Hosur</p>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES WE SERVE
+  <section class="industries-section">
+    <div class="container">
+      <div class="industries-img">
+        <img src="assets/images/Wedding-Backdrops_1.jpg" alt="Events by 5 Star">
+      </div>
+      <div>
+        <p class="sec-label" style="color:rgba(147,197,253,.8);">Industries We Serve</p>
+        <h2 class="sec-title sec-title-white">Expertise Across <em>Every Sector</em></h2>
+        <div class="sec-divider sec-divider-white"></div>
+
+        <div class="industry-list">
+          <div class="industry-item">
+            <div class="industry-icon"><i class="fas fa-industry"></i></div>
+            <div>
+              <h5>Automotive & Manufacturing</h5>
+              <p>From plant inaugurations to annual day celebrations, we manage large-scale corporate events for India's leading industrial houses.</p>
+            </div>
+          </div>
+          <div class="industry-item">
+            <div class="industry-icon"><i class="fas fa-plane-departure"></i></div>
+            <div>
+              <h5>Aviation & Infrastructure</h5>
+              <p>High-precision events for aviation MRO companies and infrastructure developers who demand nothing short of excellence.</p>
+            </div>
+          </div>
+          <div class="industry-item">
+            <div class="industry-icon"><i class="fas fa-warehouse"></i></div>
+            <div>
+              <h5>Logistics & Supply Chain</h5>
+              <p>Warehouse openings, fleet launches, and corporate milestones — we deliver events that match the scale of your operations.</p>
+            </div>
+          </div>
+          <div class="industry-item">
+            <div class="industry-icon"><i class="fas fa-home"></i></div>
+            <div>
+              <h5>Real Estate & Communities</h5>
+              <p>Community celebrations, township events, and residential milestones — creating shared memories that bind communities together.</p>
+            </div>
+          </div>
+          <div class="industry-item">
+            <div class="industry-icon"><i class="fas fa-train"></i></div>
+            <div>
+              <h5>Rail & Global Technology</h5>
+              <p>Sophisticated events for global technology companies operating in India, managed with international standards and local warmth.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- REGIONS -->
+  <section class="regions-section">
+    <div class="container">
+      <p class="sec-label" style="justify-content:center;">Our Footprint</p>
+      <h2 class="sec-title">Serving Clients Across <em>South India</em></h2>
+      <div class="sec-divider" style="margin-left:auto; margin-right:auto;"></div>
+
+      <div class="regions-row">
+        <div class="region-box">
+          <div class="region-num"><i class="fas fa-map-marker-alt"></i></div>
+          <h5>Tamil Nadu</h5>
+          <p>Our home state. Hosur, Chennai, Coimbatore, Madurai, Salem, Trichy & beyond.</p>
+        </div>
+        <div class="region-box">
+          <div class="region-num"><i class="fas fa-map-marker-alt"></i></div>
+          <h5>Karnataka</h5>
+          <p>Bengaluru, Mysuru & across India's tech capital — seamless events every time.</p>
+        </div>
+        <div class="region-box">
+          <div class="region-num"><i class="fas fa-map-marker-alt"></i></div>
+          <h5>Andhra Pradesh</h5>
+          <p>Chittoor, Vijayawada & the growing economic corridors of Andhra Pradesh.</p>
+        </div>
+        <div class="region-box">
+          <div class="region-num"><i class="fas fa-map-marker-alt"></i></div>
+          <h5>Kerala</h5>
+          <p>Kochi, Thiruvananthapuram & the beautiful landscapes of God's Own Country.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="svc-cta">
+    <h2>Ready to Host Your <em>Next Event?</em></h2>
+    <p>Join our growing family of distinguished corporate partners. Let's create an event that reflects your
+      organisation's prestige.</p>
+    <div class="cta-btns">
+      <a href="tel:+917996605557" class="btn-white">
+        <i class="fas fa-phone-alt"></i> Call Us Now
+      </a>
+      <a href="https://wa.me/917996605557?text=Hi, I'm interested in your event management services" target="_blank"
+        class="btn-outline-white">
+        <i class="fab fa-whatsapp"></i> WhatsApp Us
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="/assets/images/logo.png" alt="5 Star Events" style="height: 100px;">
+        <p>Tamilnadu's premier ISO 9001:2015 certified event management company. 18+ years of crafting unforgettable
+          celebrations across Tamilnadu.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/5__star__events?igsh=MW40YzFyYmFlNmk5dA==" target="_blank"
+            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank" aria-label="YouTube"><i
+              class="fab fa-youtube"></i></a>
+          <a href="#" target="_blank" aria-label="Facebook"><i
+              class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/917996605557" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h6>Quick Links</h6>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="wedding service.html">Services</a></li>
+          <li><a href="decor-gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Services</h6>
+        <ul>
+          <li><a href="wedding service.html">Wedding Planners</a></li>
+          <li><a href="destination wedding.html">Destination Wedding</a></li>
+          <li><a href="corporate evnt.html">Corporate Events</a></li>
+          <li><a href="house opening ceremony.html">House Opening Ceremony</a></li>
+          <li><a href="private parties.html">Private Parties</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Contact Info</h6>
+        <div class="footer-contact-list">
+          <div class="footer-contact-row">
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+917996605557">+91-799-660-5557</a>
+          </div>
+          <div class="footer-contact-row">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:5starfaqruddinevents@gmail.com">5starfaqruddinevents@gmail.com</a>
+          </div>
+          <div class="footer-contact-row">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Mathigiri, Hosur, Tamilnadu – 635 110</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2008–2026 5 Star Event Management. All Rights Reserved.</span>
+    </div>
+  </footer>
+
+  <!-- HERO SLIDESHOW SCRIPT -->
+  <script>
+    const slides = document.querySelectorAll('.hero-slide');
+    let cur = 0;
+    setInterval(() => {
+      slides[cur].classList.remove('active');
+      cur = (cur + 1) % slides.length;
+      slides[cur].classList.add('active');
+    }, 5000);
+  </script>
+  <script src="assets/js/Script.js"></script>
+</body>
+
+</html>
+</head>
+

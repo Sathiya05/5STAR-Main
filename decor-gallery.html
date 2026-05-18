@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+  <title>Decor — Gallery | 5 Star Event Management</title>
+  <meta name="description" content="Browse decor inspiration — wedding backdrops, mandap, corporate events, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/Style.css">
+</head>
+<body style="padding-top: 80px;">
+
+  <header id="site-header" class="scrolled" data-force-scrolled="true">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <img src="/assets/images/logo.png" alt="5 Star Event Management Logo"
+          style="height:80px; width:auto;">
+      </a>
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="aboutus.html" class="nav-link">About Us</a>
+        <div class="dropdown">
+          <a href="wedding service.html" class="nav-link">Services <i class="fas fa-caret-down" style="font-size:0.7rem;"></i></a>
+          <div class="dropdown-menu">
+            <a href="wedding service.html">Wedding Planners</a>
+            <a href="destination wedding.html">Destination Wedding</a>
+            <a href="corporate evnt.html">Corporate Events</a>
+            <a href="house opening ceremony.html">House Opening Ceremony</a>
+            <a href="private parties.html">Private Parties</a>
+          </div>
+        </div>
+        <a href="our client.html" class="nav-link">Our Clients</a>
+        <a href="decor-gallery.html" class="nav-link active">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+      <a href="tel:+917996605557" class="btn-cta">
+        <i class="fas fa-phone-alt" style="font-size:0.75rem;"></i> +91-799-660-5557
+      </a>
+      <button id="mobile-menu-btn" aria-label="Open menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <div id="mobile-menu">
+    <nav>
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="aboutus.html" class="mobile-link">About Us</a>
+
+      <!-- Services Dropdown -->
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-toggle" onclick="toggleMobileDropdown('services-menu')">
+          Services <i class="fas fa-chevron-down" style="font-size:0.7rem; margin-left:8px;"></i>
+        </button>
+        <div id="services-menu" class="mobile-submenu">
+          <a href="wedding service.html" class="mobile-sublink">Wedding Planners</a>
+          <a href="destination wedding.html" class="mobile-sublink">Destination Wedding</a>
+          <a href="corporate evnt.html" class="mobile-sublink">Corporate Events</a>
+          <a href="private parties.html" class="mobile-sublink">Private Parties</a>
+          <a href="house opening ceremony.html" class="mobile-sublink">House Opening Ceremony</a>
+        </div>
+      </div>
+
+      <!-- <a href="#venues" class="mobile-link">Venues</a> -->
+      <a href="our client.html" class="mobile-link">Our Clients</a>
+
+      <!-- Gallery Dropdown -->
+       <a href="decor-gallery.html" class="mobile-link">Gallery</a>
+      <!-- <div class="mobile-dropdown">
+        <button class="mobile-dropdown-toggle" onclick="toggleMobileDropdown('gallery-menu')">
+          Gallery <i class="fas fa-chevron-down" style="font-size:0.7rem; margin-left:8px;"></i>
+        </button>
+        <div id="gallery-menu" class="mobile-submenu">
+          <a href="/wedding-albums(images).html" class="mobile-sublink">Wedding Albums</a>
+          <a href="/destination-wedding(images).html" class="mobile-sublink">Destination Wedding</a>
+          <a href="/corporate-events(images).html" class="mobile-sublink">Corporate Events</a>
+          <a href="/house-opening-ceremony(images).html" class="mobile-sublink">House Opening Ceremony</a>
+          <a href="/private-parties(images).html" class="mobile-sublink">Private Parties</a>
+        </div>
+      </div> -->
+
+      <a href="contact.html" class="mobile-link">Contact Us</a>
+      <a href="tel:+917996605557" class="mobile-link" style="color:var(--primary); margin-top:16px;">
+        <i class="fas fa-phone-alt"></i> Call Now
+      </a>
+    </nav>
+  </div>
+
+  <main class="decor-gallery-page">
+    <div class="decor-page-hero">
+      <h1>5 Star Event Management</h1>
+      <p>
+Explore our elegant decor collections designed to add beauty, style, and unforgettable moments to every special occasion.
+</p>
+    </div>
+
+    <div id="decor-sections-mount" class="decor-sections-mount" aria-busy="true"></div>
+  </main>
+
+<footer>
+
+  <div class="footer-main">
+
+    <!-- Left: Logo + Description + Socials -->
+    <div class="footer-brand">
+      <img src="/assets/images/logo.png" alt="5 Star Events" style="height: 100px;">
+      <p>Tamilnadu's premier ISO 9001:2015 certified event management company. 18+ years of crafting unforgettable celebrations across Tamilnadu.</p>
+      <div class="footer-socials">
+          <a href="https://www.instagram.com/5__star__events?igsh=MW40YzFyYmFlNmk5dA==" target="_blank"
+            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank" aria-label="YouTube"><i
+              class="fab fa-youtube"></i></a>
+          <a href="#" target="_blank" aria-label="Facebook"><i
+              class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/917996605557" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- Middle: Quick Links -->
+    <div class="footer-col">
+      <h6>Quick Links</h6>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="wedding service.html">Services</a></li>
+        <!-- <li><a href="#venues">Venues</a></li> -->
+        <li><a href="decor-gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <!-- Middle: Quick Links -->
+    <div class="footer-col">
+      <h6>Services</h6>
+      <ul>
+        <li><a href="wedding service.html">Wedding Planners</a></li>
+        <li><a href="destination wedding.html">Destination Wedding</a></li>
+        <li><a href="corporate evnt.html">Corporate Events</a></li>
+        <li><a href="house opening ceremony.html">House Opening Ceremony</a></li>
+        <li><a href="private parties.html">Private Parties</a></li>
+      </ul>
+    </div>
+
+    <!-- Right: Contact Info -->
+    <div class="footer-col">
+      <h6>Contact Info</h6>
+      <div class="footer-contact-list">
+        <div class="footer-contact-row">
+          <i class="fas fa-phone-alt"></i>
+          <a href="tel:+917996605557">+91-799-660-5557</a>
+        </div>
+        <div class="footer-contact-row">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:5starfaqruddinevents@gmail.com">5starfaqruddinevents@gmail.com</a>
+        </div>
+        <div class="footer-contact-row">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Mathigiri, Hosur, Tamilnadu – 635 110</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+ 
+  <!-- Phone + Email bar -->
+  <!-- <div class="footer-bar-contact">
+    <a href="tel:+917996605557">
+      <i class="fas fa-phone-alt"></i>
+      +91-799-660-5557
+    </a>
+    <a href="mailto:info@5stareventmanagement.com">
+      <i class="fas fa-envelope"></i>
+      info@5stareventmanagement.com
+    </a>
+  </div> -->
+  <!-- Copyright bar -->
+  <div class="footer-bottom">
+    <span>
+      © 2008–2026 5 Star Event Management. All Rights Reserved.
+    </span>
+  </div>
+
+</footer>
+
+  <a href="https://wa.me/917996605557?text=Hi" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp" style="color:#fff; font-size:1.6rem;"></i>
+  </a>
+
+  <script src="assets/js/Script.js"></script>
+  <script src="assets/js/decor-gallery.js"></script>
+</body>
+</html>
+

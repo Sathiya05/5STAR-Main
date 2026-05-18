@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/logo.png" type="image/x-icon">
+    <title>5 Star Event Management</title>
+    <meta name="description"
+        content="5 Star Event Management offers expert event planning, management, and venue selection across Tamilnadu. Book your free consultation now!">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="assets/css/Style.css">
+
+    <style>
+        /* ── THEME: WHITE & BLUE (matches Wedding page) ─────────────── */
+        :root {
+            --blue:         #1a5fb4;
+            --blue-light:   #4a90d9;
+            --blue-dark:    #0d3b7a;
+            --blue-pale:    #e8f0fb;
+            --blue-pale2:   #d0e2f5;
+            --white:        #ffffff;
+            --off-white:    #f5f8ff;
+            --dark:         #0a1628;
+            --dark-2:       #112040;
+            --text:         #2c3e5a;
+            --text-muted:   #6b7f9e;
+            --serif:        'Cormorant Garamond', Georgia, serif;
+            --sans:         'Inter', sans-serif;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        /* ── SECTION HELPERS ─────────────────────────────────────────── */
+        .sec-label {
+            font-family: var(--sans);
+            font-size: .68rem;
+            font-weight: 700;
+            letter-spacing: .28em;
+            text-transform: uppercase;
+            color: var(--blue);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .sec-label::before {
+            content: '';
+            display: block;
+            width: 28px; height: 2px;
+            background: var(--blue);
+            flex-shrink: 0;
+        }
+        .sec-title {
+            font-family: var(--serif);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 300;
+            line-height: 1.2;
+            color: var(--dark);
+        }
+        .sec-title em { font-style: italic; color: var(--blue); }
+        .sec-title-white { color: #fff; }
+        .sec-title-white em { color: #93c5fd; }
+        .sec-divider {
+            width: 56px; height: 2px;
+            background: linear-gradient(90deg, var(--blue), var(--blue-light));
+            margin-top: 20px;
+        }
+        .sec-divider-white {
+            background: linear-gradient(90deg, #fff, rgba(255,255,255,.3));
+        }
+        .container { max-width: 1100px; margin: 0 auto; }
+
+        /* ── ABOUT INTRO ─────────────────────────────────────────────── */
+        .about-intro {
+            background: var(--white);
+            padding: 100px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+        .about-intro::after {
+            content: '';
+            position: absolute;
+            top: -120px; right: -120px;
+            width: 420px; height: 420px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(26,95,180,.07), transparent 70%);
+            pointer-events: none;
+        }
+        .about-intro .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 72px;
+            align-items: center;
+            position: relative;
+        }
+        .about-intro p {
+            font-family: var(--sans);
+            font-size: .95rem;
+            line-height: 1.85;
+            color: var(--text);
+            margin-top: 20px;
+        }
+        .about-intro-img {
+            position: relative;
+        }
+        .about-intro-img img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+        .about-intro-img::before {
+            content: '';
+            position: absolute;
+            top: -14px; left: -14px;
+            width: 60%; height: 60%;
+            border: 2px solid var(--blue-light);
+            z-index: 0;
+            pointer-events: none;
+        }
+        .about-intro-img::after {
+            content: '';
+            position: absolute;
+            bottom: -14px; right: -14px;
+            width: 60%; height: 60%;
+            border: 2px solid var(--blue-pale2);
+            z-index: 0;
+            pointer-events: none;
+        }
+        .svc-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--blue-pale);
+            border: 1px solid var(--blue-pale2);
+            padding: 10px 18px;
+            margin-top: 20px;
+            font-family: var(--sans);
+            font-size: .78rem;
+            font-weight: 600;
+            color: var(--blue-dark);
+        }
+        .svc-badge i { color: var(--blue); }
+
+        /* ── STATS BAR ───────────────────────────────────────────────── */
+        .stats-bar {
+            background: var(--dark-2, #112040);
+            padding: 64px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+        .stats-bar::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 80% 20%, rgba(74,144,217,.15), transparent 60%);
+        }
+        .stats-bar .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            position: relative;
+        }
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            border-right: 1px solid rgba(74,144,217,.25);
+        }
+        .stat-item:last-child { border-right: none; }
+        .stat-number {
+            font-family: var(--serif);
+            font-size: clamp(2.8rem, 5vw, 4.2rem);
+            font-weight: 300;
+            color: #93c5fd;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        .stat-suffix {
+            font-family: var(--serif);
+            font-size: 2rem;
+            color: var(--blue-light);
+        }
+        .stat-label {
+            font-family: var(--sans);
+            font-size: .75rem;
+            font-weight: 500;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-top: 10px;
+        }
+
+        /* ── OUR STORY / TIMELINE ────────────────────────────────────── */
+        .our-story {
+            background: var(--dark-2, #112040);
+            padding: 110px 24px;
+            position: relative;
+        }
+        .our-story .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 72px;
+        }
+        .section-label {
+            font-family: var(--sans);
+            font-size: .7rem;
+            font-weight: 600;
+            letter-spacing: .25em;
+            text-transform: uppercase;
+            color: var(--blue-light);
+            margin-bottom: 16px;
+        }
+        .section-title {
+            font-family: var(--serif);
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 300;
+            color: #f0f6ff;
+            line-height: 1.25;
+        }
+        .section-title em { font-style: italic; color: #93c5fd; }
+        .section-divider {
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--blue-light), transparent);
+            margin: 24px auto 0;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 48px;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 12px;
+            top: 8px;
+            bottom: 8px;
+            width: 1px;
+            background: linear-gradient(180deg, var(--blue-light) 0%, rgba(74,144,217,.1) 100%);
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 52px;
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: slideIn .6s forwards;
+        }
+        .timeline-item:nth-child(1) { animation-delay: .1s; }
+        .timeline-item:nth-child(2) { animation-delay: .2s; }
+        .timeline-item:nth-child(3) { animation-delay: .3s; }
+        .timeline-item:nth-child(4) { animation-delay: .4s; }
+        .timeline-item:nth-child(5) { animation-delay: .5s; }
+        @keyframes slideIn {
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -42px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--blue-light);
+            border: 3px solid var(--dark-2, #112040);
+            box-shadow: 0 0 0 1px var(--blue-light);
+        }
+        .timeline-year {
+            font-family: var(--serif);
+            font-size: 1rem;
+            font-style: italic;
+            color: var(--blue-light);
+            margin-bottom: 6px;
+        }
+        .timeline-item h4 {
+            font-family: var(--serif);
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #f0f6ff;
+            margin-bottom: 8px;
+        }
+        .timeline-item p {
+            font-family: var(--sans);
+            font-size: .9rem;
+            line-height: 1.7;
+            color: var(--text-muted);
+        }
+
+        /* ── WHY CHOOSE US ───────────────────────────────────────────── */
+        .why-us {
+            background: var(--blue-dark);
+            padding: 110px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+        .why-us::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 80% 20%, rgba(74,144,217,.15), transparent 60%);
+            pointer-events: none;
+        }
+        .why-us .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+        }
+        .why-us-img img {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+            display: block;
+        }
+        .why-points { margin-top: 40px; }
+        .why-point {
+            display: flex;
+            gap: 18px;
+            margin-bottom: 28px;
+            align-items: flex-start;
+        }
+        .why-point-icon {
+            width: 36px; height: 36px;
+            flex-shrink: 0;
+            background: rgba(74,144,217,.15);
+            border: 1px solid rgba(74,144,217,.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #93c5fd;
+            font-size: .85rem;
+            margin-top: 2px;
+        }
+        .why-point h5 {
+            font-family: var(--serif);
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .why-point p {
+            font-family: var(--sans);
+            font-size: .82rem;
+            line-height: 1.65;
+            color: rgba(255,255,255,.55);
+        }
+
+        /* ── OUR PROCESS ─────────────────────────────────────────────── */
+        .our-process {
+            background: var(--off-white);
+            padding: 110px 24px;
+        }
+        .our-process .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0;
+            margin-top: 64px;
+            position: relative;
+        }
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 27px;
+            left: 10%; width: 80%; height: 1px;
+            background: linear-gradient(90deg, transparent, var(--blue-light), transparent);
+        }
+        .process-step {
+            text-align: center;
+            padding: 0 16px;
+            position: relative;
+        }
+        .step-number {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--white);
+            border: 2px solid var(--blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-family: var(--serif);
+            font-size: 1.3rem;
+            color: var(--blue);
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 0 0 6px var(--off-white);
+        }
+        .process-step h4 {
+            font-family: var(--serif);
+            font-size: 1.05rem;
+            font-weight: 400;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+        .process-step p {
+            font-family: var(--sans);
+            font-size: .78rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+        }
+
+        /* ── CERTIFICATIONS ──────────────────────────────────────────── */
+        .certifications {
+            background: var(--dark);
+            padding: 80px 24px;
+            border-top: 1px solid rgba(74,144,217,.2);
+            position: relative;
+            overflow: hidden;
+        }
+        .certifications::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(74,144,217,.08), transparent 70%);
+        }
+        .certifications .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 64px;
+            flex-wrap: wrap;
+            position: relative;
+        }
+        .cert-text {
+            flex: 1;
+            min-width: 280px;
+        }
+        .cert-text h3 {
+            font-family: var(--serif);
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            font-weight: 300;
+            color: #f0f6ff;
+            margin-bottom: 16px;
+        }
+        .cert-text p {
+            font-family: var(--sans);
+            font-size: .9rem;
+            line-height: 1.7;
+            color: var(--text-muted);
+        }
+        .cert-badges {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .cert-badge {
+            text-align: center;
+            padding: 24px 32px;
+            border: 1px solid rgba(74,144,217,.3);
+            background: rgba(74,144,217,.06);
+            min-width: 130px;
+        }
+        .cert-badge i {
+            font-size: 2rem;
+            color: var(--blue-light);
+            display: block;
+            margin-bottom: 10px;
+        }
+        .cert-badge span {
+            font-family: var(--sans);
+            font-size: .72rem;
+            font-weight: 600;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        /* ── SERVICES SECTION ────────────────────────────────────────── */
+        .our-services {
+            background: var(--white);
+            padding: 110px 24px;
+        }
+        .our-services .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-top: 64px;
+        }
+        .service-card {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .service-card-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            transition: transform .6s ease;
+        }
+        .service-card:hover .service-card-img {
+            transform: scale(1.07);
+        }
+        .service-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10,22,40,.9) 0%, rgba(13,59,122,.25) 55%, transparent 100%);
+            transition: background .4s;
+        }
+        .service-card:hover .service-card-overlay {
+            background: linear-gradient(to top, rgba(13,59,122,.95) 0%, rgba(13,59,122,.55) 60%, rgba(13,59,122,.15) 100%);
+        }
+        .service-card-body {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            padding: 28px 28px 32px;
+        }
+        .service-card-icon {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(74,144,217,.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #93c5fd;
+            font-size: .95rem;
+            margin-bottom: 12px;
+        }
+        .service-card h3 {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #fff;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        .service-card p {
+            font-family: var(--sans);
+            font-size: .82rem;
+            line-height: 1.65;
+            color: rgba(255,255,255,.75);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .4s ease, opacity .4s;
+            opacity: 0;
+        }
+        .service-card:hover p {
+            max-height: 120px;
+            opacity: 1;
+        }
+        .service-card-tag {
+            display: inline-block;
+            font-family: var(--sans);
+            font-size: .65rem;
+            font-weight: 600;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: #93c5fd;
+            border: 1px solid rgba(74,144,217,.5);
+            padding: 4px 10px;
+            margin-top: 14px;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: opacity .3s .1s, transform .3s .1s;
+        }
+        .service-card:hover .service-card-tag {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ── CTA BANNER ──────────────────────────────────────────────── */
+        .cta-banner {
+            background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);
+            padding: 100px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(255,255,255,.06), transparent 70%);
+        }
+        .cta-banner h2 {
+            font-family: var(--serif);
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 300;
+            color: #fff;
+            margin-bottom: 18px;
+            position: relative;
+        }
+        .cta-banner h2 em { font-style: italic; color: #93c5fd; }
+        .cta-banner p {
+            font-family: var(--sans);
+            font-size: .97rem;
+            color: rgba(255,255,255,.65);
+            margin-bottom: 44px;
+            max-width: 520px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+        .cta-btns {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+        }
+        .btn-white {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #fff;
+            color: var(--blue-dark);
+            font-family: var(--sans);
+            font-size: .78rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            padding: 16px 36px;
+            text-decoration: none;
+            transition: background .25s, transform .25s;
+        }
+        .btn-white:hover { background: var(--blue-pale); transform: translateY(-2px); }
+        .btn-outline-white {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 2px solid rgba(255,255,255,.5);
+            color: #fff;
+            font-family: var(--sans);
+            font-size: .78rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            padding: 16px 36px;
+            text-decoration: none;
+            transition: border-color .25s, background .25s;
+        }
+        .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+
+        /* ── WHATSAPP FLOAT ──────────────────────────────────────────── */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 28px; right: 28px;
+            width: 56px; height: 56px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37,211,102,.4);
+            z-index: 999;
+            transition: transform .2s, box-shadow .2s;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 8px 28px rgba(37,211,102,.5); }
+
+        /* ── RESPONSIVE ──────────────────────────────────────────────── */
+        @media (max-width: 900px) {
+            .about-intro .container { grid-template-columns: 1fr; gap: 48px; }
+            .about-intro-img { order: -1; }
+            .why-us .container { grid-template-columns: 1fr; gap: 48px; }
+            .why-us-img { order: -1; }
+            .why-us-img img { height: 320px; }
+            .stats-bar .container { grid-template-columns: repeat(2, 1fr); }
+            .stat-item { border-right: none; border-bottom: 1px solid rgba(74,144,217,.2); }
+            .stat-item:nth-child(odd) { border-right: 1px solid rgba(74,144,217,.2); }
+            .stat-item:last-child { border-bottom: none; }
+            .process-steps { grid-template-columns: repeat(3, 1fr); gap: 32px; }
+            .process-steps::before { display: none; }
+            .certifications .container { gap: 40px; }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .process-steps { grid-template-columns: 1fr 1fr; }
+            .stats-bar .container { grid-template-columns: 1fr 1fr; }
+            .about-intro-img::before,
+            .about-intro-img::after { display: none; }
+            .services-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       HEADER
+  ============================================================ -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <img src="/assets/images/logo.png" alt="5 Star Event Management Logo"
+          style="height:80px; width:auto;">
+      </a>
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="aboutus.html" class="nav-link active">About Us</a>
+        <div class="dropdown">
+          <a href="wedding service.html" class="nav-link">
+            Services <i class="fas fa-caret-down" style="font-size:0.7rem;"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="wedding service.html">Wedding Planners</a>
+            <a href="destination wedding.html">Destination Wedding</a>
+            <a href="corporate evnt.html">Corporate Events</a>
+            <a href="house opening ceremony.html">House opening ceremony</a>
+            <a href="private parties.html">Private Parties</a>
+          </div>
+        </div>
+        <a href="our client.html" class="nav-link">Our Clients</a>
+        <a href="decor-gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+      <a href="tel:+917996605557" class="btn-cta">
+        <i class="fas fa-phone-alt" style="font-size:0.75rem;"></i>
+        +91-799-660-5557
+      </a>
+      <button id="mobile-menu-btn" aria-label="Open menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       MOBILE MENU
+  ============================================================ -->
+  <div id="mobile-menu">
+    <nav>
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="aboutus.html" class="mobile-link">About Us</a>
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-toggle" onclick="toggleMobileDropdown('services-menu')">
+          Services <i class="fas fa-chevron-down" style="font-size:0.7rem; margin-left:8px;"></i>
+        </button>
+        <div id="services-menu" class="mobile-submenu">
+          <a href="wedding service.html" class="mobile-sublink">Wedding Planners</a>
+          <a href="destination wedding.html" class="mobile-sublink">Destination Wedding</a>
+          <a href="corporate evnt.html" class="mobile-sublink">Corporate Events</a>
+          <a href="private parties.html" class="mobile-sublink">Private Parties</a>
+          <a href="house opening ceremony.html" class="mobile-sublink">House Opening Ceremony</a>
+        </div>
+      </div>
+      <a href="our client.html" class="mobile-link">Our Clients</a>
+      <a href="decor-gallery.html" class="mobile-link">Gallery</a>
+      <a href="contact.html" class="mobile-link">Contact Us</a>
+      <a href="tel:+917996605557" class="mobile-link" style="color:var(--primary); margin-top:16px;">
+        <i class="fas fa-phone-alt"></i> Call Now
+      </a>
+    </nav>
+  </div>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section id="home">
+    <div class="hero-slide active"
+        style="background-image:url('assets/images/event_split_2.jpg');"></div>
+    <div class="hero-slide"
+        style="background-image:url('assets/images/event_split_4.jpg');"></div>
+    <div class="hero-slide"
+        style="background-image:url('assets/images/event_grid_2.jpg');"></div>
+    <div class="hero-slide"
+        style="background-image:url('assets/images/event_grid_4.jpg');"></div>
+    <div class="hero-slide"
+        style="background-image:url('assets/images/event_split_3.jpg');"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content" style="margin-top: 250px;">
+        <p class="hero-label" style="color: #fff; font-size: 1.25rem; font-weight: bold;">
+            About US
+        </p>
+        <h1 class="hero-title">
+            Turning Your Dreams into Timeless Celebrations.
+        </h1>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT INTRO
+  ============================================================ -->
+  <section class="about-intro" id="about">
+    <div class="container">
+        <div>
+            <p class="sec-label">Who We Are</p>
+            <h2 class="sec-title">South India's Most <em>Trusted</em> Event Management Company</h2>
+            <div class="sec-divider"></div>
+            <p>
+                Established in 2008, <strong>5 Star Event Management</strong> has grown from a small passionate team into a leading ISO 9001:2015 certified event management company. Headquartered in Hosur, we proudly serve across Tamilnadu, Kerala, Karnataka, and Andhra Pradesh, delivering exceptional event experiences for over 18 years.
+            </p>
+            <p>
+                From intimate private gatherings to grand destination weddings and large-scale corporate events, we combine creativity, precision, and cultural expertise to design celebrations that truly reflect your vision.
+            </p>
+            <p>
+                Every event we manage is driven by our commitment to excellence, attention to detail, and the trust our clients place in us—creating unforgettable moments that last a lifetime.
+            </p>
+            <div class="svc-badge">
+                <i class="fas fa-certificate"></i> ISO 9001:2015 Certified Company
+            </div>
+            <div class="svc-badge" style="margin-top:10px;">
+                <i class="fas fa-star"></i> 18+ Years of Trusted Excellence
+            </div>
+        </div>
+        <div class="about-intro-img">
+            <img src="assets/images/Photo-Booth-Decoration_4.png"
+                alt="5 Star Event Management — Traditional Indian Wedding Setup">
+        </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       STATS BAR
+  ============================================================ -->
+  <section class="stats-bar">
+    <div class="container">
+        <div class="stat-item">
+            <div class="stat-number">5000<span class="stat-suffix">+</span></div>
+            <div class="stat-label">Events Delivered</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">20<span class="stat-suffix">+</span></div>
+            <div class="stat-label">Years of Experience</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">4<span class="stat-suffix"></span></div>
+            <div class="stat-label">States Covered</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">100<span class="stat-suffix">%</span></div>
+            <div class="stat-label">Client Satisfaction</div>
+        </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       OUR STORY / TIMELINE
+  ============================================================ -->
+  <section class="our-story">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-label">Our Journey</p>
+            <h2 class="section-title">A Story Built on <em>Celebrations</em></h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <p class="timeline-year">2006 — The Beginning</p>
+                <h4>Founded in Hosur, Tamilnadu</h4>
+                <p>5 Star Event Management was established in Hosur with a vision to create extraordinary celebrations. We began by organizing weddings and private events with a strong focus on quality, creativity, and personal attention.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <p class="timeline-year">2012 — Expanding Horizons</p>
+                <h4>Growing Across Tamilnadu</h4>
+                <p>With increasing trust and demand, we expanded our services across major cities including Chennai, Coimbatore, Madurai, and Salem, delivering seamless event experiences throughout Tamilnadu.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <p class="timeline-year">2016 — Corporate Excellence</p>
+                <h4>Entering Corporate Event Management</h4>
+                <p>We stepped into the corporate event space, successfully managing conferences, product launches, and business events with professionalism, precision, and strong brand execution.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <p class="timeline-year">2020 — Quality Recognition</p>
+                <h4>ISO 9001:2015 Certified</h4>
+                <p>Our commitment to quality and structured processes earned us ISO 9001:2015 certification, strengthening our position as a trusted event management company.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <p class="timeline-year">2026 — Today</p>
+                <h4>5000+ Successful Events &amp; 20+ Years of Experience</h4>
+                <p>With over 20 years of experience and 5000+ successful events, 5 Star Event Management continues to deliver exceptional services across Tamilnadu, Kerala, Karnataka, and Andhra Pradesh.</p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       OUR PROCESS
+  ============================================================ -->
+  <section class="our-process">
+    <div class="container">
+        <p class="sec-label" style="justify-content:center;">How We Work</p>
+        <h2 class="sec-title">From <em>Vision</em> to Reality</h2>
+        <div class="sec-divider" style="margin-left:auto; margin-right:auto;"></div>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-number">01</div>
+                <h4>Free Consultation</h4>
+                <p>We start with a no-obligation conversation to understand your vision, budget, and guest count.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">02</div>
+                <h4>Concept &amp; Planning</h4>
+                <p>Our creative team develops a detailed event concept, mood board, and custom checklist tailored to you.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">03</div>
+                <h4>Vendor Coordination</h4>
+                <p>We source and confirm all vendors — décor, catering, entertainment, photography — at the best rates.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">04</div>
+                <h4>Execution Day</h4>
+                <p>Our on-ground team manages every minute detail so you can be fully present and enjoy your celebration.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">05</div>
+                <h4>Post-Event Wrap-Up</h4>
+                <p>We handle teardown, vendor settlements, and share your event gallery. Your journey ends perfectly.</p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CERTIFICATIONS
+  ============================================================ -->
+  <section class="certifications">
+    <div class="container">
+        <div class="cert-text">
+            <h3>Quality You Can <em style="font-style:italic; color:#93c5fd;">Trust</em></h3>
+            <p>
+                5 Star Event Management is proud to be one of the few ISO 9001:2015 certified event
+                management companies in Tamilnadu. Our commitment to international quality standards
+                ensures that every event is delivered with consistency, care, and professionalism.
+            </p>
+        </div>
+        <div class="cert-badges">
+            <div class="cert-badge">
+                <i class="fas fa-shield-alt"></i>
+                <span>ISO 9001:2015<br>Certified</span>
+            </div>
+            <div class="cert-badge">
+                <i class="fas fa-star"></i>
+                <span>18+ Years<br>Trusted</span>
+            </div>
+            <div class="cert-badge">
+                <i class="fas fa-trophy"></i>
+                <span>Best Event Co.<br>Tamilnadu 2023</span>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       OUR SERVICES
+  ============================================================ -->
+  <section class="our-services" id="services">
+    <div class="container">
+        <div style="text-align:center;">
+            <p class="sec-label" style="justify-content:center;">What We Do</p>
+            <h2 class="sec-title">Our <em>Services</em></h2>
+            <div class="sec-divider" style="margin-left:auto; margin-right:auto;"></div>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <img class="service-card-img"
+                    src="assets/images/Wedding-Backdrops_1.jpg"
+                    alt="Wedding Planners">
+                <div class="service-card-overlay"></div>
+                <div class="service-card-body">
+                    <div class="service-card-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Wedding Planners</h3>
+                    <p>Full-service wedding planning from concept to execution. We handle décor, catering, entertainment, photography coordination and every detail in between — so you simply enjoy your day.</p>
+                    <a href="wedding service.html"><span class="service-card-tag">Learn More →</span></a>
+                </div>
+            </div>
+            <div class="service-card">
+                <img class="service-card-img"
+                    src="assets/images/Party-Decorations_20.jpg"
+                    alt="Destination Wedding">
+                <div class="service-card-overlay"></div>
+                <div class="service-card-body">
+                    <div class="service-card-icon"><i class="fas fa-plane"></i></div>
+                    <h3>Destination Wedding</h3>
+                    <p>Say "I do" in a breathtaking location across Tamilnadu or beyond. We manage travel logistics, local vendor tie-ups, venue selection, and all arrangements for you and your guests.</p>
+                    <a href="Destination wedding.html"><span class="service-card-tag">Learn More →</span></a>
+                </div>
+            </div>
+            <div class="service-card">
+                <img class="service-card-img"
+                    src="assets/images/Corporate-event-Decor_108.jpg"
+                    alt="Corporate Events">
+                <div class="service-card-overlay"></div>
+                <div class="service-card-body">
+                    <div class="service-card-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3>Corporate Events</h3>
+                    <p>From product launches and conferences to annual galas and team celebrations — we deliver corporate events that reflect your brand's prestige and leave a lasting impression on every attendee.</p>
+                    <a href="Corporate evnt.html"><span class="service-card-tag">Learn More →</span></a>
+                </div>
+            </div>
+            <div class="service-card">
+                <img class="service-card-img"
+                    src="assets/images/Birthday-Decor_18.png"
+                    alt="Birthday Celebration">
+                <div class="service-card-overlay"></div>
+                <div class="service-card-body">
+                    <div class="service-card-icon"><i class="fas fa-umbrella-beach"></i></div>
+                    <h3>Birthday Celebration</h3>
+                    <p>Celebrate your love with the ocean as your backdrop. We specialise in stunning beachside ceremonies along the Tamilnadu and Pondicherry coastline — with tasteful floral setups, canopy arches, and sunset lighting.</p>
+                    <a href="private parties.html"><span class="service-card-tag">Learn More →</span></a>
+                </div>
+            </div>
+            <div class="service-card">
+                <img class="service-card-img"
+                    src="assets/images/house4.jpeg"
+                    alt="House Opening Ceremony">
+                <div class="service-card-overlay"></div>
+                <div class="service-card-body">
+                    <div class="service-card-icon"><i class="fas fa-music"></i></div>
+                    <h3>House Opening Ceremony</h3>
+                    <p>Elevate your event with live bands, DJs, classical musicians, folk artists, and cultural performers. We curate entertainment packages tailored to your event's tone — from traditional to contemporary.</p>
+                    <a href="House opening ceremony.html"><span class="service-card-tag">Learn More →</span></a>
+                </div>
+            </div>
+            <div class="service-card">
+                <img class="service-card-img"
+                    src="assets/images/Party-Decorations_15.jpg"
+                    alt="Private Parties">
+                <div class="service-card-overlay"></div>
+                <div class="service-card-body">
+                    <div class="service-card-icon"><i class="fas fa-glass-cheers"></i></div>
+                    <h3>Private Parties</h3>
+                    <p>Birthdays, anniversaries, baby showers, get-togethers — no celebration is too small or too grand for us. We create intimate, personalised party experiences your guests will rave about.</p>
+                    <a href="private parties.html"><span class="service-card-tag">Learn More →</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA BANNER
+  ============================================================ -->
+  <section class="cta-banner">
+    <h2>Ready to Plan Your <em>Dream Event?</em></h2>
+    <p>Let's have a free, no-obligation conversation about your vision. Our team is ready to make it happen.</p>
+    <div class="cta-btns">
+        <a href="tel:+917996605557" class="btn-white">
+            <i class="fas fa-phone-alt"></i> Call Us Now
+        </a>
+        <a href="https://wa.me/917996605557?text=Hi" target="_blank" class="btn-outline-white">
+            <i class="fab fa-whatsapp"></i> WhatsApp Us
+        </a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="/assets/images/logo.png" alt="5 Star Events" style="height: 100px;">
+        <p>Tamilnadu's premier ISO 9001:2015 certified event management company. 18+ years of crafting unforgettable celebrations across Tamilnadu.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/5__star__events?igsh=MW40YzFyYmFlNmk5dA==" target="_blank"
+            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank" aria-label="YouTube"><i
+              class="fab fa-youtube"></i></a>
+          <a href="#" target="_blank" aria-label="Facebook"><i
+              class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/917996605557" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h6>Quick Links</h6>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="wedding service.html">Services</a></li>
+          <li><a href="decor-gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Services</h6>
+        <ul>
+          <li><a href="wedding service.html">Wedding Planners</a></li>
+          <li><a href="destination wedding.html">Destination Wedding</a></li>
+          <li><a href="corporate evnt.html">Corporate Events</a></li>
+          <li><a href="house opening ceremony.html">House Opening Ceremony</a></li>
+          <li><a href="private parties.html">Private Parties</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Contact Info</h6>
+        <div class="footer-contact-list">
+          <div class="footer-contact-row">
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+917996605557">+91-799-660-5557</a>
+          </div>
+          <div class="footer-contact-row">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:5starfaqruddinevents@gmail.com">5starfaqruddinevents@gmail.com</a>
+          </div>
+          <div class="footer-contact-row">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Mathigiri, Hosur, Tamilnadu – 635 110</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2008–2026 5 Star Event Management. All Rights Reserved.</span>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <a href="https://wa.me/917996605557?text=Hi" target="_blank" rel="noopener" class="whatsapp-float"
+      aria-label="Chat on WhatsApp">
+      <i class="fab fa-whatsapp" style="color:#fff; font-size:1.6rem;"></i>
+  </a>
+
+  <script src="assets/js/Script.js"></script>
+
+</body>
+</html>
+

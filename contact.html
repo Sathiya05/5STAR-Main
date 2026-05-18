@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+  <title>Contact Us - 5 Star Event Management</title>
+  <meta name="description"
+    content="5 Star Event Management – Contact us for wedding planning, corporate events & more. Free consultation available.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/Style.css">
+
+  <style>
+    :root {
+      --blue: #1a5fb4;
+      --blue-light: #4a90d9;
+      --blue-dark: #0d3b7a;
+      --blue-pale: #e8f0fb;
+      --blue-pale2: #d0e2f5;
+      --white: #ffffff;
+      --off-white: #f5f8ff;
+      --dark: #0a1628;
+      --text: #2c3e5a;
+      --text-muted: #6b7f9e;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Inter', sans-serif;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ── NAV ── */
+    #site-header {
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+
+    #site-header.scrolled {
+      background: rgba(255, 255, 255, .97) !important;
+      box-shadow: 0 1px 16px rgba(0, 0, 0, .08) !important;
+    }
+
+    .nav-link {
+      color: #fff !important;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: #93c5fd !important;
+    }
+
+    #site-header.scrolled .nav-link {
+      color: #1f2937 !important;
+    }
+
+    #site-header.scrolled .nav-link:hover,
+    #site-header.scrolled .nav-link.active {
+      color: #1d4ed8 !important;
+    }
+
+    .dropdown-menu a {
+      color: #374151;
+    }
+
+    /* ── HERO ── */
+    #home {
+      position: relative;
+      height: 60vh;
+      min-height: 420px;
+      overflow: hidden;
+    }
+
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1.2s ease;
+    }
+
+    .hero-slide.active {
+      opacity: 1;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(10, 22, 40, .5) 0%, rgba(10, 22, 40, .78) 100%);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      padding: 0 60px 72px;
+      max-width: 860px;
+    }
+
+    .hero-label {
+      font-family: var(--sans);
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: #93c5fd;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .hero-label::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: #93c5fd;
+    }
+
+    .hero-title {
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 300;
+      color: #fff;
+      line-height: 1.15;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: #93c5fd;
+    }
+
+    /* ── SECTION HELPERS ── */
+    .sec-label {
+      font-family: var(--sans);
+      font-size: .67rem;
+      font-weight: 700;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sec-label::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--blue);
+      flex-shrink: 0;
+    }
+
+    .sec-title {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--dark);
+    }
+
+    .sec-title em {
+      font-style: italic;
+      color: var(--blue);
+    }
+
+    .sec-divider {
+      width: 44px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--blue), var(--blue-light));
+      margin-top: 16px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* ── CONTACT SECTION ── */
+    .contact-section {
+      background: var(--off-white);
+      padding: 88px 24px;
+    }
+
+    .contact-section .container {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    /* Left — info panel */
+
+
+    .contact-info p {
+      font-family: var(--sans);
+      font-size: .9rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+      margin-top: 18px;
+      margin-bottom: 36px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .info-icon {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      background: var(--blue-pale);
+      border: 1px solid var(--blue-pale2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue);
+      font-size: .85rem;
+    }
+
+
+    .info-item-body .info-label {
+      font-family: var(--sans);
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 3px;
+    }
+
+    .info-item-body .info-value {
+      font-family: var(--sans);
+      font-size: .9rem;
+      color: var(--dark);
+      font-weight: 500;
+    }
+
+    .info-item-body a {
+      color: var(--dark);
+      text-decoration: none;
+      transition: color .2s;
+    }
+
+    .info-item-body a:hover {
+      color: var(--blue);
+    }
+
+    /* Divider between info items */
+    .info-divider {
+      width: 100%;
+      height: 1px;
+      background: var(--blue-pale2);
+      margin: 8px 0 24px;
+    }
+
+    /* Social row */
+    .contact-socials {
+      display: flex;
+      gap: 10px;
+      margin-top: 36px;
+    }
+
+    .contact-socials a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border: 1px solid var(--blue-pale2);
+      color: var(--text-muted);
+      font-size: .85rem;
+      text-decoration: none;
+      background: var(--white);
+      transition: background .2s, color .2s, border-color .2s;
+    }
+
+    .contact-socials a:hover {
+      background: var(--blue);
+      color: #fff;
+      border-color: var(--blue);
+    }
+
+    /* Right — form panel */
+    .contact-form-box {
+      background: var(--white);
+      border: 1px solid var(--blue-pale2);
+      padding: 44px 40px;
+      position: relative;
+    }
+
+    .contact-form-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--blue-dark), var(--blue-light));
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      font-family: var(--sans);
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      font-family: var(--sans);
+      font-size: .88rem;
+      color: var(--dark);
+      background: var(--off-white);
+      border: 1px solid var(--blue-pale2);
+      padding: 12px 16px;
+      outline: none;
+      transition: border-color .2s, background .2s;
+      appearance: none;
+      -webkit-appearance: none;
+      resize: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--blue-light);
+      background: var(--white);
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: #aab4c4;
+    }
+
+    .btn-submit {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--blue-dark);
+      color: #fff;
+      font-family: var(--sans);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: 14px 36px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      justify-content: center;
+      margin-top: 4px;
+      transition: background .25s, transform .2s;
+    }
+
+    .btn-submit:hover {
+      background: var(--blue);
+      transform: translateY(-2px);
+    }
+
+    /* ── MAP SECTION ── */
+    .map-section {
+      background: var(--white);
+      border-top: 1px solid var(--blue-pale2);
+    }
+
+    .map-section .container {
+      padding: 72px 0 0;
+    }
+
+    .map-head {
+      padding: 0 24px;
+      margin-bottom: 36px;
+    }
+
+    .map-box {
+      width: 100%;
+      height: 380px;
+      overflow: hidden;
+    }
+
+    .map-box iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+      filter: grayscale(15%);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      position: relative;
+      font-family: var(--sans);
+      font-size: 14px;
+      color: #fff;
+      overflow: hidden;
+      background-color: #0d1b2a;
+    }
+
+    footer>* {
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-main {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 60px 48px;
+      gap: 40px;
+    }
+
+    .footer-brand {
+      flex: 0 0 300px;
+      max-width: 300px;
+    }
+
+    .footer-brand img {
+      display: block;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 20px;
+      filter: brightness(0) invert(1);
+    }
+
+    .footer-brand p {
+      color: rgba(255, 255, 255, .55);
+      font-size: 13.5px;
+      line-height: 1.75;
+      margin: 0 0 24px;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 10px;
+    }
+
+    .footer-socials a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, .18);
+      color: rgba(255, 255, 255, .6);
+      font-size: 13px;
+      text-decoration: none;
+      background: rgba(255, 255, 255, .04);
+      transition: background .2s, color .2s;
+    }
+
+    .footer-socials a:hover {
+      background: rgba(255, 255, 255, .14);
+      color: #fff;
+    }
+
+    .footer-col {
+      flex: 1;
+    }
+
+    .footer-col h6 {
+      font-size: 11px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin: 0 0 18px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-col ul li a {
+      color: rgba(255, 255, 255, .55);
+      text-decoration: none;
+      font-size: 13.5px;
+      transition: color .2s;
+    }
+
+    .footer-col ul li a:hover {
+      color: #fff;
+    }
+
+    .footer-contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .footer-contact-row {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: rgba(255, 255, 255, .55);
+      font-size: 13.5px;
+      line-height: 1.55;
+    }
+
+    .footer-contact-row i {
+      color: #a78bfa;
+      font-size: 12px;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    .footer-contact-row a {
+      color: rgba(255, 255, 255, .55);
+      text-decoration: none;
+      transition: color .2s;
+    }
+
+    .footer-contact-row a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding: 18px 60px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, .35);
+      max-width: 1200px;
+      margin: 0 auto;
+      box-sizing: border-box;
+      width: 100%;
+      border-top: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    .footer-bottom strong {
+      color: rgba(255, 255, 255, .6);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .contact-section .container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-form-box {
+        padding: 32px 24px;
+      }
+
+      .hero-content {
+        padding: 0 24px 56px;
+      }
+
+      .map-box {
+        height: 280px;
+      }
+
+      .footer-main {
+        flex-direction: column;
+        padding: 40px 24px 32px;
+      }
+
+      .footer-brand {
+        flex: none;
+        max-width: 100%;
+      }
+
+      .footer-bottom {
+        padding: 18px 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <img src="/assets/images/logo.png" alt="5 Star Event Management Logo"
+          style="height:80px; width:auto;">
+      </a>
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="aboutus.html" class="nav-link">About Us</a>
+        <div class="dropdown">
+          <a href="wedding service.html" class="nav-link">
+            Services <i class="fas fa-caret-down" style="font-size:0.7rem;"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="wedding service.html">Wedding Planners</a>
+            <a href="destination wedding.html">Destination Wedding</a>
+            <a href="corporate evnt.html">Corporate Events</a>
+            <a href="house opening ceremony.html">House opening ceremony</a>
+            <a href="private parties.html">Private Parties</a>
+          </div>
+        </div>
+        <a href="our client.html" class="nav-link">Our Clients</a>
+        <a href="decor-gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link active">Contact Us</a>
+      </nav>
+      <a href="tel:+917996605557" class="btn-cta">
+        <i class="fas fa-phone-alt" style="font-size:0.75rem;"></i>
+        +91-799-660-5557
+      </a>
+      <button id="mobile-menu-btn" aria-label="Open menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu">
+    <nav>
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="aboutus.html" class="mobile-link">About Us</a>
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-toggle" onclick="toggleMobileDropdown('services-menu')">
+          Services <i class="fas fa-chevron-down" style="font-size:0.7rem; margin-left:8px;"></i>
+        </button>
+        <div id="services-menu" class="mobile-submenu">
+          <a href="wedding service.html" class="mobile-sublink">Wedding Planners</a>
+          <a href="destination wedding.html" class="mobile-sublink">Destination Wedding</a>
+          <a href="corporate evnt.html" class="mobile-sublink">Corporate Events</a>
+          <a href="private parties.html" class="mobile-sublink">Private Parties</a>
+          <a href="house opening ceremony.html" class="mobile-sublink">House Opening Ceremony</a>
+        </div>
+      </div>
+      <a href="our client.html" class="mobile-link">Our Clients</a>
+      <a href="decor-gallery.html" class="mobile-link">Gallery</a>
+      <a href="contact.html" class="mobile-link">Contact Us</a>
+      <a href="tel:+917996605557" class="mobile-link" style="color:var(--primary); margin-top:16px;">
+        <i class="fas fa-phone-alt"></i> Call Now
+      </a>
+    </nav>
+  </div>
+
+  <!-- HERO -->
+  <section id="home">
+    <div class="hero-slide active"
+      style="background-image:url('assets/images/destination2.jpeg');"></div>
+    <div class="hero-slide"
+      style="background-image:url('assets/images/Haldi-and-Mehendi_3.jpg');"></div>
+    <div class="hero-slide" style="background-image:url('assets/images/Haldi-and-Mehendi_4.jpg');">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-label">Let's Plan Something Extraordinary</p>
+      <h1 class="hero-title">Get in Touch <em>With Us</em></h1>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+
+      <!-- Left — Info -->
+      <div class="contact-info">
+        <p class="sec-label">Contact Us</p>
+        <h2 class="sec-title">Let's Talk About <em>Your Event</em></h2>
+        <div class="sec-divider"></div>
+
+        <p>Planning a wedding, corporate event, or private party? Our expert team is ready to turn your vision into an
+          unforgettable celebration.</p>
+
+        <div class="info-divider"></div>
+
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+          <div class="info-item-body">
+            <div class="info-label">Phone</div>
+            <div class="info-value"><a href="tel:+917996605557">+91-799-660-5557</a></div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-envelope"></i></div>
+          <div class="info-item-body">
+            <div class="info-label">Email</div>
+            <div class="info-value"><a href="mailto:5starfaqruddinevents@gmail.com">5starfaqruddinevents@gmail.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="info-item-body">
+            <div class="info-label">Address</div>
+            <div class="info-value">Mathigiri, Hosur, Tamilnadu – 635 110</div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-clock"></i></div>
+          <div class="info-item-body">
+            <div class="info-label">Working Hours</div>
+            <div class="info-value">Mon – Sat, 9:00 AM – 7:00 PM</div>
+          </div>
+        </div>
+
+        <div class="contact-socials">
+          <a href="https://www.instagram.com/5__star__events?igsh=MW40YzFyYmFlNmk5dA==" target="_blank"
+            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@melodiaeventmanagement" target="_blank" aria-label="YouTube"><i
+              class="fab fa-youtube"></i></a>
+          <a href="https://www.facebook.com/melodiaevents/" target="_blank" aria-label="Facebook"><i
+              class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/917996605557" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Right — Form -->
+      <div class="contact-form-box">
+        <p class="sec-label" style="margin-bottom:8px;">Send a Message</p>
+        <h3 style="font-family:var(--serif); font-size:1.5rem; font-weight:300; color:var(--dark); margin-bottom:28px;">
+          We'll Get Back to You <em style="font-style:italic; color:var(--blue);">Shortly</em></h3>
+
+        <form class="contact-form" onsubmit="return false;">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" placeholder="e.g. Maqsood Ahamed" required>
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="+91 7996605557" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="5starfaqruddinevents@gmail.com" required>
+          </div>
+
+          <div class="form-group">
+            <label>Event Type</label>
+            <select>
+              <option value="" disabled selected>Select your event</option>
+              <option>Wedding</option>
+              <option>Destination Wedding</option>
+              <option>Corporate Event</option>
+              <option>House Opening Ceremony</option>
+              <option>Private Party</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Your Message</label>
+            <textarea rows="5"
+              placeholder="Tell us about your event — date, venue, guest count, or any special requests..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section style="padding: 80px 0; background: #f9fafb;">
+
+    <div style="max-width: 1200px; margin: auto; padding: 0 20px;">
+
+      <div style="text-align: center; margin-bottom: 40px;">
+        <p
+          style="font-size: 14px; color: #4a90d9; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px;">
+          Find Us
+        </p>
+
+        <h2 style="font-size: 32px; font-weight: 700; color: #111827;">
+          Our <em style="color: #4a90d9; font-style: normal;">Location</em>
+        </h2>
+
+        <div style="width: 60px; height: 3px; background: #16a34a; margin: 15px auto 0; border-radius: 2px;"></div>
+      </div>
+
+    </div>
+
+    <div style="display: flex; justify-content: center; padding: 0 20px;">
+
+      <div
+        style="width: 100%; max-width: 1100px; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: 0.3s;">
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31280.123!2d77.8252923!3d12.7409127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae70c883f728a3%3A0xd71a6bc0275ac9be!2sHosur%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+          style="width: 100%; height: 450px; border: none;" allowfullscreen loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="Hosur, Tamil Nadu">
+        </iframe>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="/assets/images/logo.png" alt="5 Star Events" style="height: 100px;">
+        <p>Tamilnadu's premier ISO 9001:2015 certified event management company. 18+ years of crafting unforgettable
+          celebrations across Tamilnadu.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/5__star__events?igsh=MW40YzFyYmFlNmk5dA==" target="_blank"
+            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank" aria-label="YouTube"><i
+              class="fab fa-youtube"></i></a>
+          <a href="#" target="_blank" aria-label="Facebook"><i
+              class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/917996605557" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h6>Quick Links</h6>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="wedding service.html">Services</a></li>
+          <li><a href="decor-gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Services</h6>
+        <ul>
+          <li><a href="wedding service.html">Wedding Planners</a></li>
+          <li><a href="destination wedding.html">Destination Wedding</a></li>
+          <li><a href="corporate evnt.html">Corporate Events</a></li>
+          <li><a href="house opening ceremony.html">House Opening Ceremony</a></li>
+          <li><a href="private parties.html">Private Parties</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Contact Info</h6>
+        <div class="footer-contact-list">
+          <div class="footer-contact-row">
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+917996605557">+91-799-660-5557</a>
+          </div>
+          <div class="footer-contact-row">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:5starfaqruddinevents@gmail.com">5starfaqruddinevents@gmail.com</a>
+          </div>
+          <div class="footer-contact-row">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Mathigiri, Hosur, Tamilnadu – 635 110</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2008–2026 5 Star Event Management. All Rights Reserved.</span>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/917996605557?text=Hi" target="_blank" rel="noopener" class="whatsapp-float"
+    aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp" style="color:#fff; font-size:1.6rem;"></i>
+  </a>
+
+  <!-- <script>
+    const slides = document.querySelectorAll('.hero-slide');
+    let cur = 0;
+    setInterval(() => {
+      slides[cur].classList.remove('active');
+      cur = (cur + 1) % slides.length;
+      slides[cur].classList.add('active');
+    }, 5000);
+  </script> -->
+  <script src="assets/js/Script.js"></script>
+  <script>
+    // ── 2. MOBILE MENU TOGGLE ───────────────────────────────────
+    // Opens/closes the full-screen mobile nav overlay.
+
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuBtn && mobileMenu) {
+      // Toggle menu open/close when hamburger button is clicked
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('open');
+      });
+
+      // Close menu automatically when any mobile nav link is clicked
+      mobileMenu.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('open');
+        });
+      });
+    }
+  </script>
+
+</body>
+
+</html>
+

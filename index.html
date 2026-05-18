@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/assets/images/logo.png" type="image/x-icon">
+  <title>5 Star Events</title>
+  <meta name="description"
+    content="5 Star Events is a leading event planner in Tamilnadu offering wedding planning, destination weddings, corporate events, private parties, and housewarming events across South India.">
+
+  <meta name="keywords"
+    content="event management tamilnadu, wedding planners hosur, destination wedding planners, corporate event management, birthday event planners, private party organizers">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Your CSS (all styles live here) -->
+  <link rel="stylesheet" href="assets/css/Style.css">
+</head>
+
+<body>
+
+
+  <!-- ============================================================
+       HEADER — Fixed top navigation bar
+  ============================================================ -->
+  <header id="site-header">
+    <div class="header-inner">
+
+      <!-- Logo -->
+      <a href="#" class="logo">
+        <img src="/assets/images/logo.png" alt="5 Star Event Management Logo"
+          style="height:80px; width:auto;">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="aboutus.html" class="nav-link">About Us</a>
+
+        <div class="dropdown">
+          <a href="wedding service.html" class="nav-link">
+            Services <i class="fas fa-caret-down" style="font-size:0.7rem;"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="wedding service.html">Wedding Planners</a>
+            <a href="destination wedding.html">Destination Wedding</a>
+            <a href="corporate evnt.html">Corporate Events</a>
+            <a href="house opening ceremony.html">House opening ceremony</a>
+            <a href="private parties.html">Private Parties</a>
+          </div>
+        </div>
+
+        <!-- <a href="#venues" class="nav-link">Venues</a> -->
+        <a href="our client.html" class="nav-link">Our Clients</a>
+
+        <!-- <div class="dropdown"> -->
+        <a href="decor-gallery.html" class="nav-link">
+          Gallery
+        </a>
+        <!-- <div class="dropdown-menu">
+            <a href="/wedding-albums(images).html">Wedding Albums</a>
+            <a href="/destination-wedding(images).html">Destination Wedding</a>
+            <a href="/corporate-events(images).html">Corporate Events</a>
+            <a href="/house-opening-ceremony(images).html">House Opening Ceremony</a>
+            <a href="/private-parties(images).html">Private Parties</a>
+          </div>
+        </div> -->
+
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <!-- Call Button (desktop) -->
+      <a href="tel:+917996605557" class="btn-cta">
+        <i class="fas fa-phone-alt" style="font-size:0.75rem;"></i>
+        +91-799-660-5557
+      </a>
+
+      <!-- Hamburger (mobile only) -->
+      <button id="mobile-menu-btn" aria-label="Open menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+
+  <!-- ============================================================
+       MOBILE MENU — Full-screen overlay nav for small screens
+  ============================================================ -->
+  <div id="mobile-menu">
+    <nav>
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="aboutus.html" class="mobile-link">About Us</a>
+
+      <!-- Services Dropdown -->
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-toggle" onclick="toggleMobileDropdown('services-menu')">
+          Services <i class="fas fa-chevron-down" style="font-size:0.7rem; margin-left:8px;"></i>
+        </button>
+        <div id="services-menu" class="mobile-submenu">
+          <a href="wedding service.html" class="mobile-sublink">Wedding Planners</a>
+          <a href="destination wedding.html" class="mobile-sublink">Destination Wedding</a>
+          <a href="corporate evnt.html" class="mobile-sublink">Corporate Events</a>
+          <a href="private parties.html" class="mobile-sublink">Private Parties</a>
+          <a href="house opening ceremony.html" class="mobile-sublink">House Opening Ceremony</a>
+        </div>
+      </div>
+
+      <!-- <a href="#venues" class="mobile-link">Venues</a> -->
+      <a href="our client.html" class="mobile-link">Our Clients</a>
+
+      <!-- Gallery Dropdown -->
+      <a href="decor-gallery.html" class="mobile-link">Gallery</a>
+      <!-- <div class="mobile-dropdown">
+        <button class="mobile-dropdown-toggle" onclick="toggleMobileDropdown('gallery-menu')">
+          Gallery <i class="fas fa-chevron-down" style="font-size:0.7rem; margin-left:8px;"></i>
+        </button>
+        <div id="gallery-menu" class="mobile-submenu">
+          <a href="wedding-albums.html" class="mobile-sublink">Wedding Albums</a>
+          <a href="destination-wedding.html" class="mobile-sublink">Destination Wedding</a>
+          <a href="corporate-events.html" class="mobile-sublink">Corporate Events</a>
+          <a href="house-opening-ceremony.html" class="mobile-sublink">House Opening Ceremony</a>
+          <a href="private-parties.html" class="mobile-sublink">Private Parties</a>
+        </div>
+      </div> -->
+
+      <a href="contact.html" class="mobile-link">Contact Us</a>
+      <a href="tel:+917996605557" class="mobile-link" style="color:var(--primary); margin-top:16px;">
+        <i class="fas fa-phone-alt"></i> Call Now
+      </a>
+    </nav>
+  </div>
+
+
+  <!-- ============================================================
+       HERO — Full-screen slideshow with headline
+  ============================================================ -->
+  <section id="home">
+
+    <!-- Background slideshow images -->
+    <div class="hero-slide active"
+      style="background-image:url('assets/images/Mandap-Decoration_18.jpg');">
+    </div>
+    <div class="hero-slide"
+      style="background-image:url('assets/images/Mandap-Decoration_7.jpg');">
+    </div>
+    <div class="hero-slide"
+      style="background-image:url('assets/images/Wedding-Backdrops_2.jpg');">
+    </div>
+    <div class="hero-slide"
+      style="background-image:url('assets/images/Mandap-Decoration_25.jpg');">
+    </div>
+    <div class="hero-slide"
+      style="background-image:url('assets/images/Party-Decorations_19.jpg');">
+    </div>
+
+    <!-- Dark gradient overlay so text is readable over the photo -->
+    <div class="hero-overlay"></div>
+
+    <!-- Main hero text content -->
+    <div class="hero-content">
+      <p class="hero-label">South India's Leading Event Management Company</p>
+      <h1 class="hero-title">Partner with <em>5-star</em> Event Management in South India</h1>
+      <!-- <p class="hero-label">Let's Plan Something Extraordinary</p>
+      <h1 class="hero-title">Get in Touch <em>With Us</em></h1> -->
+
+      <div class="hero-buttons">
+        <a href="contact.html" class="btn-primary">Contact Us</a>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       STATS — Key numbers that animate when scrolled into view
+  ============================================================ -->
+  <section id="stats">
+    <div class="stats-grid">
+
+      <div class="stat-item">
+        <div class="stat-label">Years of Experience</div>
+        <div class="stat-number">
+          <span data-counter="20">0</span><span class="stat-suffix">+</span>
+        </div>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-label">Events Covered</div>
+        <div class="stat-number">
+          <span data-counter="5">0</span><span class="stat-suffix">K+</span>
+        </div>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-label">Satisfied Clients</div>
+        <div class="stat-number">
+          <span data-counter="2.3">0</span><span class="stat-suffix">K+</span>
+        </div>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-label">Customer Rating</div>
+        <div class="stat-number">
+          <span data-counter="4.8">0</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       VIDEO — Thumbnail that plays YouTube video on click
+  ============================================================ -->
+  <!-- <div class="video-section">
+    <div class="video-wrapper" id="video-wrapper">
+      <img src="https://eventsmanagementkerala.com/wp-content/uploads/2024/11/ECP01217-scaled.jpg"
+        alt="Click to play event highlight video">
+      <div class="play-btn">
+        <div class="play-circle">
+          <i class="fas fa-play" style="margin-left:4px;"></i>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+  <!-- ============================================================
+       ABOUT — Company introduction + 4 photo grid
+  ============================================================ -->
+  <section id="about" class="about-section">
+    <div class="section-container">
+      <div class="about-grid">
+
+        <!-- Text column -->
+        <div class="about-text">
+          <img
+            src="https://eventsmanagementkerala.com/wp-content/uploads/2025/05/width_600-removebg-preview-e1746788098745.webp"
+            alt="ISO 9001:2015 Certification Badge" style="width:140px; margin-bottom:20px; object-fit:contain;">
+          <p class="section-label">ISO 9001:2015 Certified</p>
+          <h2 class="section-title">Leading Event Management Company in South India</h2>
+          <p>
+            Looking to create an unforgettable event? <strong>5 Star Event Management</strong> is your trusted partner
+            for planning and executing exceptional events across Tamilnadu, Kerala, Karnataka, and Andhra Pradesh. From
+            corporate events and weddings to private celebrations and customized event solutions, we bring creativity,
+            precision, and excellence to every occasion. We specialize in both indoor and outdoor events, delivering
+            seamless experiences tailored to your needs. Let us turn your vision into a memorable experience.
+          </p>
+        </div>
+
+        <!-- Image grid column -->
+        <div class="about-images">
+          <img src="assets/images/Mandap-Decoration_24.jpg" alt="Event 1">
+          <img src="assets/images/Haldi-and-Mehendi_11.jpg" alt="Event 2">
+          <img src="assets/images/Birthday-Decor_15.png" alt="Event 3">
+          <img src="assets/images/Photo-Booth-Decoration_15.png" alt="Event 4">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       DESTINATION / VENUES — Full-width parallax CTA section
+  ============================================================ -->
+  <section id="venues" class="destination-section"
+    style="background-image:url('assets/images/Wedding-Backdrops_30.jpg');">
+    <div class="destination-overlay"></div>
+    <div class="destination-content">
+      <p class="label">Premium Destinations</p>
+      <h2>Create Your Perfect Destination Wedding</h2>
+      <p class="desc">
+        With <strong>5 Star Event Management</strong>, experience luxury destination weddings across Tamilnadu and
+        beyond. Whether it’s a scenic beach or a grand resort, we craft unforgettable celebrations with style,
+        tradition, and perfection.
+      </p>
+      <div class="btn-group">
+        <a href="contact.html" class="btn-primary">
+          <i class="fas fa-phone-volume"></i> Talk to Expert
+        </a>
+        <a href="https://wa.me/917996605557?text=Hi" target="_blank" class="btn-wa">
+          <i class="fab fa-whatsapp"></i> WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SERVICES — 6 service cards in a 3-column grid
+  ============================================================ -->
+  <section id="services" class="services-section">
+    <div class="section-container">
+
+      <div class="text-center">
+        <p class="section-label">Our Services</p>
+        <h2 class="section-title" style="text-transform:none; font-size:clamp(1.6rem,3vw,2.2rem);">
+          Services by 5 Star® Event Management
+        </h2>
+        <p class="section-intro">
+          ISO 9001:2015 certified services across all of Tamilnadu — from corporate events to
+          destination weddings, we handle everything with precision.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- Corporate Events -->
+        <a href="Corporate evnt.html" class="service-card">
+          <img src="assets/images/Corporate-event-Decor_1.jpg" alt="Corporate Event">
+          <div class="service-caption">
+            <div class="service-icon"><i class="fas fa-building"></i></div>
+            <h3>Corporate Event</h3>
+            <p>Make a statement at your next corporate event with 5 Star.</p>
+          </div>
+        </a>
+
+        <!-- Wedding Planners -->
+        <a href="wedding service.html" class="service-card">
+          <img src="assets/images/Wedding-Backdrops_23.jpg" alt="Wedding Planners">
+          <div class="service-caption">
+            <div class="service-icon"><i class="fas fa-heart"></i></div>
+            <h3>Wedding Planners</h3>
+            <p>Planning the perfect dream wedding to be remembered forever.</p>
+          </div>
+        </a>
+
+        <!-- Destination Weddings -->
+        <a href="Destination wedding.html" class="service-card">
+          <img src="assets/images/Party-Decorations_26.jpg" alt="Destination Weddings">
+          <div class="service-caption">
+            <div class="service-icon"><i class="fas fa-plane-departure"></i></div>
+            <h3>Destination Weddings</h3>
+            <p>Celebrate in paradise with a luxurious destination wedding.</p>
+          </div>
+        </a>
+
+        <!-- Beach Weddings -->
+        <a href="private parties.html" class="service-card">
+          <img src="assets/images/Birthday-Decor_12.png" alt="Beach Weddings">
+          <div class="service-caption">
+            <div class="service-icon"><i class="fas fa-umbrella-beach"></i></div>
+            <h3>Birthday celebration</h3>
+            <p>Love amidst the serene shores and palm-fringed beaches of Tamilnadu.</p>
+          </div>
+        </a>
+
+        <!-- Music & Entertainment -->
+        <a href="House opening ceremony.html" class="service-card">
+          <img src="assets/images/house1.jpeg" alt="Music and Entertainment">
+          <div class="service-caption">
+            <div class="service-icon"><i class="fas fa-music"></i></div>
+            <h3>House opening ceremony</h3>
+            <p>Live bands, DJs, and mesmerising performers for every event.</p>
+          </div>
+        </a>
+
+        <!-- Private Parties -->
+        <a href="private parties.html" class="service-card">
+          <img src="assets/images/Party-Decorations_23.jpg" alt="Private Parties">
+          <div class="service-caption">
+            <div class="service-icon"><i class="fas fa-champagne-glasses"></i></div>
+            <h3>Private Parties</h3>
+            <p>Crafting unforgettable moments that leave lasting memories.</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       TESTIMONIALS — 3 Google review cards
+  ============================================================ -->
+  <section class="testimonials-section">
+    <div class="section-container">
+
+      <div class="text-center" style="margin-bottom:48px;">
+        <p class="section-label">Client Experiences</p>
+        <h2 class="section-title" style="text-transform:none;">
+          What Our Clients Say About Us
+        </h2>
+      </div>
+
+      <div class="testimonials-grid">
+
+        <!-- Review 1 -->
+        <div class="testimonial-card">
+          <i class="fas fa-quote-left" style="font-size:2.5rem; color:rgba(153,58,135,0.08); float:right;"></i>
+          <div class="stars-row">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>
+            "Our wedding was handled so beautifully. Every small detail was perfect and the entire team was very
+            supportive."
+          </p>
+          <div class="reviewer">
+            <img src="https://randomuser.me/api/portraits/men/11.jpg">
+            <div class="reviewer-info">
+              <p>Karthik S</p>
+              <span>Wedding Client</span>
+            </div>
+            <img src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" class="google-icon">
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="testimonial-card">
+          <i class="fas fa-quote-left" style="font-size:2.5rem; color:rgba(153,58,135,0.08); float:right;"></i>
+          <div class="stars-row">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>
+            "Highly professional team! They made our corporate event look premium and well organized."
+          </p>
+          <div class="reviewer">
+            <img src="https://randomuser.me/api/portraits/women/21.jpg">
+            <div class="reviewer-info">
+              <p>Meena R</p>
+              <span>Corporate Event</span>
+            </div>
+            <img src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" class="google-icon">
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="testimonial-card">
+          <i class="fas fa-quote-left" style="font-size:2.5rem; color:rgba(153,58,135,0.08); float:right;"></i>
+          <div class="stars-row">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>
+            "Decoration and lighting were stunning. Our engagement event looked like a dream setup!"
+          </p>
+          <div class="reviewer">
+            <img src="https://randomuser.me/api/portraits/women/32.jpg">
+            <div class="reviewer-info">
+              <p>Divya K</p>
+              <span>Engagement Event</span>
+            </div>
+            <img src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" class="google-icon">
+          </div>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="testimonial-card">
+          <i class="fas fa-quote-left" style="font-size:2.5rem; color:rgba(153,58,135,0.08); float:right;"></i>
+          <div class="stars-row">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>
+            "They handled everything smoothly and we were stress-free throughout the function. Excellent service!"
+          </p>
+          <div class="reviewer">
+            <img src="https://randomuser.me/api/portraits/men/45.jpg">
+            <div class="reviewer-info">
+              <p>Praveen M</p>
+              <span>Family Event</span>
+            </div>
+            <img src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" class="google-icon">
+          </div>
+        </div>
+
+        <!-- Review 5 -->
+        <div class="testimonial-card">
+          <i class="fas fa-quote-left" style="font-size:2.5rem; color:rgba(153,58,135,0.08); float:right;"></i>
+          <div class="stars-row">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>
+            "Best event planners in town. Their creativity and execution made our event truly memorable."
+          </p>
+          <div class="reviewer">
+            <img src="https://randomuser.me/api/portraits/men/29.jpg">
+            <div class="reviewer-info">
+              <p>Suresh B</p>
+              <span>Reception Event</span>
+            </div>
+            <img src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" class="google-icon">
+          </div>
+        </div>
+
+        <!-- Review 6 -->
+        <div class="testimonial-card">
+          <i class="fas fa-quote-left" style="font-size:2.5rem; color:rgba(153,58,135,0.08); float:right;"></i>
+          <div class="stars-row">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>
+            "From planning to execution, everything was perfect. Highly recommend them for any special occasion."
+          </p>
+          <div class="reviewer">
+            <img src="https://randomuser.me/api/portraits/women/18.jpg">
+            <div class="reviewer-info">
+              <p>Keerthana V</p>
+              <span>Birthday Event</span>
+            </div>
+            <img src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" class="google-icon">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       AWARDS — Award recognition section with 2 photos
+  ============================================================ -->
+  <section class="awards-section" style="padding:60px 20px; background:#f9f9f9;">
+    <div class="section-container" style="max-width:1200px; margin:auto;">
+
+      <div class="text-center" style="margin-bottom:48px; text-align:center;">
+        <p class="section-label" style="color:#2e7d32; font-weight:600; letter-spacing:1px;">
+          Awards &amp; Recognitions
+        </p>
+
+        <h2 class="section-title" style="text-transform:none; font-size:32px; font-weight:700;">
+          Recognized for Excellence in Event Management
+        </h2>
+      </div>
+
+      <div class="awards-box"
+        style="background:#fff; padding:30px; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.08);">
+
+        <p style="text-align:center; font-size:16px; line-height:1.6; margin-bottom:30px;">
+          Our dedication and excellence in event management have been recognized by
+          <strong>Wabtec (Faiveley Transport)</strong>, where we were honoured for successfully
+          organizing and managing corporate events with professionalism and quality execution.
+        </p>
+
+        <div class="awards-grid" style="display:flex; gap:20px; flex-wrap:wrap; justify-content:center;">
+
+          <img src="assets/images/award1.png" alt="Award Ceremony 1"
+            style="width:100%; max-width:500px; height:300px; object-fit:cover; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+
+          <img src="assets/images/award2.png" alt="Award Ceremony 2"
+            style="width:100%; max-width:500px; height:300px; object-fit:cover; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FAQ — Accordion-style frequently asked questions
+  ============================================================ -->
+  <section class="faq-section">
+    <div class="section-container">
+
+      <div class="text-center" style="margin-bottom:48px;">
+        <p class="section-label">FAQs</p>
+        <h2 class="section-title" style="text-transform:none;">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-grid">
+
+        <!-- Column 1 -->
+        <div>
+          <div class="faq-item">
+            <button class="faq-question">
+              How much does event management cost in Tamilnadu?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              The average price range is ₹3 lakhs to ₹20 lakhs depending on event type and scale.
+              Contact us for a custom quote tailored to your budget.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Do you arrange events on a budget?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Yes! We provide tailored event plans based on our clients' budgets so everyone can have
+              a dream event without overspending.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Who is the owner of 5 Star Event Management?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Mr. Maqsood Ahamad (also known as Ahamad) is the CEO and founder. He began this journey
+              20+ years ago as a Tent owner.
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div>
+          <div class="faq-item">
+            <button class="faq-question">
+              How much does a destination wedding cost?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              On average ₹15 to ₹22 lakhs, inclusive of decor, catering, photography, entertainment,
+              and transport from airports to venues.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              When should I hire an event planner?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              At least 1 to 2 months in advance to avoid last-minute stress, especially during
+              Tamilnadu's peak wedding season.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Do you offer entertainment services?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Yes — DJ, live bands, water drum music, wedding dances, Oppana, Margamkali and more.
+              Entertainment is our specialty!
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       GOOGLE MAP — Embedded location map
+  ============================================================ -->
+  <div class="map-section">
+    <div class="map-box">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31280.123!2d77.8252923!3d12.7409127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae70c883f728a3%3A0xd71a6bc0275ac9be!2sHosur%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Hosur, Tamil Nadu">
+      </iframe>
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+      FOOTER
+  ============================================================ -->
+  <footer>
+
+    <div class="footer-main">
+
+      <!-- Left: Logo + Description + Socials -->
+      <div class="footer-brand">
+        <img src="/assets/images/logo.png" alt="5 Star Events" style="height: 100px;">
+        <p>Tamilnadu's premier ISO 9001:2015 certified event management company. 18+ years of crafting unforgettable
+          celebrations across Tamilnadu.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/5__star__events?igsh=MW40YzFyYmFlNmk5dA==" target="_blank"
+            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank" aria-label="YouTube"><i
+              class="fab fa-youtube"></i></a>
+          <a href="#" target="_blank" aria-label="Facebook"><i
+              class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/917996605557" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Middle: Quick Links -->
+      <div class="footer-col">
+        <h6>Quick Links</h6>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="wedding service.html">Services</a></li>
+          <!-- <li><a href="#venues">Venues</a></li> -->
+          <li><a href="decor-gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <!-- Middle: Quick Links -->
+      <div class="footer-col">
+        <h6>Services</h6>
+        <ul>
+          <li><a href="wedding service.html">Wedding Planners</a></li>
+          <li><a href="destination wedding.html">Destination Wedding</a></li>
+          <li><a href="corporate evnt.html">Corporate Events</a></li>
+          <li><a href="house opening ceremony.html">House Opening Ceremony</a></li>
+          <li><a href="private parties.html">Private Parties</a></li>
+        </ul>
+      </div>
+
+      <!-- Right: Contact Info -->
+      <div class="footer-col">
+        <h6>Contact Info</h6>
+        <div class="footer-contact-list">
+          <div class="footer-contact-row">
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+917996605557">+91-799-660-5557</a>
+          </div>
+          <div class="footer-contact-row">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:5starfaqruddinevents@gmail.com">5starfaqruddinevents@gmail.com</a>
+          </div>
+          <div class="footer-contact-row">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Mathigiri, Hosur, Tamilnadu – 635 110</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Phone + Email bar -->
+    <!-- <div class="footer-bar-contact">
+    <a href="tel:+917996605557">
+      <i class="fas fa-phone-alt"></i>
+      +91-799-660-5557
+    </a>
+    <a href="mailto:info@5stareventmanagement.com">
+      <i class="fas fa-envelope"></i>
+      info@5stareventmanagement.com
+    </a>
+  </div> -->
+    <!-- Copyright bar -->
+    <div class="footer-bottom">
+      <span>
+        © 2008–2026 5 Star Event Management. All Rights Reserved.
+      </span>
+      <!-- <span>Powered by <strong>Pindiyan Software &amp; Digital Solutions</strong></span> -->
+    </div>
+
+  </footer>
+
+  <!-- ============================================================
+       WHATSAPP FLOATING BUTTON
+  ============================================================ -->
+  <a href="https://wa.me/917996605557?text=Hi" target="_blank" rel="noopener" class="whatsapp-float"
+    aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp" style="color:#fff; font-size:1.6rem;"></i>
+  </a>
+
+
+  <!-- Your JavaScript (all logic lives here) -->
+  <script src="assets/js/Script.js"></script>
+
+</body>
+
+</html>
+

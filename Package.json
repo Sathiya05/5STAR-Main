@@ -1,0 +1,21 @@
+{
+  "name": "mama",
+  "version": "1.0.0",
+  "description": "Melodia Event Management Website",
+  "scripts": {
+    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./css/style.css",
+    "watch": "npx @tailwindcss/cli -i ./src/input.css -o ./css/style.css --watch",
+    "serve": "npx live-server --port=3000 --open=index.html",
+    "start": "npm run build && npx live-server --port=3000 --open=index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.2",
+    "autoprefixer": "^10.4.27",
+    "live-server": "^1.2.2",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.2"
+  }
+}
