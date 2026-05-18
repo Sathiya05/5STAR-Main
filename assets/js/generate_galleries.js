@@ -26,24 +26,24 @@ const templateHeader = `<!DOCTYPE html>
   <!-- Header -->
   <header id="site-header" class="scrolled">
     <div class="header-inner">
-      <a href="Index.html" class="logo">
-        <img src="https://eventsmanagementkerala.com/wp-content/uploads/2022/09/MELODIA-LOGO-03-1-1024x454.webp" alt="5 Star Event Management Logo">
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo.png" alt="5 Star Event Management Logo">
       </a>
       <nav class="desktop-nav">
-        <a href="Index.html#home" class="nav-link">Home</a>
-        <a href="Index.html#about" class="nav-link">About</a>
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="index.html#about" class="nav-link">About</a>
         <div class="dropdown">
-          <a href="Index.html#services" class="nav-link">Services <i class="fas fa-caret-down" style="font-size:0.7rem;"></i></a>
+          <a href="index.html#services" class="nav-link">Services <i class="fas fa-caret-down" style="font-size:0.7rem;"></i></a>
           <div class="dropdown-menu">
-            <a href="Index.html#services">Wedding Planners</a>
-            <a href="Index.html#services">Destination Wedding</a>
-            <a href="Index.html#services">Corporate Events</a>
-            <a href="Index.html#services">Beach Wedding</a>
-            <a href="Index.html#services">Music &amp; Entertainment</a>
-            <a href="Index.html#services">Private Parties</a>
+            <a href="index.html#services">Wedding Planners</a>
+            <a href="index.html#services">Destination Wedding</a>
+            <a href="index.html#services">Corporate Events</a>
+            <a href="index.html#services">Beach Wedding</a>
+            <a href="index.html#services">Music &amp; Entertainment</a>
+            <a href="index.html#services">Private Parties</a>
           </div>
         </div>
-        <a href="Index.html#venues" class="nav-link">Venues</a>
+        <a href="index.html#venues" class="nav-link">Venues</a>
         <div class="dropdown">
           <a href="#" class="nav-link active">Gallery <i class="fas fa-caret-down" style="font-size:0.7rem;"></i></a>
           <div class="dropdown-menu">
@@ -63,7 +63,7 @@ const templateHeader = `<!DOCTYPE html>
             <a href="#our-clients">Our clients</a>
           </div>
         </div>
-        <a href="Index.html#contact" class="nav-link">Contact Us</a>
+        <a href="index.html#contact" class="nav-link">Contact Us</a>
       </nav>
       <a href="tel:+917996605557" class="btn-cta">
         <i class="fas fa-phone-alt" style="font-size:0.75rem;"></i> +91-799-660-5557
@@ -78,12 +78,12 @@ const templateHeader = `<!DOCTYPE html>
   <!-- Mobile Menu -->
   <div id="mobile-menu">
     <nav>
-      <a href="Index.html#home"    class="mobile-link">Home</a>
-      <a href="Index.html#about"   class="mobile-link">About</a>
-      <a href="Index.html#services" class="mobile-link">Services</a>
-      <a href="Index.html#venues"  class="mobile-link">Venues</a>
+      <a href="index.html#home"    class="mobile-link">Home</a>
+      <a href="index.html#about"   class="mobile-link">About</a>
+      <a href="index.html#services" class="mobile-link">Services</a>
+      <a href="index.html#venues"  class="mobile-link">Venues</a>
       <a href="#" class="mobile-link">Gallery</a>
-      <a href="Index.html#contact" class="mobile-link">Contact Us</a>
+      <a href="index.html#contact" class="mobile-link">Contact Us</a>
       <a href="tel:+917996605557" class="mobile-link" style="color:var(--primary); margin-top:16px;">
         <i class="fas fa-phone-alt"></i> Call Now
       </a>
@@ -107,7 +107,7 @@ const templateFooter = `      </div>
   <footer style="margin-top:0;">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="https://eventsmanagementkerala.com/wp-content/uploads/2022/09/MELODIA-LOGO-03-1-1024x454.webp" alt="5 Star Event Management">
+        <img src="assets/images/logo.png" alt="5 Star Event Management">
         <p>Tamilnadu's premier ISO 9001:2015 certified event management company.</p>
         <div class="social-links">
           <a href="#" target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
@@ -119,12 +119,12 @@ const templateFooter = `      </div>
       <div class="footer-col">
         <h6>Quick Links</h6>
         <ul>
-          <li><a href="Index.html#home">Home</a></li>
-          <li><a href="Index.html#about">About</a></li>
-          <li><a href="Index.html#services">Services</a></li>
-          <li><a href="Index.html#venues">Venues</a></li>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#venues">Venues</a></li>
           <li><a href="wedding-albums.html">Gallery</a></li>
-          <li><a href="Index.html#contact">Contact</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
         </ul>
       </div>
       <div class="footer-col">

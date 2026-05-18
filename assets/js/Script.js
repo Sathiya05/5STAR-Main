@@ -250,12 +250,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 }); // end DOMContentLoaded
 
-
-document.querySelector(".contact-form").addEventListener("submit", function(e) {
-  e.preventDefault();
-  alert("Message sent successfully! 🎉");
-});
-
 // ============================================================
 //  5 Star Event Management — script.js
 //  All JavaScript for the website in one clean file
