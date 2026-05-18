@@ -1,20 +1,9 @@
-const fs = require('fs');
-const path = require('path');
-
-const categories = [
-  { name: 'Wedding Albums', sourceFolder: path.join(__dirname, '../Wedding'), targetFolder: 'assets/images/Wedding', filename: 'wedding-albums.html' },
-  { name: 'Destination Wedding', sourceFolder: path.join(__dirname, '../Destination Wedding'), targetFolder: 'assets/images/Destination Wedding', filename: 'destination-wedding.html' },
-  { name: 'Corporate Events', sourceFolder: path.join(__dirname, '../Corparate Events'), targetFolder: 'assets/images/Corporate Events', filename: 'corporate-events.html' },
-  { name: 'House Opening Ceremony', sourceFolder: path.join(__dirname, '../House Opening'), targetFolder: 'assets/images/House Opening', filename: 'house-opening-ceremony.html' },
-  { name: 'Private Parties', sourceFolder: path.join(__dirname, '../private Parties'), targetFolder: 'assets/images/Private Parties', filename: 'private-parties.html' }
-];
-
-const templateHeader = `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{TITLE}} - 5 Star Event Management</title>
+  <title>House Opening Ceremony - 5 Star Event Management</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -120,11 +109,11 @@ const templateHeader = `<!DOCTYPE html>
     <div class="section-container" style="max-width: 1200px; margin: 0 auto;">
       <div class="text-center" style="margin-bottom: 48px; text-align: center;">
         <p class="section-label" style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--primary); margin-bottom: 12px;">Gallery</p>
-        <h2 class="section-title" style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: #111827; margin-bottom: 16px;">{{TITLE}}</h2>
+        <h2 class="section-title" style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: #111827; margin-bottom: 16px;">House Opening Ceremony</h2>
       </div>
-      <div class="masonry-gallery">`;
-
-const templateFooter = `      </div>
+      <div class="masonry-gallery">
+        <p style="text-align:center;width:100%;color:#666;">Images not found in C:\Users\thara\Downloads\5STAR-Main-main 2\assets\House Opening</p>
+      </div>
     </div>
   </section>
 
@@ -176,43 +165,4 @@ const templateFooter = `      </div>
   </a>
   <script src="assets/js/Script.js"></script>
   </body>
-</html>`;
-
-// Ensure images directory exists
-const baseImagesDir = path.join(__dirname, 'images');
-if (!fs.existsSync(baseImagesDir)) fs.mkdirSync(baseImagesDir);
-
-categories.forEach(cat => {
-  let imagesHtml = '';
-  const srcDir = cat.sourceFolder;
-  const destDir = path.join(__dirname, cat.targetFolder);
-
-  // Create target dir if not exists
-  if (!fs.existsSync(destDir)) fs.mkdirSync(destDir, { recursive: true });
-
-  if (fs.existsSync(srcDir)) {
-    const files = fs.readdirSync(srcDir);
-    // filter image files
-    const imgs = files.filter(f => /\.(jpg|jpeg|png|webp|gif)$/i.test(f));
-    imgs.forEach(img => {
-      const srcPath = path.join(srcDir, img);
-      const destPath = path.join(destDir, img);
-
-      // Copy file if it doesn't already exist to save time
-      if (!fs.existsSync(destPath)) {
-        fs.copyFileSync(srcPath, destPath);
-      }
-
-      // Construct relative URL for the HTML file
-      // encodeURI encodes spaces to %20 which is required
-      const htmlImgPath = encodeURI(cat.targetFolder + '/' + img);
-      imagesHtml += `        <div class="gallery-item"><img src="${htmlImgPath}" alt="${cat.name} Image" loading="lazy"></div>\n`;
-    });
-  } else {
-    imagesHtml += `        <p style="text-align:center;width:100%;color:#666;">Images not found in ${srcDir}</p>\n`;
-  }
-
-  const html = templateHeader.replace(/{{TITLE}}/g, cat.name) + "\n" + imagesHtml + templateFooter;
-  fs.writeFileSync(path.join(__dirname, cat.filename), html);
-  console.log('Created ' + cat.filename + ' with images saved in ' + cat.targetFolder);
-});
+</html>

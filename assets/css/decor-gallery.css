@@ -1,0 +1,339 @@
+/* ============================================================
+   Decor Gallery Styles
+   ============================================================ */
+
+.decor-gallery-page {
+  padding: 40px 0;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.decor-page-hero {
+  text-align: center;
+  padding: 40px 20px 60px;
+}
+
+.decor-page-hero h1 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+
+.decor-page-hero p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Row Blocks */
+.decor-row-block {
+  margin-bottom: 60px;
+}
+
+.decor-row-header {
+  padding: 0 24px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.decor-row-title-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #1f2937;
+  transition: color 0.2s;
+}
+
+.decor-row-title-btn:hover {
+  color: var(--primary);
+}
+
+.decor-row-title-chevron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #f3f4f6;
+  border-radius: 50%;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.decor-row-title-btn:hover .decor-row-title-chevron {
+  background: var(--primary);
+  color: #fff;
+  transform: translateX(4px);
+}
+
+.decor-row-title-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Marquee Row */
+.decor-row-outer {
+  position: relative;
+  overflow: hidden;
+  padding: 0 60px;
+}
+
+.decor-row-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.2s;
+}
+
+.decor-row-arrow:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.decor-row-arrow.prev { left: 10px; }
+.decor-row-arrow.next { right: 10px; }
+
+.decor-row-track-wrap {
+  overflow: hidden;
+  width: 100%;
+}
+
+.decor-row-marquee-strip {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  will-change: transform;
+}
+
+.decor-row-marquee-group {
+  display: flex;
+  gap: 20px;
+}
+
+.decor-slide-link {
+  display: block;
+  flex: 0 0 300px;
+  aspect-ratio: 4/3;
+  border: none;
+  padding: 0;
+  background: #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.decor-slide {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.decor-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.decor-slide-link:hover img {
+  transform: scale(1.05);
+}
+
+/* Grid View */
+.decor-grid-view {
+  padding: 0 24px;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.decor-grid-back {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.decor-grid-back::before {
+  content: '←';
+}
+
+.decor-grid-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+.decor-grid-head h2 {
+  font-size: 2rem;
+  color: #1f2937;
+}
+
+.decor-grid-count {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.decor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.decor-grid-cell {
+  aspect-ratio: 1/1;
+  border: none;
+  padding: 0;
+  background: #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.decor-grid-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.decor-grid-cell:hover img {
+  transform: scale(1.08);
+}
+
+/* Lightbox */
+.decor-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.decor-lightbox.open {
+  display: flex;
+  opacity: 1;
+}
+
+.decor-lightbox-inner {
+  position: relative;
+  max-width: 90%;
+  max-height: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.decor-lightbox-inner img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  box-shadow: 0 0 40px rgba(0,0,0,0.5);
+}
+
+.decor-lightbox-caption {
+  color: #fff;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.decor-lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 10px;
+}
+
+.decor-lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: background 0.2s;
+}
+
+.decor-lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.decor-lightbox-prev { left: 20px; }
+.decor-lightbox-next { right: 20px; }
+
+/* Error state */
+.decor-gallery-error {
+  text-align: center;
+  padding: 60px 20px;
+  color: #ef4444;
+  font-weight: 500;
+  background: #fef2f2;
+  border-radius: 12px;
+  margin: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .decor-page-hero h1 { font-size: 2rem; }
+  .decor-row-outer { padding: 0 10px; }
+  .decor-row-arrow { display: none; }
+  .decor-row-header { padding: 0 16px; }
+  .decor-row-title-text { font-size: 1.25rem; }
+  .decor-slide-link { flex: 0 0 240px; }
+  .decor-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+  .decor-lightbox-nav { width: 44px; height: 44px; font-size: 1.2rem; }
+}

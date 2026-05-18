@@ -372,10 +372,26 @@
     const lightbox = buildLightbox();
 
     try {
-      const res = await fetch(new URL('decor-gallery-data.json', window.location.href));
-      if (!res.ok) throw new Error('Failed to load gallery data');
-      const sections = await res.json();
-      if (!Array.isArray(sections) || sections.length === 0) throw new Error('Empty gallery');
+      let sections = [];
+      
+      // Try fetching the JSON first
+      try {
+        const res = await fetch('decor-gallery-data.json');
+        if (res.ok) {
+          sections = await res.json();
+        }
+      } catch (e) {
+        console.warn('JSON fetch failed, checking for global fallback');
+      }
+
+      // If fetch failed or returned empty, use the global variable from decor-gallery-data.js
+      if (!sections || sections.length === 0) {
+        if (window.DECOR_GALLERY_DATA) {
+          sections = window.DECOR_GALLERY_DATA;
+        } else {
+          throw new Error('No gallery data available');
+        }
+      }
 
       const content = document.createElement('div');
       content.className = 'decor-gallery-content';
