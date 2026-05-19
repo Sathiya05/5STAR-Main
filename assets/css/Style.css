@@ -1377,7 +1377,7 @@ footer>* {
 @media (max-width: 480px) {
   .footer-bottom {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
   }
 }
 
@@ -1424,15 +1424,23 @@ footer>* {
   }
 
   .testimonials-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    display: grid;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 10px 20px 30px;
+    margin: 0 -24px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .testimonials-grid::-webkit-scrollbar {
+    display: none;
   }
 
   .testimonial-card {
-    width: 100%;
+    flex: 0 0 85%;
+    scroll-snap-align: center;
     padding: 24px;
   }
 
@@ -1465,8 +1473,8 @@ footer>* {
     flex-direction: column;
     padding: 48px 24px;
     gap: 40px;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .footer-brand,
@@ -1476,11 +1484,11 @@ footer>* {
   }
 
   .footer-socials {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .footer-contact-row {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .footer-bar-contact {
@@ -1510,28 +1518,45 @@ footer>* {
 
   /* Testimonial Mobile Fix */
   .reviewer {
-    gap: 10px;
-    padding-top: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 16px;
+    width: 100%;
   }
 
   .reviewer img {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .reviewer-info {
+    flex: 1;
+    min-width: 0;
   }
 
   .reviewer-info p {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    font-weight: 700;
     margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .reviewer-info span {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
+    color: #9ca3af;
   }
 
   .google-icon {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     flex-shrink: 0;
+    margin-left: 8px;
   }
 }
 
