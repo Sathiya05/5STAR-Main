@@ -29,116 +29,6 @@
 
 
   <!-- ============================================================
-       HEADER — Fixed top navigation bar
-  ============================================================ -->
-  <header id="site-header">
-    <div class="header-inner">
-
-      <!-- Logo -->
-      <a href="index.html" class="logo">
-        <img src="assets/images/logo.png" alt="5 Star Event Management Logo">
-      </a>
-
-      <!-- Desktop Navigation -->
-      <nav class="desktop-nav">
-        <a href="index.html" class="nav-link active">Home</a>
-        <a href="aboutus.html" class="nav-link">About Us</a>
-
-        <div class="dropdown">
-          <a href="wedding service.html" class="nav-link">
-            Services <i class="fas fa-caret-down" style="font-size:0.7rem;"></i>
-          </a>
-          <div class="dropdown-menu">
-            <a href="wedding-planners.html">Wedding Planners</a>
-            <a href="destination-wedding.html">Destination Wedding</a>
-            <a href="corporate-events.html">Corporate Events</a>
-            <a href="house-opening-ceremony.html">House opening ceremony</a>
-            <a href="private-parties.html">Private Parties</a>
-          </div>
-        </div>
-
-        <!-- <a href="#venues" class="nav-link">Venues</a> -->
-        <a href="our-clients.html" class="nav-link">Our Clients</a>
-
-        <!-- <div class="dropdown"> -->
-        <a href="decor-gallery.html" class="nav-link">
-          Gallery
-        </a>
-        <!-- <div class="dropdown-menu">
-            <a href="/wedding-albums(images).html">Wedding Albums</a>
-            <a href="/destination-wedding(images).html">Destination Wedding</a>
-            <a href="/corporate-events(images).html">Corporate Events</a>
-            <a href="/house-opening-ceremony(images).html">House Opening Ceremony</a>
-            <a href="/private-parties(images).html">Private Parties</a>
-          </div>
-        </div> -->
-
-        <a href="contact.html" class="nav-link">Contact Us</a>
-      </nav>
-
-      <!-- Call Button (desktop) -->
-      <a href="tel:+917996605557" class="btn-cta">
-        <i class="fas fa-phone-alt" style="font-size:0.75rem;"></i>
-        +91-799-660-5557
-      </a>
-
-      <!-- Hamburger (mobile only) -->
-      <button id="mobile-menu-btn" aria-label="Open menu">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-  </header>
-
-
-  <!-- ============================================================
-       MOBILE MENU — Full-screen overlay nav for small screens
-  ============================================================ -->
-  <div id="mobile-menu">
-    <nav>
-      <a href="index.html" class="mobile-link">Home</a>
-      <a href="aboutus.html" class="mobile-link">About Us</a>
-
-      <!-- Services Dropdown -->
-      <div class="mobile-dropdown">
-        <button class="mobile-dropdown-toggle" onclick="toggleMobileDropdown('services-menu')">
-          Services <i class="fas fa-chevron-down" style="font-size:0.7rem; margin-left:8px;"></i>
-        </button>
-        <div id="services-menu" class="mobile-submenu">
-          <a href="wedding-planners.html" class="mobile-sublink">Wedding Planners</a>
-          <a href="destination-wedding.html" class="mobile-sublink">Destination Wedding</a>
-          <a href="corporate-events.html" class="mobile-sublink">Corporate Events</a>
-          <a href="private-parties.html" class="mobile-sublink">Private Parties</a>
-          <a href="house-opening-ceremony.html" class="mobile-sublink">House Opening Ceremony</a>
-        </div>
-      </div>
-
-      <!-- <a href="#venues" class="mobile-link">Venues</a> -->
-      <a href="our-clients.html" class="mobile-link">Our Clients</a>
-
-      <!-- Gallery Dropdown -->
-      <a href="decor-gallery.html" class="mobile-link">Gallery</a>
-      <!-- <div class="mobile-dropdown">
-        <button class="mobile-dropdown-toggle" onclick="toggleMobileDropdown('gallery-menu')">
-          Gallery <i class="fas fa-chevron-down" style="font-size:0.7rem; margin-left:8px;"></i>
-        </button>
-        <div id="gallery-menu" class="mobile-submenu">
-          <a href="wedding-albums.html" class="mobile-sublink">Wedding Albums</a>
-          <a href="destination-wedding.html" class="mobile-sublink">Destination Wedding</a>
-          <a href="corporate-events.html" class="mobile-sublink">Corporate Events</a>
-          <a href="house-opening-ceremony.html" class="mobile-sublink">House Opening Ceremony</a>
-          <a href="private-parties.html" class="mobile-sublink">Private Parties</a>
-        </div>
-      </div> -->
-
-      <a href="contact.html" class="mobile-link">Contact Us</a>
-      <a href="tel:+917996605557" class="mobile-link" style="color:var(--primary); margin-top:16px;">
-        <i class="fas fa-phone-alt"></i> Call Now
-      </a>
-    </nav>
-  </div>
-
-
-  <!-- ============================================================
        HERO — Full-screen slideshow with headline
   ============================================================ -->
   <section id="home">
@@ -759,6 +649,116 @@
     aria-label="Chat on WhatsApp">
     <i class="fab fa-whatsapp" style="color:#fff; font-size:1.6rem;"></i>
   </a>
+
+
+  <!-- ============================================================
+       HEADER — Fixed top navigation bar
+  ============================================================ -->
+  <header id="site-header" class="scrolled" data-force-scrolled="true">
+    <div class="header-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo.png" alt="5 Star Event Management Logo">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="aboutus.html" class="nav-link">About Us</a>
+
+        <div class="dropdown">
+          <a href="wedding-planners.html" class="nav-link">
+            Services <i class="fas fa-caret-down" style="font-size:0.7rem;"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="wedding-planners.html">Wedding Planners</a>
+            <a href="destination-wedding.html">Destination Wedding</a>
+            <a href="corporate-events.html">Corporate Events</a>
+            <a href="house-opening-ceremony.html">House opening ceremony</a>
+            <a href="private-parties.html">Private Parties</a>
+          </div>
+        </div>
+
+        <!-- <a href="#venues" class="nav-link">Venues</a> -->
+        <a href="our-clients.html" class="nav-link">Our Clients</a>
+
+        <!-- <div class="dropdown"> -->
+        <a href="decor-gallery.html" class="nav-link">
+          Gallery
+        </a>
+        <!-- <div class="dropdown-menu">
+            <a href="/wedding-albums(images).html">Wedding Albums</a>
+            <a href="/destination-wedding(images).html">Destination Wedding</a>
+            <a href="/corporate-events(images).html">Corporate Events</a>
+            <a href="/house-opening-ceremony(images).html">House Opening Ceremony</a>
+            <a href="/private-parties(images).html">Private Parties</a>
+          </div>
+        </div> -->
+
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <!-- Call Button (desktop) -->
+      <a href="tel:+917996605557" class="btn-cta">
+        <i class="fas fa-phone-alt" style="font-size:0.75rem;"></i>
+        +91-799-660-5557
+      </a>
+
+      <!-- Hamburger (mobile only) -->
+      <button id="mobile-menu-btn" aria-label="Open menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+
+  <!-- ============================================================
+       MOBILE MENU — Full-screen overlay nav for small screens
+  ============================================================ -->
+  <div id="mobile-menu">
+    <nav>
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="aboutus.html" class="mobile-link">About Us</a>
+
+      <!-- Services Dropdown -->
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-toggle" onclick="toggleMobileDropdown('services-menu')">
+          Services <i class="fas fa-chevron-down" style="font-size:0.7rem; margin-left:8px;"></i>
+        </button>
+        <div id="services-menu" class="mobile-submenu">
+          <a href="wedding-planners.html" class="mobile-sublink">Wedding Planners</a>
+          <a href="destination-wedding.html" class="mobile-sublink">Destination Wedding</a>
+          <a href="corporate-events.html" class="mobile-sublink">Corporate Events</a>
+          <a href="private-parties.html" class="mobile-sublink">Private Parties</a>
+          <a href="house-opening-ceremony.html" class="mobile-sublink">House Opening Ceremony</a>
+        </div>
+      </div>
+
+      <!-- <a href="#venues" class="mobile-link">Venues</a> -->
+      <a href="our-clients.html" class="mobile-link">Our Clients</a>
+
+      <!-- Gallery Dropdown -->
+      <a href="decor-gallery.html" class="mobile-link">Gallery</a>
+      <!-- <div class="mobile-dropdown">
+        <button class="mobile-dropdown-toggle" onclick="toggleMobileDropdown('gallery-menu')">
+          Gallery <i class="fas fa-chevron-down" style="font-size:0.7rem; margin-left:8px;"></i>
+        </button>
+        <div id="gallery-menu" class="mobile-submenu">
+          <a href="wedding-albums.html" class="mobile-sublink">Wedding Albums</a>
+          <a href="destination-wedding.html" class="mobile-sublink">Destination Wedding</a>
+          <a href="corporate-events.html" class="mobile-sublink">Corporate Events</a>
+          <a href="house-opening-ceremony.html" class="mobile-sublink">House Opening Ceremony</a>
+          <a href="private-parties.html" class="mobile-sublink">Private Parties</a>
+        </div>
+      </div> -->
+
+      <a href="contact.html" class="mobile-link">Contact Us</a>
+      <a href="tel:+917996605557" class="mobile-link" style="color:var(--primary); margin-top:16px;">
+        <i class="fas fa-phone-alt"></i> Call Now
+      </a>
+    </nav>
+  </div>
 
 
   <!-- Your JavaScript (all logic lives here) -->

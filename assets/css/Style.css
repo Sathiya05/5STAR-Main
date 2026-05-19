@@ -1792,17 +1792,3 @@ footer>* {
   }
 }
 
-/* ============================================================
-   5 Star Event Management — style.css
-   All styles for the website in one clean file
-   ============================================================ */
-
-/* ── RESET & BASE ── */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
