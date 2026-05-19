@@ -1425,10 +1425,27 @@ footer>* {
 
   .testimonials-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
+    display: grid;
+    margin: 0;
+    padding: 0;
+  }
+
+  .testimonial-card {
+    width: 100%;
+    padding: 24px;
   }
 
   .awards-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
+    display: grid;
+  }
+
+  .awards-grid img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
   }
 
   .faq-grid {
@@ -1489,6 +1506,32 @@ footer>* {
   .hero-label {
     font-size: 0.7rem;
     letter-spacing: 0.15em;
+  }
+
+  /* Testimonial Mobile Fix */
+  .reviewer {
+    gap: 10px;
+    padding-top: 14px;
+  }
+
+  .reviewer img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .reviewer-info p {
+    font-size: 0.8rem;
+    margin-bottom: 2px;
+  }
+
+  .reviewer-info span {
+    font-size: 0.7rem;
+  }
+
+  .google-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
   }
 }
 
