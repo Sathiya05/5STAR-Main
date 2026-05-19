@@ -351,28 +351,32 @@ header.scrolled #mobile-menu-btn {
 
 .hero-content {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 2;
-  padding: 0 60px 72px;
-  max-width: 860px;
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 24px;
+  text-align: center;
 }
 
 .hero-label {
   font-family: var(--sans);
-  font-size: .7rem;
+  font-size: .75rem;
   font-weight: 700;
   letter-spacing: .3em;
   text-transform: uppercase;
   color: #93c5fd;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
 }
 
-.hero-label::before {
+.hero-label::before,
+.hero-label::after {
   content: '';
   display: block;
   width: 28px;
@@ -395,6 +399,7 @@ header.scrolled #mobile-menu-btn {
 
 .hero-buttons {
   display: flex;
+  justify-content: center;
   gap: 14px;
   flex-wrap: wrap;
   margin-bottom: 32px;
@@ -446,7 +451,7 @@ header.scrolled #mobile-menu-btn {
   position: relative;
   z-index: 10;
   margin: -56px auto 0;
-  max-width: 900px;
+  max-width: 1100px;
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
@@ -563,12 +568,12 @@ header.scrolled #mobile-menu-btn {
 
 /* ── ABOUT ── */
 .about-section {
-  padding: 80px 24px;
+  padding: 100px 24px;
   background: #fff;
 }
 
 .section-container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -725,8 +730,8 @@ header.scrolled #mobile-menu-btn {
 
 /* ── SERVICES ── */
 .services-section {
-  padding: 80px 24px;
-  background: #fff;
+  padding: 100px 24px;
+  background: #f9fafb;
 }
 
 .text-center {
@@ -1179,9 +1184,9 @@ footer>* {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 60px 60px 48px;
+  padding: 60px 24px 48px;
   gap: 40px;
 }
 
