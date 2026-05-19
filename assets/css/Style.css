@@ -17,15 +17,22 @@
   --primary-dark: #7a2d6b;
 }
 
+html,
 body {
   font-family: 'Inter', sans-serif;
   background: #f9fafb;
   color: #1f2937;
   overflow-x: hidden;
+  width: 100%;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* ── HEADER ── */
@@ -1437,6 +1444,28 @@ footer>* {
     gap: 32px;
   }
 
+  .footer-main {
+    flex-direction: column;
+    padding: 48px 24px;
+    gap: 40px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-brand,
+  .footer-col {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+
+  .footer-contact-row {
+    justify-content: center;
+  }
+
   .footer-bar-contact {
     flex-direction: column;
     gap: 16px;
@@ -1449,6 +1478,17 @@ footer>* {
 
   .hero-content {
     padding: 0 20px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 8vw, 2.8rem);
+    margin-bottom: 20px;
+    overflow-wrap: break-word;
+  }
+
+  .hero-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
   }
 }
 
